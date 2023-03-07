@@ -1,0 +1,10 @@
+configVersion: 1.0.0
+generation:
+  telemetryEnabled: false
+  sdkClassName: writer
+  sdkFlattening: true
+java:
+  version: 0.1.0
+  artifactID: sdk
+  groupID: com.writer
+  projectName: api
