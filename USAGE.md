@@ -4,27 +4,27 @@ package hello.world;
 
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.shared.Security;
+import com.writer.sdk.models.operations.DetectContentRequest;
+import com.writer.sdk.models.operations.DetectContentResponse;
+import com.writer.sdk.models.shared.ContentDetectorRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            Writer.Builder builder = Writer.builder();
+            Writer sdk = Writer.builder()
+                .setSecurity(new Security() {{
+                    apiKey = "YOUR_API_KEY_HERE";
+                }})
+                .setOrganizationId(548814)
+                .build();
 
-            Writer sdk = builder.build();
+            DetectContentRequest req = new DetectContentRequest() {{
+                contentDetectorRequest = new ContentDetectorRequest() {{
+                    input = "provident";
+                }};
+            }}            
 
-            ContentDetectorApiRequest req = new ContentDetectorApiRequest() {{
-                pathParams = new ContentDetectorApiPathParams() {{
-                    organizationId = 548814;
-                }};
-                headers = new ContentDetectorApiHeaders() {{
-                    authorization = "deserunt";
-                }};
-                request = new ContentDetectorRequest() {{
-                    input = "porro";
-                }};
-            }};
-
-            ContentDetectorApiResponse res = sdk.aiContentDetector.contentDetectorApi(req);
+            DetectContentResponse res = sdk.aiContentDetector.detect(req);
 
             if (res.contentDetectorResponses.isPresent()) {
                 // handle response
