@@ -64,12 +64,10 @@ public class Terminology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.AddTermsResponse res = new com.writer.sdk.models.operations.AddTermsResponse() {{
+        com.writer.sdk.models.operations.AddTermsResponse res = new com.writer.sdk.models.operations.AddTermsResponse(contentType, httpRes.statusCode()) {{
             createTermsResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,12 +127,10 @@ public class Terminology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DeleteTermsResponse res = new com.writer.sdk.models.operations.DeleteTermsResponse() {{
+        com.writer.sdk.models.operations.DeleteTermsResponse res = new com.writer.sdk.models.operations.DeleteTermsResponse(contentType, httpRes.statusCode()) {{
             deleteResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,12 +182,10 @@ public class Terminology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.FindTermsResponse res = new com.writer.sdk.models.operations.FindTermsResponse() {{
+        com.writer.sdk.models.operations.FindTermsResponse res = new com.writer.sdk.models.operations.FindTermsResponse(contentType, httpRes.statusCode()) {{
             paginatedResultFullTermWithUser = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,12 +244,10 @@ public class Terminology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.UpdateTermsResponse res = new com.writer.sdk.models.operations.UpdateTermsResponse() {{
+        com.writer.sdk.models.operations.UpdateTermsResponse res = new com.writer.sdk.models.operations.UpdateTermsResponse(contentType, httpRes.statusCode()) {{
             createTermsResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

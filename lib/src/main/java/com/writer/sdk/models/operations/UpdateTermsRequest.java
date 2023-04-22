@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class UpdateTermsRequest {
@@ -35,4 +36,9 @@ public class UpdateTermsRequest {
         return this;
     }
     
+
+    public UpdateTermsRequest(@JsonProperty("UpdateTermsRequest") com.writer.sdk.models.shared.UpdateTermsRequest updateTermsRequest, @JsonProperty("teamId") Long teamId) {
+    this.updateTermsRequest = updateTermsRequest;
+this.teamId = teamId;
+  }
 }

@@ -57,12 +57,10 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.GetSubscriptionDetailsResponse res = new com.writer.sdk.models.operations.GetSubscriptionDetailsResponse() {{
+        com.writer.sdk.models.operations.GetSubscriptionDetailsResponse res = new com.writer.sdk.models.operations.GetSubscriptionDetailsResponse(contentType, httpRes.statusCode()) {{
             subscriptionPublicResponseApi = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

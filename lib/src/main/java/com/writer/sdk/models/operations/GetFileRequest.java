@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class GetFileRequest {
@@ -21,4 +22,8 @@ public class GetFileRequest {
         return this;
     }
     
+
+    public GetFileRequest(@JsonProperty("fileId") String fileId) {
+    this.fileId = fileId;
+  }
 }

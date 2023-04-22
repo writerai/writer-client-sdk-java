@@ -57,12 +57,10 @@ public class Models {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListModelsResponse res = new com.writer.sdk.models.operations.ListModelsResponse() {{
+        com.writer.sdk.models.operations.ListModelsResponse res = new com.writer.sdk.models.operations.ListModelsResponse(contentType, httpRes.statusCode()) {{
             generationModelsResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

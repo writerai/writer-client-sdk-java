@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class UploadModelFileRequest {
@@ -14,4 +15,8 @@ public class UploadModelFileRequest {
         return this;
     }
     
+
+    public UploadModelFileRequest(@JsonProperty("file") UploadModelFileRequestFile file) {
+    this.file = file;
+  }
 }

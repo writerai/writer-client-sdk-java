@@ -61,4 +61,11 @@ public class FullLinkedTerm {
         return this;
     }
     
+
+    public FullLinkedTerm(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("linkedTermId") Long linkedTermId, @JsonProperty("term") String term, @JsonProperty("termId") Long termId) {
+    this.caseSensitive = caseSensitive;
+this.linkedTermId = linkedTermId;
+this.term = term;
+this.termId = termId;
+  }
 }

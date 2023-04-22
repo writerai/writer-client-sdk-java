@@ -96,4 +96,8 @@ public class CompletionRequest {
         return this;
     }
     
+
+    public CompletionRequest(@JsonProperty("prompt") String prompt) {
+    this.prompt = prompt;
+  }
 }

@@ -14,4 +14,6 @@ public class ListFilesRequest {
         return this;
     }
     
+
+    public ListFilesRequest(){}
 }

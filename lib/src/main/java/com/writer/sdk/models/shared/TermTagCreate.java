@@ -14,4 +14,8 @@ public class TermTagCreate {
         return this;
     }
     
+
+    public TermTagCreate(@JsonProperty("tag") String tag) {
+    this.tag = tag;
+  }
 }

@@ -59,12 +59,10 @@ public class Styleguide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.PageDetailsResponse res = new com.writer.sdk.models.operations.PageDetailsResponse() {{
+        com.writer.sdk.models.operations.PageDetailsResponse res = new com.writer.sdk.models.operations.PageDetailsResponse(contentType, httpRes.statusCode()) {{
             pageWithSectionResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class Styleguide {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListPagesResponse res = new com.writer.sdk.models.operations.ListPagesResponse() {{
+        com.writer.sdk.models.operations.ListPagesResponse res = new com.writer.sdk.models.operations.ListPagesResponse(contentType, httpRes.statusCode()) {{
             paginatedResultPagePublicApiResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

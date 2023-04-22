@@ -25,4 +25,6 @@ public class UpdateTermsRequest {
         return this;
     }
     
+
+    public UpdateTermsRequest(){}
 }

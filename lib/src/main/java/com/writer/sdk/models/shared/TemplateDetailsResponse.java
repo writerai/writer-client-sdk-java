@@ -77,4 +77,12 @@ public class TemplateDetailsResponse {
         return this;
     }
     
+
+    public TemplateDetailsResponse(@JsonProperty("categoryId") Long categoryId, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("name") String name) {
+    this.categoryId = categoryId;
+this.creationTime = creationTime;
+this.id = id;
+this.modificationTime = modificationTime;
+this.name = name;
+  }
 }

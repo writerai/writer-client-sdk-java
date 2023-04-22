@@ -35,4 +35,11 @@ public class TermTagResponse {
         return this;
     }
     
+
+    public TermTagResponse(@JsonProperty("id") Long id, @JsonProperty("parentTagId") Long parentTagId, @JsonProperty("tag") String tag, @JsonProperty("termId") Long termId) {
+    this.id = id;
+this.parentTagId = parentTagId;
+this.tag = tag;
+this.termId = termId;
+  }
 }

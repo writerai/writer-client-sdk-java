@@ -79,4 +79,9 @@ public class CreateCustomizationRequest {
         return this;
     }
     
+
+    public CreateCustomizationRequest(@JsonProperty("name") String name, @JsonProperty("trainingDatasetFileId") String trainingDatasetFileId) {
+    this.name = name;
+this.trainingDatasetFileId = trainingDatasetFileId;
+  }
 }

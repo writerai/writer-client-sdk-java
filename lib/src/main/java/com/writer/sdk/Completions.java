@@ -63,12 +63,10 @@ public class Completions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.CreateCompletionResponse res = new com.writer.sdk.models.operations.CreateCompletionResponse() {{
+        com.writer.sdk.models.operations.CreateCompletionResponse res = new com.writer.sdk.models.operations.CreateCompletionResponse(contentType, httpRes.statusCode()) {{
             completionResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,12 +117,10 @@ public class Completions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse() {{
+        com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse(contentType, httpRes.statusCode()) {{
             completionResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

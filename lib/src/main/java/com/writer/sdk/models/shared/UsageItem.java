@@ -21,4 +21,9 @@ public class UsageItem {
         return this;
     }
     
+
+    public UsageItem(@JsonProperty("limit") Long limit, @JsonProperty("value") Long value) {
+    this.limit = limit;
+this.value = value;
+  }
 }

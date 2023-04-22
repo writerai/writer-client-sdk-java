@@ -41,4 +41,6 @@ public class CompletionGenerationChoiceLogprobs {
         return this;
     }
     
+
+    public CompletionGenerationChoiceLogprobs(){}
 }

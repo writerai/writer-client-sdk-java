@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class FetchCustomizedModelFileRequest {
@@ -28,4 +29,9 @@ public class FetchCustomizedModelFileRequest {
         return this;
     }
     
+
+    public FetchCustomizedModelFileRequest(@JsonProperty("customizationId") String customizationId, @JsonProperty("modelId") String modelId) {
+    this.customizationId = customizationId;
+this.modelId = modelId;
+  }
 }

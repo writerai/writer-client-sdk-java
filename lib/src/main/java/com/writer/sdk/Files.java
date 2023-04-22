@@ -60,12 +60,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DeleteFileResponse res = new com.writer.sdk.models.operations.DeleteFileResponse() {{
+        com.writer.sdk.models.operations.DeleteFileResponse res = new com.writer.sdk.models.operations.DeleteFileResponse(contentType, httpRes.statusCode()) {{
             deleteFile200ApplicationJSONObject = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.GetFileResponse res = new com.writer.sdk.models.operations.GetFileResponse() {{
+        com.writer.sdk.models.operations.GetFileResponse res = new com.writer.sdk.models.operations.GetFileResponse(contentType, httpRes.statusCode()) {{
             modelFile = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,12 +158,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListFilesResponse res = new com.writer.sdk.models.operations.ListFilesResponse() {{
+        com.writer.sdk.models.operations.ListFilesResponse res = new com.writer.sdk.models.operations.ListFilesResponse(contentType, httpRes.statusCode()) {{
             modelFilesResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,12 +212,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.UploadFileResponse res = new com.writer.sdk.models.operations.UploadFileResponse() {{
+        com.writer.sdk.models.operations.UploadFileResponse res = new com.writer.sdk.models.operations.UploadFileResponse(contentType, httpRes.statusCode()) {{
             modelFile = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

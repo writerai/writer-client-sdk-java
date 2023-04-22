@@ -83,4 +83,14 @@ public class PagePublicApiResponse {
         return this;
     }
     
+
+    public PagePublicApiResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("order") Long order, @JsonProperty("status") PagePublicApiResponseStatusEnum status, @JsonProperty("title") String title, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+    this.createdAt = createdAt;
+this.id = id;
+this.order = order;
+this.status = status;
+this.title = title;
+this.updatedAt = updatedAt;
+this.url = url;
+  }
 }

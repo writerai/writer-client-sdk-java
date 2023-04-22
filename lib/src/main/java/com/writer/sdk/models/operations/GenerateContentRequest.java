@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class GenerateContentRequest {
@@ -28,4 +29,9 @@ public class GenerateContentRequest {
         return this;
     }
     
+
+    public GenerateContentRequest(@JsonProperty("GenerateTemplateRequest") com.writer.sdk.models.shared.GenerateTemplateRequest generateTemplateRequest, @JsonProperty("teamId") Long teamId) {
+    this.generateTemplateRequest = generateTemplateRequest;
+this.teamId = teamId;
+  }
 }

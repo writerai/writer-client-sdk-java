@@ -14,4 +14,8 @@ public class SnippetTagV2 {
         return this;
     }
     
+
+    public SnippetTagV2(@JsonProperty("tag") String tag) {
+    this.tag = tag;
+  }
 }

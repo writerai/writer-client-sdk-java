@@ -65,12 +65,10 @@ public class ModelCustomization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.CreateModelCustomizationResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationResponse() {{
+        com.writer.sdk.models.operations.CreateModelCustomizationResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationResponse(contentType, httpRes.statusCode()) {{
             modelCustomization = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class ModelCustomization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = new com.writer.sdk.models.operations.DeleteModelCustomizationResponse() {{
+        com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = new com.writer.sdk.models.operations.DeleteModelCustomizationResponse(contentType, httpRes.statusCode()) {{
             deleteModelCustomization200ApplicationJSONObject = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,12 +163,10 @@ public class ModelCustomization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.GetModelCustomizationResponse res = new com.writer.sdk.models.operations.GetModelCustomizationResponse() {{
+        com.writer.sdk.models.operations.GetModelCustomizationResponse res = new com.writer.sdk.models.operations.GetModelCustomizationResponse(contentType, httpRes.statusCode()) {{
             modelCustomization = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,12 +212,10 @@ public class ModelCustomization {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListModelCustomizationsResponse res = new com.writer.sdk.models.operations.ListModelCustomizationsResponse() {{
+        com.writer.sdk.models.operations.ListModelCustomizationsResponse res = new com.writer.sdk.models.operations.ListModelCustomizationsResponse(contentType, httpRes.statusCode()) {{
             customizationsResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -73,12 +73,10 @@ public class Snippet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DeleteSnippetsResponse res = new com.writer.sdk.models.operations.DeleteSnippetsResponse() {{
+        com.writer.sdk.models.operations.DeleteSnippetsResponse res = new com.writer.sdk.models.operations.DeleteSnippetsResponse(contentType, httpRes.statusCode()) {{
             deleteResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,12 +128,10 @@ public class Snippet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.FindSnippetsResponse res = new com.writer.sdk.models.operations.FindSnippetsResponse() {{
+        com.writer.sdk.models.operations.FindSnippetsResponse res = new com.writer.sdk.models.operations.FindSnippetsResponse(contentType, httpRes.statusCode()) {{
             paginatedResultSnippetWithUser = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,12 +187,10 @@ public class Snippet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.UpdateSnippetsResponse res = new com.writer.sdk.models.operations.UpdateSnippetsResponse() {{
+        com.writer.sdk.models.operations.UpdateSnippetsResponse res = new com.writer.sdk.models.operations.UpdateSnippetsResponse(contentType, httpRes.statusCode()) {{
             snippetWithUsers = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

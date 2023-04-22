@@ -35,4 +35,11 @@ public class Usage {
         return this;
     }
     
+
+    public Usage(@JsonProperty("coWriteWords") UsageItem coWriteWords, @JsonProperty("team") UsageItem team, @JsonProperty("user") UsageItem user, @JsonProperty("words") UsageItem words) {
+    this.coWriteWords = coWriteWords;
+this.team = team;
+this.user = user;
+this.words = words;
+  }
 }

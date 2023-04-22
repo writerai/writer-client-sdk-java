@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class DetectContentRequest {
@@ -21,4 +22,8 @@ public class DetectContentRequest {
         return this;
     }
     
+
+    public DetectContentRequest(@JsonProperty("ContentDetectorRequest") com.writer.sdk.models.shared.ContentDetectorRequest contentDetectorRequest) {
+    this.contentDetectorRequest = contentDetectorRequest;
+  }
 }

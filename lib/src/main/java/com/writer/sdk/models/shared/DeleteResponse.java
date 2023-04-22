@@ -14,4 +14,8 @@ public class DeleteResponse {
         return this;
     }
     
+
+    public DeleteResponse(@JsonProperty("deleted") Long deleted) {
+    this.deleted = deleted;
+  }
 }

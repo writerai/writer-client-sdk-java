@@ -57,12 +57,10 @@ public class DownloadTheCustomizedModel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.FetchCustomizedModelFileResponse res = new com.writer.sdk.models.operations.FetchCustomizedModelFileResponse() {{
+        com.writer.sdk.models.operations.FetchCustomizedModelFileResponse res = new com.writer.sdk.models.operations.FetchCustomizedModelFileResponse(contentType, httpRes.statusCode()) {{
             fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

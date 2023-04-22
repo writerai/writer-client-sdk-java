@@ -101,4 +101,11 @@ public class TermUpdate {
         return this;
     }
     
+
+    public TermUpdate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("id") Long id, @JsonProperty("term") String term, @JsonProperty("type") TermUpdateTypeEnum type) {
+    this.caseSensitive = caseSensitive;
+this.id = id;
+this.term = term;
+this.type = type;
+  }
 }

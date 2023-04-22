@@ -45,4 +45,11 @@ public class ApprovedTermExtension {
         return this;
     }
     
+
+    public ApprovedTermExtension(@JsonProperty("capitalize") Boolean capitalize, @JsonProperty("fixCase") Boolean fixCase, @JsonProperty("fixCommonMistakes") Boolean fixCommonMistakes, @JsonProperty("termId") Long termId) {
+    this.capitalize = capitalize;
+this.fixCase = fixCase;
+this.fixCommonMistakes = fixCommonMistakes;
+this.termId = termId;
+  }
 }

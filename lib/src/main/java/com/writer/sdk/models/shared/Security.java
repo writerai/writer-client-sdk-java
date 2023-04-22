@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class Security {
@@ -14,4 +15,8 @@ public class Security {
         return this;
     }
     
+
+    public Security(@JsonProperty("apiKey") String apiKey) {
+    this.apiKey = apiKey;
+  }
 }

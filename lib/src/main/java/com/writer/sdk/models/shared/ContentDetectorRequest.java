@@ -14,4 +14,8 @@ public class ContentDetectorRequest {
         return this;
     }
     
+
+    public ContentDetectorRequest(@JsonProperty("input") String input) {
+    this.input = input;
+  }
 }

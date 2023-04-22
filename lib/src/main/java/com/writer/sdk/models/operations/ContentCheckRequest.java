@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class ContentCheckRequest {
@@ -28,4 +29,9 @@ public class ContentCheckRequest {
         return this;
     }
     
+
+    public ContentCheckRequest(@JsonProperty("ContentRequest") com.writer.sdk.models.shared.ContentRequest contentRequest, @JsonProperty("teamId") Long teamId) {
+    this.contentRequest = contentRequest;
+this.teamId = teamId;
+  }
 }

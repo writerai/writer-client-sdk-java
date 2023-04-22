@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class FindSnippetsRequest {
@@ -70,4 +71,8 @@ public class FindSnippetsRequest {
         return this;
     }
     
+
+    public FindSnippetsRequest(@JsonProperty("teamId") Long teamId) {
+    this.teamId = teamId;
+  }
 }

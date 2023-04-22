@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class CreateModelCustomizationCompletionRequest {
@@ -35,4 +36,10 @@ public class CreateModelCustomizationCompletionRequest {
         return this;
     }
     
+
+    public CreateModelCustomizationCompletionRequest(@JsonProperty("CompletionRequest") com.writer.sdk.models.shared.CompletionRequest completionRequest, @JsonProperty("customizationId") String customizationId, @JsonProperty("modelId") String modelId) {
+    this.completionRequest = completionRequest;
+this.customizationId = customizationId;
+this.modelId = modelId;
+  }
 }

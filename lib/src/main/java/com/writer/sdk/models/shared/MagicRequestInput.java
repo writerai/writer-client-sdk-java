@@ -24,4 +24,8 @@ public class MagicRequestInput {
         return this;
     }
     
+
+    public MagicRequestInput(@JsonProperty("name") String name) {
+    this.name = name;
+  }
 }

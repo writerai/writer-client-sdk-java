@@ -64,12 +64,10 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListUsersResponse res = new com.writer.sdk.models.operations.ListUsersResponse() {{
+        com.writer.sdk.models.operations.ListUsersResponse res = new com.writer.sdk.models.operations.ListUsersResponse(contentType, httpRes.statusCode()) {{
             paginatedResultUserPublicResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

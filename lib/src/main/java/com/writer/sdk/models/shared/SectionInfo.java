@@ -28,4 +28,10 @@ public class SectionInfo {
         return this;
     }
     
+
+    public SectionInfo(@JsonProperty("id") Long id, @JsonProperty("title") String title, @JsonProperty("url") String url) {
+    this.id = id;
+this.title = title;
+this.url = url;
+  }
 }

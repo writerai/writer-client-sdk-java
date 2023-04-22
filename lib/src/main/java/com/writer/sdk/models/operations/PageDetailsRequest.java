@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class PageDetailsRequest {
@@ -14,4 +15,8 @@ public class PageDetailsRequest {
         return this;
     }
     
+
+    public PageDetailsRequest(@JsonProperty("pageId") Long pageId) {
+    this.pageId = pageId;
+  }
 }

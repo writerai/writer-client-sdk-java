@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class DeleteTermsRequest {
@@ -35,4 +36,8 @@ public class DeleteTermsRequest {
         return this;
     }
     
+
+    public DeleteTermsRequest(@JsonProperty("teamId") Long teamId) {
+    this.teamId = teamId;
+  }
 }

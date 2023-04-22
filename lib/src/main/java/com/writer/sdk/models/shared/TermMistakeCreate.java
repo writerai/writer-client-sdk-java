@@ -39,4 +39,9 @@ public class TermMistakeCreate {
         return this;
     }
     
+
+    public TermMistakeCreate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("mistake") String mistake) {
+    this.caseSensitive = caseSensitive;
+this.mistake = mistake;
+  }
 }

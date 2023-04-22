@@ -85,4 +85,11 @@ public class Input {
         return this;
     }
     
+
+    public Input(@JsonProperty("dynamic") Boolean dynamic, @JsonProperty("name") String name, @JsonProperty("required") Boolean required, @JsonProperty("type") InputTypeEnum type) {
+    this.dynamic = dynamic;
+this.name = name;
+this.required = required;
+this.type = type;
+  }
 }

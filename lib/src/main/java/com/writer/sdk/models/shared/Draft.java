@@ -95,4 +95,16 @@ public class Draft {
         return this;
     }
     
+
+    public Draft(@JsonProperty("body") String body, @JsonProperty("createdUserId") Long createdUserId, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("deleted") Boolean deleted, @JsonProperty("documentId") String documentId, @JsonProperty("inputs") Object inputs, @JsonProperty("organizationId") Long organizationId, @JsonProperty("teamId") Long teamId, @JsonProperty("templateId") String templateId) {
+    this.body = body;
+this.createdUserId = createdUserId;
+this.creationTime = creationTime;
+this.deleted = deleted;
+this.documentId = documentId;
+this.inputs = inputs;
+this.organizationId = organizationId;
+this.teamId = teamId;
+this.templateId = templateId;
+  }
 }

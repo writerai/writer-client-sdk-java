@@ -63,12 +63,10 @@ public class AIContentDetector {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DetectContentResponse res = new com.writer.sdk.models.operations.DetectContentResponse() {{
+        com.writer.sdk.models.operations.DetectContentResponse res = new com.writer.sdk.models.operations.DetectContentResponse(contentType, httpRes.statusCode()) {{
             contentDetectorResponses = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

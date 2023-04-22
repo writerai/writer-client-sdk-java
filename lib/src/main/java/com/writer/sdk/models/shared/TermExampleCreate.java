@@ -21,4 +21,9 @@ public class TermExampleCreate {
         return this;
     }
     
+
+    public TermExampleCreate(@JsonProperty("example") String example, @JsonProperty("type") TermExampleCreateTypeEnum type) {
+    this.example = example;
+this.type = type;
+  }
 }

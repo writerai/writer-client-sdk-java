@@ -102,4 +102,10 @@ public class TermCreate {
         return this;
     }
     
+
+    public TermCreate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("term") String term, @JsonProperty("type") TermCreateTypeEnum type) {
+    this.caseSensitive = caseSensitive;
+this.term = term;
+this.type = type;
+  }
 }

@@ -28,4 +28,6 @@ public class ListPagesRequest {
         return this;
     }
     
+
+    public ListPagesRequest(){}
 }

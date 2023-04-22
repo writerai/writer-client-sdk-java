@@ -63,12 +63,10 @@ public class Content {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ContentCheckResponse res = new com.writer.sdk.models.operations.ContentCheckResponse() {{
+        com.writer.sdk.models.operations.ContentCheckResponse res = new com.writer.sdk.models.operations.ContentCheckResponse(contentType, httpRes.statusCode()) {{
             processedContent = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,12 +125,10 @@ public class Content {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ContentCorrectResponse res = new com.writer.sdk.models.operations.ContentCorrectResponse() {{
+        com.writer.sdk.models.operations.ContentCorrectResponse res = new com.writer.sdk.models.operations.ContentCorrectResponse(contentType, httpRes.statusCode()) {{
             correctionResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

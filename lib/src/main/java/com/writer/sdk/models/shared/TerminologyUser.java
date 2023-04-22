@@ -32,4 +32,8 @@ public class TerminologyUser {
         return this;
     }
     
+
+    public TerminologyUser(@JsonProperty("id") Long id) {
+    this.id = id;
+  }
 }

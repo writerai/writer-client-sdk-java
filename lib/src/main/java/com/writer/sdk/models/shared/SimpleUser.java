@@ -39,4 +39,9 @@ public class SimpleUser {
         return this;
     }
     
+
+    public SimpleUser(@JsonProperty("firstName") String firstName, @JsonProperty("id") Long id) {
+    this.firstName = firstName;
+this.id = id;
+  }
 }

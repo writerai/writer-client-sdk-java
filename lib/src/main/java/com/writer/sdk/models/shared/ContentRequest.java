@@ -21,4 +21,9 @@ public class ContentRequest {
         return this;
     }
     
+
+    public ContentRequest(@JsonProperty("content") String content, @JsonProperty("settings") ContentSettings settings) {
+    this.content = content;
+this.settings = settings;
+  }
 }

@@ -66,4 +66,14 @@ public class MetaData {
         return this;
     }
     
+
+    public MetaData(@JsonProperty("portal") java.util.Map<String, String> portal, @JsonProperty("reporting") java.util.Map<String, String> reporting, @JsonProperty("snippetsCount") Long snippetsCount, @JsonProperty("ssoAccess") Boolean ssoAccess, @JsonProperty("styleguide") java.util.Map<String, String> styleguide, @JsonProperty("teamCount") Long teamCount, @JsonProperty("termsCount") Long termsCount) {
+    this.portal = portal;
+this.reporting = reporting;
+this.snippetsCount = snippetsCount;
+this.ssoAccess = ssoAccess;
+this.styleguide = styleguide;
+this.teamCount = teamCount;
+this.termsCount = termsCount;
+  }
 }

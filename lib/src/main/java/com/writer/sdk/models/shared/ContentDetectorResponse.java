@@ -21,4 +21,9 @@ public class ContentDetectorResponse {
         return this;
     }
     
+
+    public ContentDetectorResponse(@JsonProperty("label") ContentDetectorResponseLabelEnum label, @JsonProperty("score") Double score) {
+    this.label = label;
+this.score = score;
+  }
 }

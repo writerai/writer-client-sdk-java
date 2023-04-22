@@ -34,4 +34,9 @@ public class FailResponse {
         return this;
     }
     
+
+    public FailResponse(@JsonProperty("extras") Object extras, @JsonProperty("tpe") String tpe) {
+    this.extras = extras;
+this.tpe = tpe;
+  }
 }

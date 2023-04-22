@@ -4,6 +4,7 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
 public class ListTemplatesRequest {
@@ -28,4 +29,9 @@ public class ListTemplatesRequest {
         return this;
     }
     
+
+    public ListTemplatesRequest(@JsonProperty("teamId") Long teamId, @JsonProperty("templateId") String templateId) {
+    this.teamId = teamId;
+this.templateId = templateId;
+  }
 }

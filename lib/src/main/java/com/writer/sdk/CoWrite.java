@@ -64,12 +64,10 @@ public class CoWrite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.GenerateContentResponse res = new com.writer.sdk.models.operations.GenerateContentResponse() {{
+        com.writer.sdk.models.operations.GenerateContentResponse res = new com.writer.sdk.models.operations.GenerateContentResponse(contentType, httpRes.statusCode()) {{
             draft = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class CoWrite {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListTemplatesResponse res = new com.writer.sdk.models.operations.ListTemplatesResponse() {{
+        com.writer.sdk.models.operations.ListTemplatesResponse res = new com.writer.sdk.models.operations.ListTemplatesResponse(contentType, httpRes.statusCode()) {{
             templateDetailsResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
