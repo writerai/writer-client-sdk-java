@@ -17,6 +17,5 @@ public class ModelFilesResponse {
         return this;
     }
     
-
     public ModelFilesResponse(){}
 }

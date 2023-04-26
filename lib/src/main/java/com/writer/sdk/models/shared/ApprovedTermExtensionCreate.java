@@ -28,10 +28,9 @@ public class ApprovedTermExtensionCreate {
         return this;
     }
     
-
     public ApprovedTermExtensionCreate(@JsonProperty("capitalize") Boolean capitalize, @JsonProperty("fixCase") Boolean fixCase, @JsonProperty("fixCommonMistakes") Boolean fixCommonMistakes) {
-    this.capitalize = capitalize;
-this.fixCase = fixCase;
-this.fixCommonMistakes = fixCommonMistakes;
+        this.capitalize = capitalize;
+        this.fixCase = fixCase;
+        this.fixCommonMistakes = fixCommonMistakes;
   }
 }

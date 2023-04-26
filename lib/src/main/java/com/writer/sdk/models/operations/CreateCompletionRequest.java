@@ -29,9 +29,8 @@ public class CreateCompletionRequest {
         return this;
     }
     
-
     public CreateCompletionRequest(@JsonProperty("CompletionRequest") com.writer.sdk.models.shared.CompletionRequest completionRequest, @JsonProperty("modelId") String modelId) {
-    this.completionRequest = completionRequest;
-this.modelId = modelId;
+        this.completionRequest = completionRequest;
+        this.modelId = modelId;
   }
 }

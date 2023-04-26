@@ -29,9 +29,8 @@ public class CreateModelCustomizationRequest {
         return this;
     }
     
-
     public CreateModelCustomizationRequest(@JsonProperty("CreateCustomizationRequest") com.writer.sdk.models.shared.CreateCustomizationRequest createCustomizationRequest, @JsonProperty("modelId") String modelId) {
-    this.createCustomizationRequest = createCustomizationRequest;
-this.modelId = modelId;
+        this.createCustomizationRequest = createCustomizationRequest;
+        this.modelId = modelId;
   }
 }

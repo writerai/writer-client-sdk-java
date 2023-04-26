@@ -47,9 +47,8 @@ public class SnippetUpdate {
         return this;
     }
     
-
     public SnippetUpdate(@JsonProperty("id") String id, @JsonProperty("snippet") String snippet) {
-    this.id = id;
-this.snippet = snippet;
+        this.id = id;
+        this.snippet = snippet;
   }
 }

@@ -53,9 +53,8 @@ public class DeleteSnippetsResponse {
         return this;
     }
     
-
     public DeleteSnippetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
-    this.contentType = contentType;
-this.statusCode = statusCode;
+        this.contentType = contentType;
+        this.statusCode = statusCode;
   }
 }

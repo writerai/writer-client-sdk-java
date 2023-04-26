@@ -31,9 +31,8 @@ public class PaginatedResultSnippetWithUser {
         return this;
     }
     
-
     public PaginatedResultSnippetWithUser(@JsonProperty("pagination") Pagination pagination, @JsonProperty("totalCount") Long totalCount) {
-    this.pagination = pagination;
-this.totalCount = totalCount;
+        this.pagination = pagination;
+        this.totalCount = totalCount;
   }
 }

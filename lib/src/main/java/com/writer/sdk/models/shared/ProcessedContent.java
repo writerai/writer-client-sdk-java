@@ -17,6 +17,5 @@ public class ProcessedContent {
         return this;
     }
     
-
     public ProcessedContent(){}
 }

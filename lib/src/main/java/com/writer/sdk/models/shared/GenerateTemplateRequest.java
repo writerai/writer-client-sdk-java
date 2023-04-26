@@ -24,8 +24,7 @@ public class GenerateTemplateRequest {
         return this;
     }
     
-
     public GenerateTemplateRequest(@JsonProperty("templateId") String templateId) {
-    this.templateId = templateId;
+        this.templateId = templateId;
   }
 }

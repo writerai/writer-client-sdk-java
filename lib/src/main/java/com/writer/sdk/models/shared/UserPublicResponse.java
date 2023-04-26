@@ -101,12 +101,11 @@ public class UserPublicResponse {
         return this;
     }
     
-
     public UserPublicResponse(@JsonProperty("accountStatus") UserPublicResponseAccountStatusEnum accountStatus, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("firstName") String firstName, @JsonProperty("fullName") String fullName, @JsonProperty("id") Long id) {
-    this.accountStatus = accountStatus;
-this.createdAt = createdAt;
-this.firstName = firstName;
-this.fullName = fullName;
-this.id = id;
+        this.accountStatus = accountStatus;
+        this.createdAt = createdAt;
+        this.firstName = firstName;
+        this.fullName = fullName;
+        this.id = id;
   }
 }

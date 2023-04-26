@@ -14,8 +14,7 @@ public class HyperParameters {
         return this;
     }
     
-
     public HyperParameters(@JsonProperty("numVirtualTokens") Long numVirtualTokens) {
-    this.numVirtualTokens = numVirtualTokens;
+        this.numVirtualTokens = numVirtualTokens;
   }
 }

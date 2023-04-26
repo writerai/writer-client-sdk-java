@@ -36,8 +36,7 @@ public class DeleteSnippetsRequest {
         return this;
     }
     
-
     public DeleteSnippetsRequest(@JsonProperty("teamId") Long teamId) {
-    this.teamId = teamId;
+        this.teamId = teamId;
   }
 }

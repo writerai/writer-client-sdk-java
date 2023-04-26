@@ -24,8 +24,7 @@ public class CompletionGenerationChoice {
         return this;
     }
     
-
     public CompletionGenerationChoice(@JsonProperty("text") String text) {
-    this.text = text;
+        this.text = text;
   }
 }

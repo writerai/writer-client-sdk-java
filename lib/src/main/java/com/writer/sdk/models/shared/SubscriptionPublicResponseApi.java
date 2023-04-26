@@ -63,14 +63,13 @@ public class SubscriptionPublicResponseApi {
         return this;
     }
     
-
     public SubscriptionPublicResponseApi(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("meta") MetaData meta, @JsonProperty("productName") SubscriptionPublicResponseApiProductNameEnum productName, @JsonProperty("seats") Long seats, @JsonProperty("status") SubscriptionPublicResponseApiStatusEnum status, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("usage") Usage usage) {
-    this.createdAt = createdAt;
-this.meta = meta;
-this.productName = productName;
-this.seats = seats;
-this.status = status;
-this.subscriptionId = subscriptionId;
-this.usage = usage;
+        this.createdAt = createdAt;
+        this.meta = meta;
+        this.productName = productName;
+        this.seats = seats;
+        this.status = status;
+        this.subscriptionId = subscriptionId;
+        this.usage = usage;
   }
 }

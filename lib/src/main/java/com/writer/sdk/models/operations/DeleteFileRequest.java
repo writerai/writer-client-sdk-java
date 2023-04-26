@@ -22,8 +22,7 @@ public class DeleteFileRequest {
         return this;
     }
     
-
     public DeleteFileRequest(@JsonProperty("fileId") String fileId) {
-    this.fileId = fileId;
+        this.fileId = fileId;
   }
 }

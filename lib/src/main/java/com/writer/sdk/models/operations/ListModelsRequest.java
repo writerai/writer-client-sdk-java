@@ -14,6 +14,5 @@ public class ListModelsRequest {
         return this;
     }
     
-
     public ListModelsRequest(){}
 }

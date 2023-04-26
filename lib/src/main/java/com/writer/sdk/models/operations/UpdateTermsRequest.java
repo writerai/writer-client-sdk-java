@@ -36,9 +36,8 @@ public class UpdateTermsRequest {
         return this;
     }
     
-
     public UpdateTermsRequest(@JsonProperty("UpdateTermsRequest") com.writer.sdk.models.shared.UpdateTermsRequest updateTermsRequest, @JsonProperty("teamId") Long teamId) {
-    this.updateTermsRequest = updateTermsRequest;
-this.teamId = teamId;
+        this.updateTermsRequest = updateTermsRequest;
+        this.teamId = teamId;
   }
 }

@@ -25,6 +25,5 @@ public class Pagination {
         return this;
     }
     
-
     public Pagination(){}
 }

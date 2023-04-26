@@ -28,10 +28,9 @@ public class GenerationModelInfoResponse {
         return this;
     }
     
-
     public GenerationModelInfoResponse(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") GenerationModelInfoResponseTypeEnum type) {
-    this.id = id;
-this.name = name;
-this.type = type;
+        this.id = id;
+        this.name = name;
+        this.type = type;
   }
 }

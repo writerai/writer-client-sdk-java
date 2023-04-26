@@ -91,14 +91,13 @@ public class PageWithSectionResponse {
         return this;
     }
     
-
     public PageWithSectionResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("order") Long order, @JsonProperty("status") PageWithSectionResponseStatusEnum status, @JsonProperty("title") String title, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
-    this.createdAt = createdAt;
-this.id = id;
-this.order = order;
-this.status = status;
-this.title = title;
-this.updatedAt = updatedAt;
-this.url = url;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.order = order;
+        this.status = status;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
   }
 }

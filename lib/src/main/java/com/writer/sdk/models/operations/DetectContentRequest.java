@@ -22,8 +22,7 @@ public class DetectContentRequest {
         return this;
     }
     
-
     public DetectContentRequest(@JsonProperty("ContentDetectorRequest") com.writer.sdk.models.shared.ContentDetectorRequest contentDetectorRequest) {
-    this.contentDetectorRequest = contentDetectorRequest;
+        this.contentDetectorRequest = contentDetectorRequest;
   }
 }

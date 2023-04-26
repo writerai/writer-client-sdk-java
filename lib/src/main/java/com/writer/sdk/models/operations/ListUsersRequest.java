@@ -42,6 +42,5 @@ public class ListUsersRequest {
         return this;
     }
     
-
     public ListUsersRequest(){}
 }

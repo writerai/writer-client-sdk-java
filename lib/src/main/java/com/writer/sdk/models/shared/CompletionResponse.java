@@ -17,6 +17,5 @@ public class CompletionResponse {
         return this;
     }
     
-
     public CompletionResponse(){}
 }

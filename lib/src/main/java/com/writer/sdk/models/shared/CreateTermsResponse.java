@@ -25,6 +25,5 @@ public class CreateTermsResponse {
         return this;
     }
     
-
     public CreateTermsResponse(){}
 }

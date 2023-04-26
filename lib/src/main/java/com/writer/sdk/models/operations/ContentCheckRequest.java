@@ -29,9 +29,8 @@ public class ContentCheckRequest {
         return this;
     }
     
-
     public ContentCheckRequest(@JsonProperty("ContentRequest") com.writer.sdk.models.shared.ContentRequest contentRequest, @JsonProperty("teamId") Long teamId) {
-    this.contentRequest = contentRequest;
-this.teamId = teamId;
+        this.contentRequest = contentRequest;
+        this.teamId = teamId;
   }
 }

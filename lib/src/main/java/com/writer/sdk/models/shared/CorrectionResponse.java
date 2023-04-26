@@ -14,8 +14,7 @@ public class CorrectionResponse {
         return this;
     }
     
-
     public CorrectionResponse(@JsonProperty("correct") String correct) {
-    this.correct = correct;
+        this.correct = correct;
   }
 }

@@ -22,9 +22,8 @@ public class UploadModelFileRequestFile {
         return this;
     }
     
-
     public UploadModelFileRequestFile(@JsonProperty("content") byte[] content, @JsonProperty("file") String file) {
-    this.content = content;
-this.file = file;
+        this.content = content;
+        this.file = file;
   }
 }

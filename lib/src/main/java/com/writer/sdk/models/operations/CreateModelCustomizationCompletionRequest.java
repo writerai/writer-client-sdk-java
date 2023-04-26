@@ -36,10 +36,9 @@ public class CreateModelCustomizationCompletionRequest {
         return this;
     }
     
-
     public CreateModelCustomizationCompletionRequest(@JsonProperty("CompletionRequest") com.writer.sdk.models.shared.CompletionRequest completionRequest, @JsonProperty("customizationId") String customizationId, @JsonProperty("modelId") String modelId) {
-    this.completionRequest = completionRequest;
-this.customizationId = customizationId;
-this.modelId = modelId;
+        this.completionRequest = completionRequest;
+        this.customizationId = customizationId;
+        this.modelId = modelId;
   }
 }

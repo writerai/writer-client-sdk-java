@@ -15,8 +15,7 @@ public class PageDetailsRequest {
         return this;
     }
     
-
     public PageDetailsRequest(@JsonProperty("pageId") Long pageId) {
-    this.pageId = pageId;
+        this.pageId = pageId;
   }
 }

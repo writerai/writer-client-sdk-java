@@ -28,10 +28,9 @@ public class FailMessage {
         return this;
     }
     
-
     public FailMessage(@JsonProperty("description") String description, @JsonProperty("extras") Object extras, @JsonProperty("key") String key) {
-    this.description = description;
-this.extras = extras;
-this.key = key;
+        this.description = description;
+        this.extras = extras;
+        this.key = key;
   }
 }

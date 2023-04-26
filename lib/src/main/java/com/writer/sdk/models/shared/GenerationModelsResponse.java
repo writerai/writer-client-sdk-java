@@ -17,6 +17,5 @@ public class GenerationModelsResponse {
         return this;
     }
     
-
     public GenerationModelsResponse(){}
 }

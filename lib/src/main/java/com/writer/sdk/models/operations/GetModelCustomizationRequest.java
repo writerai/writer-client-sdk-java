@@ -29,9 +29,8 @@ public class GetModelCustomizationRequest {
         return this;
     }
     
-
     public GetModelCustomizationRequest(@JsonProperty("customizationId") String customizationId, @JsonProperty("modelId") String modelId) {
-    this.customizationId = customizationId;
-this.modelId = modelId;
+        this.customizationId = customizationId;
+        this.modelId = modelId;
   }
 }

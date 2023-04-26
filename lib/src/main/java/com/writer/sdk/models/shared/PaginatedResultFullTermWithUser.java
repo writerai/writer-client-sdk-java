@@ -31,9 +31,8 @@ public class PaginatedResultFullTermWithUser {
         return this;
     }
     
-
     public PaginatedResultFullTermWithUser(@JsonProperty("pagination") Pagination pagination, @JsonProperty("totalCount") Long totalCount) {
-    this.pagination = pagination;
-this.totalCount = totalCount;
+        this.pagination = pagination;
+        this.totalCount = totalCount;
   }
 }

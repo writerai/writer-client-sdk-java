@@ -84,13 +84,12 @@ public class SnippetWithUser {
         return this;
     }
     
-
     public SnippetWithUser(@JsonProperty("createdUser") TerminologyUser createdUser, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("modifiedUser") TerminologyUser modifiedUser, @JsonProperty("snippet") String snippet) {
-    this.createdUser = createdUser;
-this.creationTime = creationTime;
-this.id = id;
-this.modificationTime = modificationTime;
-this.modifiedUser = modifiedUser;
-this.snippet = snippet;
+        this.createdUser = createdUser;
+        this.creationTime = creationTime;
+        this.id = id;
+        this.modificationTime = modificationTime;
+        this.modifiedUser = modifiedUser;
+        this.snippet = snippet;
   }
 }

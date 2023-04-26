@@ -17,6 +17,5 @@ public class CustomizationsResponse {
         return this;
     }
     
-
     public CustomizationsResponse(){}
 }

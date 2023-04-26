@@ -15,8 +15,7 @@ public class UploadModelFileRequest {
         return this;
     }
     
-
     public UploadModelFileRequest(@JsonProperty("file") UploadModelFileRequestFile file) {
-    this.file = file;
+        this.file = file;
   }
 }

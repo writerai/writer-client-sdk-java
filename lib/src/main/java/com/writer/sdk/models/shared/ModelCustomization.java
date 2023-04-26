@@ -123,14 +123,13 @@ public class ModelCustomization {
         return this;
     }
     
-
     public ModelCustomization(@JsonProperty("baseModelId") String baseModelId, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("status") String status, @JsonProperty("trainingDatasetFileId") String trainingDatasetFileId, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
-    this.baseModelId = baseModelId;
-this.createdAt = createdAt;
-this.id = id;
-this.name = name;
-this.status = status;
-this.trainingDatasetFileId = trainingDatasetFileId;
-this.updatedAt = updatedAt;
+        this.baseModelId = baseModelId;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.trainingDatasetFileId = trainingDatasetFileId;
+        this.updatedAt = updatedAt;
   }
 }

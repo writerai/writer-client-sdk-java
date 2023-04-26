@@ -3,10 +3,10 @@
 package hello.world;
 
 import com.writer.sdk.Writer;
-import com.writer.sdk.models.shared.Security;
 import com.writer.sdk.models.operations.DetectContentRequest;
 import com.writer.sdk.models.operations.DetectContentResponse;
 import com.writer.sdk.models.shared.ContentDetectorRequest;
+import com.writer.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,18 +15,20 @@ public class Application {
                 .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
-                .setOrganizationId(592845)
+                .setOrganizationId(592845L)
                 .build();
 
             DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("distinctio"););            
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 
-            if (res.contentDetectorResponses.isPresent()) {
+            if (res.contentDetectorResponses != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

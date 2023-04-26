@@ -119,23 +119,22 @@ public class ContentSettings {
         return this;
     }
     
-
     public ContentSettings(@JsonProperty("ageAndFamilyStatus") Boolean ageAndFamilyStatus, @JsonProperty("confidence") Boolean confidence, @JsonProperty("contentSafeguards") Boolean contentSafeguards, @JsonProperty("disability") Boolean disability, @JsonProperty("genderIdentitySensitivity") Boolean genderIdentitySensitivity, @JsonProperty("genderInclusiveNouns") Boolean genderInclusiveNouns, @JsonProperty("genderInclusivePronouns") Boolean genderInclusivePronouns, @JsonProperty("grammar") Boolean grammar, @JsonProperty("healthyCommunication") Boolean healthyCommunication, @JsonProperty("passiveVoice") Boolean passiveVoice, @JsonProperty("raceEthnicityNationalitySensitivity") Boolean raceEthnicityNationalitySensitivity, @JsonProperty("sexualOrientationSensitivity") Boolean sexualOrientationSensitivity, @JsonProperty("spelling") Boolean spelling, @JsonProperty("substanceUseSensitivity") Boolean substanceUseSensitivity, @JsonProperty("unclearReference") Boolean unclearReference, @JsonProperty("wordiness") Boolean wordiness) {
-    this.ageAndFamilyStatus = ageAndFamilyStatus;
-this.confidence = confidence;
-this.contentSafeguards = contentSafeguards;
-this.disability = disability;
-this.genderIdentitySensitivity = genderIdentitySensitivity;
-this.genderInclusiveNouns = genderInclusiveNouns;
-this.genderInclusivePronouns = genderInclusivePronouns;
-this.grammar = grammar;
-this.healthyCommunication = healthyCommunication;
-this.passiveVoice = passiveVoice;
-this.raceEthnicityNationalitySensitivity = raceEthnicityNationalitySensitivity;
-this.sexualOrientationSensitivity = sexualOrientationSensitivity;
-this.spelling = spelling;
-this.substanceUseSensitivity = substanceUseSensitivity;
-this.unclearReference = unclearReference;
-this.wordiness = wordiness;
+        this.ageAndFamilyStatus = ageAndFamilyStatus;
+        this.confidence = confidence;
+        this.contentSafeguards = contentSafeguards;
+        this.disability = disability;
+        this.genderIdentitySensitivity = genderIdentitySensitivity;
+        this.genderInclusiveNouns = genderInclusiveNouns;
+        this.genderInclusivePronouns = genderInclusivePronouns;
+        this.grammar = grammar;
+        this.healthyCommunication = healthyCommunication;
+        this.passiveVoice = passiveVoice;
+        this.raceEthnicityNationalitySensitivity = raceEthnicityNationalitySensitivity;
+        this.sexualOrientationSensitivity = sexualOrientationSensitivity;
+        this.spelling = spelling;
+        this.substanceUseSensitivity = substanceUseSensitivity;
+        this.unclearReference = unclearReference;
+        this.wordiness = wordiness;
   }
 }

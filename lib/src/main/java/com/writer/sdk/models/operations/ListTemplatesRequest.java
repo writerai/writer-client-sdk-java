@@ -29,9 +29,8 @@ public class ListTemplatesRequest {
         return this;
     }
     
-
     public ListTemplatesRequest(@JsonProperty("teamId") Long teamId, @JsonProperty("templateId") String templateId) {
-    this.teamId = teamId;
-this.templateId = templateId;
+        this.teamId = teamId;
+        this.templateId = templateId;
   }
 }

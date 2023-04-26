@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.4.0'
+implementation 'com.writer.sdk:api:0.5.0'
 ```
 <!-- End SDK Installation -->
 
@@ -36,10 +36,10 @@ If you cannot see your secret API keys in the Dashboard, this means you do not h
 package hello.world;
 
 import com.writer.sdk.Writer;
-import com.writer.sdk.models.shared.Security;
 import com.writer.sdk.models.operations.DetectContentRequest;
 import com.writer.sdk.models.operations.DetectContentResponse;
 import com.writer.sdk.models.shared.ContentDetectorRequest;
+import com.writer.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -48,19 +48,21 @@ public class Application {
                 .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
-                .setOrganizationId(592845)
+                .setOrganizationId(592845L)
                 .build();
 
             DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("distinctio"););            
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 
-            if (res.contentDetectorResponses.isPresent()) {
+            if (res.contentDetectorResponses != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -68,72 +70,72 @@ public class Application {
 ## Available Resources and Operations
 
 
-### aiContentDetector
+### [aiContentDetector](docs/aicontentdetector/README.md)
 
-* `detect` - Content detector api
+* [detect](docs/aicontentdetector/README.md#detect) - Content detector api
 
-### billing
+### [billing](docs/billing/README.md)
 
-* `getSubscriptionDetails` - Get your organization subscription details
+* [getSubscriptionDetails](docs/billing/README.md#getsubscriptiondetails) - Get your organization subscription details
 
-### coWrite
+### [coWrite](docs/cowrite/README.md)
 
-* `generateContent` - Generate content using predefined templates
-* `listTemplates` - Get a list of your existing CoWrite templates
+* [generateContent](docs/cowrite/README.md#generatecontent) - Generate content using predefined templates
+* [listTemplates](docs/cowrite/README.md#listtemplates) - Get a list of your existing CoWrite templates
 
-### completions
+### [completions](docs/completions/README.md)
 
-* `create` - Create completion for LLM model
-* `createModelCustomizationCompletion` - Create completion for LLM customization model
+* [create](docs/completions/README.md#create) - Create completion for LLM model
+* [createModelCustomizationCompletion](docs/completions/README.md#createmodelcustomizationcompletion) - Create completion for LLM customization model
 
-### content
+### [content](docs/content/README.md)
 
-* `check` - Check your content against your preset styleguide.
-* `correct` - Apply the style guide suggestions directly to your content.
+* [check](docs/content/README.md#check) - Check your content against your preset styleguide.
+* [correct](docs/content/README.md#correct) - Apply the style guide suggestions directly to your content.
 
-### downloadTheCustomizedModel
+### [downloadTheCustomizedModel](docs/downloadthecustomizedmodel/README.md)
 
-* `fetchFile` - Download your fine-tuned model (available only for Palmyra Base and Palmyra Large)
+* [fetchFile](docs/downloadthecustomizedmodel/README.md#fetchfile) - Download your fine-tuned model (available only for Palmyra Base and Palmyra Large)
 
-### files
+### [files](docs/files/README.md)
 
-* `delete` - Delete file
-* `get` - Get file
-* `list` - List files
-* `upload` - Upload file
+* [delete](docs/files/README.md#delete) - Delete file
+* [get](docs/files/README.md#get) - Get file
+* [list](docs/files/README.md#list) - List files
+* [upload](docs/files/README.md#upload) - Upload file
 
-### modelCustomization
+### [modelCustomization](docs/modelcustomization/README.md)
 
-* `create` - Create model customization
-* `delete` - Delete Model customization
-* `get` - Get model customization
-* `list` - List model customizations
+* [create](docs/modelcustomization/README.md#create) - Create model customization
+* [delete](docs/modelcustomization/README.md#delete) - Delete Model customization
+* [get](docs/modelcustomization/README.md#get) - Get model customization
+* [list](docs/modelcustomization/README.md#list) - List model customizations
 
-### models
+### [models](docs/models/README.md)
 
-* `list` - List available LLM models
+* [list](docs/models/README.md#list) - List available LLM models
 
-### snippet
+### [snippet](docs/snippet/README.md)
 
-* `delete` - Delete snippets
-* `find` - Find snippets
-* `update` - Update snippets
+* [delete](docs/snippet/README.md#delete) - Delete snippets
+* [find](docs/snippet/README.md#find) - Find snippets
+* [update](docs/snippet/README.md#update) - Update snippets
 
-### styleguide
+### [styleguide](docs/styleguide/README.md)
 
-* `get` - Page details
-* `listPages` - List your styleguide pages
+* [get](docs/styleguide/README.md#get) - Page details
+* [listPages](docs/styleguide/README.md#listpages) - List your styleguide pages
 
-### terminology
+### [terminology](docs/terminology/README.md)
 
-* `add` - Add terms
-* `delete` - Delete terms
-* `find` - Find terms
-* `update` - Update terms
+* [add](docs/terminology/README.md#add) - Add terms
+* [delete](docs/terminology/README.md#delete) - Delete terms
+* [find](docs/terminology/README.md#find) - Find terms
+* [update](docs/terminology/README.md#update) - Update terms
 
-### user
+### [user](docs/user/README.md)
 
-* `list` - List users
+* [list](docs/user/README.md#list) - List users
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

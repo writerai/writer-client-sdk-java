@@ -25,6 +25,5 @@ public class LinkedTermCreate {
         return this;
     }
     
-
     public LinkedTermCreate(){}
 }

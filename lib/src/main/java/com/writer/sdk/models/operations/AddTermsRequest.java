@@ -29,9 +29,8 @@ public class AddTermsRequest {
         return this;
     }
     
-
     public AddTermsRequest(@JsonProperty("CreateTermsRequest") com.writer.sdk.models.shared.CreateTermsRequest createTermsRequest, @JsonProperty("teamId") Long teamId) {
-    this.createTermsRequest = createTermsRequest;
-this.teamId = teamId;
+        this.createTermsRequest = createTermsRequest;
+        this.teamId = teamId;
   }
 }

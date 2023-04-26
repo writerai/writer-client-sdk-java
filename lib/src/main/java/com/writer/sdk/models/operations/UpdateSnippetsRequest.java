@@ -36,8 +36,7 @@ public class UpdateSnippetsRequest {
         return this;
     }
     
-
     public UpdateSnippetsRequest(@JsonProperty("teamId") Long teamId) {
-    this.teamId = teamId;
+        this.teamId = teamId;
   }
 }

@@ -22,8 +22,7 @@ public class UploadFileRequest {
         return this;
     }
     
-
     public UploadFileRequest(@JsonProperty("UploadModelFileRequest") com.writer.sdk.models.shared.UploadModelFileRequest uploadModelFileRequest) {
-    this.uploadModelFileRequest = uploadModelFileRequest;
+        this.uploadModelFileRequest = uploadModelFileRequest;
   }
 }

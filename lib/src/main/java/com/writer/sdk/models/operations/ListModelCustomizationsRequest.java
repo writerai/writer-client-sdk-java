@@ -22,8 +22,7 @@ public class ListModelCustomizationsRequest {
         return this;
     }
     
-
     public ListModelCustomizationsRequest(@JsonProperty("modelId") String modelId) {
-    this.modelId = modelId;
+        this.modelId = modelId;
   }
 }

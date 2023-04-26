@@ -36,8 +36,7 @@ public class DeleteTermsRequest {
         return this;
     }
     
-
     public DeleteTermsRequest(@JsonProperty("teamId") Long teamId) {
-    this.teamId = teamId;
+        this.teamId = teamId;
   }
 }

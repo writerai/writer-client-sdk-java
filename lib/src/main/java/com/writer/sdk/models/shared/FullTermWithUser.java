@@ -152,17 +152,16 @@ public class FullTermWithUser {
         return this;
     }
     
-
     public FullTermWithUser(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("createdUser") TerminologyUser createdUser, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("highlight") Boolean highlight, @JsonProperty("id") Long id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("modifiedUser") TerminologyUser modifiedUser, @JsonProperty("term") String term, @JsonProperty("termBankId") Long termBankId, @JsonProperty("type") FullTermWithUserTypeEnum type) {
-    this.caseSensitive = caseSensitive;
-this.createdUser = createdUser;
-this.creationTime = creationTime;
-this.highlight = highlight;
-this.id = id;
-this.modificationTime = modificationTime;
-this.modifiedUser = modifiedUser;
-this.term = term;
-this.termBankId = termBankId;
-this.type = type;
+        this.caseSensitive = caseSensitive;
+        this.createdUser = createdUser;
+        this.creationTime = creationTime;
+        this.highlight = highlight;
+        this.id = id;
+        this.modificationTime = modificationTime;
+        this.modifiedUser = modifiedUser;
+        this.term = term;
+        this.termBankId = termBankId;
+        this.type = type;
   }
 }

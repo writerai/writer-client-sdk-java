@@ -56,13 +56,12 @@ public class ModelFile {
         return this;
     }
     
-
     public ModelFile(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("format") String format, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("numberOfSamples") Long numberOfSamples, @JsonProperty("size") Long size) {
-    this.createdAt = createdAt;
-this.format = format;
-this.id = id;
-this.name = name;
-this.numberOfSamples = numberOfSamples;
-this.size = size;
+        this.createdAt = createdAt;
+        this.format = format;
+        this.id = id;
+        this.name = name;
+        this.numberOfSamples = numberOfSamples;
+        this.size = size;
   }
 }

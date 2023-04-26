@@ -29,9 +29,8 @@ public class GenerateContentRequest {
         return this;
     }
     
-
     public GenerateContentRequest(@JsonProperty("GenerateTemplateRequest") com.writer.sdk.models.shared.GenerateTemplateRequest generateTemplateRequest, @JsonProperty("teamId") Long teamId) {
-    this.generateTemplateRequest = generateTemplateRequest;
-this.teamId = teamId;
+        this.generateTemplateRequest = generateTemplateRequest;
+        this.teamId = teamId;
   }
 }

@@ -71,8 +71,7 @@ public class FindSnippetsRequest {
         return this;
     }
     
-
     public FindSnippetsRequest(@JsonProperty("teamId") Long teamId) {
-    this.teamId = teamId;
+        this.teamId = teamId;
   }
 }

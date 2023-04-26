@@ -45,11 +45,10 @@ public class TermExample {
         return this;
     }
     
-
     public TermExample(@JsonProperty("example") String example, @JsonProperty("termBankId") Long termBankId, @JsonProperty("termId") Long termId, @JsonProperty("type") TermExampleTypeEnum type) {
-    this.example = example;
-this.termBankId = termBankId;
-this.termId = termId;
-this.type = type;
+        this.example = example;
+        this.termBankId = termBankId;
+        this.termId = termId;
+        this.type = type;
   }
 }

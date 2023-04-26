@@ -25,6 +25,5 @@ public class CreateTermsRequest {
         return this;
     }
     
-
     public CreateTermsRequest(){}
 }

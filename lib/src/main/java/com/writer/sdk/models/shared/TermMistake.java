@@ -53,11 +53,10 @@ public class TermMistake {
         return this;
     }
     
-
     public TermMistake(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("mistake") String mistake, @JsonProperty("termBankId") Long termBankId, @JsonProperty("termId") Long termId) {
-    this.caseSensitive = caseSensitive;
-this.mistake = mistake;
-this.termBankId = termBankId;
-this.termId = termId;
+        this.caseSensitive = caseSensitive;
+        this.mistake = mistake;
+        this.termBankId = termBankId;
+        this.termId = termId;
   }
 }
