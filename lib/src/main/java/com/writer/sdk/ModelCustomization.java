@@ -39,12 +39,6 @@ public class ModelCustomization {
 		this._globals = globals;
 	}
 
-    /**
-     * Create model customization
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.CreateModelCustomizationResponse create(com.writer.sdk.models.operations.CreateModelCustomizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization", request, this._globals);
@@ -93,12 +87,6 @@ public class ModelCustomization {
         return res;
     }
 
-    /**
-     * Delete Model customization
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.DeleteModelCustomizationResponse delete(com.writer.sdk.models.operations.DeleteModelCustomizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}", request, this._globals);
@@ -142,12 +130,6 @@ public class ModelCustomization {
         return res;
     }
 
-    /**
-     * Get model customization
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.GetModelCustomizationResponse get(com.writer.sdk.models.operations.GetModelCustomizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.GetModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}", request, this._globals);
@@ -191,12 +173,6 @@ public class ModelCustomization {
         return res;
     }
 
-    /**
-     * List model customizations
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.ListModelCustomizationsResponse list(com.writer.sdk.models.operations.ListModelCustomizationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListModelCustomizationsRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization", request, this._globals);

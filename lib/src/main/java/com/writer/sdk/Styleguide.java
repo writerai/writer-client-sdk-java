@@ -38,12 +38,6 @@ public class Styleguide {
 		this._globals = globals;
 	}
 
-    /**
-     * Page details
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.PageDetailsResponse get(com.writer.sdk.models.operations.PageDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.PageDetailsRequest.class, baseUrl, "/styleguide/page/{pageId}", request, this._globals);
@@ -87,12 +81,6 @@ public class Styleguide {
         return res;
     }
 
-    /**
-     * List your styleguide pages
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.ListPagesResponse listPages(com.writer.sdk.models.operations.ListPagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(baseUrl, "/styleguide/page");

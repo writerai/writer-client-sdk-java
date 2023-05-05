@@ -39,12 +39,6 @@ public class Files {
 		this._globals = globals;
 	}
 
-    /**
-     * Delete file
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.DeleteFileResponse delete(com.writer.sdk.models.operations.DeleteFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file/{fileId}", request, this._globals);
@@ -88,12 +82,6 @@ public class Files {
         return res;
     }
 
-    /**
-     * Get file
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.GetFileResponse get(com.writer.sdk.models.operations.GetFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.GetFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file/{fileId}", request, this._globals);
@@ -137,12 +125,6 @@ public class Files {
         return res;
     }
 
-    /**
-     * List files
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.ListFilesResponse list(com.writer.sdk.models.operations.ListFilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListFilesRequest.class, baseUrl, "/llm/organization/{organizationId}/file", request, this._globals);
@@ -186,12 +168,6 @@ public class Files {
         return res;
     }
 
-    /**
-     * Upload file
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.UploadFileResponse upload(com.writer.sdk.models.operations.UploadFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.UploadFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file", request, this._globals);

@@ -2,19 +2,20 @@ configVersion: 1.0.0
 management:
   docChecksum: 55a1df383e1db4d900f22f65b739c1d5
   docVersion: "1.6"
-  speakeasyVersion: 1.27.0
-  generationVersion: 2.24.0
+  speakeasyVersion: 1.29.0
+  generationVersion: 2.26.0
 generation:
   telemetryEnabled: false
   sdkClassName: writer
   singleTagPerOp: false
 java:
-  version: 0.7.0
+  version: 0.8.0
   artifactID: sdk
   companyEmail: info@mycompany.com
   companyName: My Company
   companyURL: www.mycompany.com
   githubURL: github.com/owner/repo
   groupID: com.writer
+  maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: api

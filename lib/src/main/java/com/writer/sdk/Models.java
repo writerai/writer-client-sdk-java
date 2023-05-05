@@ -36,12 +36,6 @@ public class Models {
 		this._globals = globals;
 	}
 
-    /**
-     * List available LLM models
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.ListModelsResponse list(com.writer.sdk.models.operations.ListModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListModelsRequest.class, baseUrl, "/llm/organization/{organizationId}/model", request, this._globals);

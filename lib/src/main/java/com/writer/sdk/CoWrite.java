@@ -38,12 +38,6 @@ public class CoWrite {
 		this._globals = globals;
 	}
 
-    /**
-     * Generate content using predefined templates
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.GenerateContentResponse generateContent(com.writer.sdk.models.operations.GenerateContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.GenerateContentRequest.class, baseUrl, "/cowrite/organization/{organizationId}/team/{teamId}/generate", request, this._globals);
@@ -92,12 +86,6 @@ public class CoWrite {
         return res;
     }
 
-    /**
-     * Get a list of your existing CoWrite templates
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.ListTemplatesResponse listTemplates(com.writer.sdk.models.operations.ListTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListTemplatesRequest.class, baseUrl, "/cowrite/organization/{organizationId}/team/{teamId}/template/{templateId}", request, this._globals);

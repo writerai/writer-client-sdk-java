@@ -37,12 +37,6 @@ public class Content {
 		this._globals = globals;
 	}
 
-    /**
-     * Check your content against your preset styleguide.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.ContentCheckResponse check(com.writer.sdk.models.operations.ContentCheckRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ContentCheckRequest.class, baseUrl, "/content/organization/{organizationId}/team/{teamId}/check", request, this._globals);
@@ -91,12 +85,6 @@ public class Content {
         return res;
     }
 
-    /**
-     * Apply the style guide suggestions directly to your content.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public com.writer.sdk.models.operations.ContentCorrectResponse correct(com.writer.sdk.models.operations.ContentCorrectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ContentCorrectRequest.class, baseUrl, "/content/organization/{organizationId}/team/{teamId}/correct", request, this._globals);
