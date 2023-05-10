@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailMessage {
     @JsonProperty("description")
     public String description;
+
     public FailMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class FailMessage {
     
     @JsonProperty("extras")
     public Object extras;
+
     public FailMessage withExtras(Object extras) {
         this.extras = extras;
         return this;
@@ -23,6 +25,7 @@ public class FailMessage {
     
     @JsonProperty("key")
     public String key;
+
     public FailMessage withKey(String key) {
         this.key = key;
         return this;

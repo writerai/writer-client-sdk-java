@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class CreateModelCustomizationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.CreateCustomizationRequest createCustomizationRequest;
+
     public CreateModelCustomizationRequest withCreateCustomizationRequest(com.writer.sdk.models.shared.CreateCustomizationRequest createCustomizationRequest) {
         this.createCustomizationRequest = createCustomizationRequest;
         return this;
@@ -17,6 +18,7 @@ public class CreateModelCustomizationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public CreateModelCustomizationRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -24,6 +26,7 @@ public class CreateModelCustomizationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public CreateModelCustomizationRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;

@@ -18,6 +18,7 @@ public class PagePublicApiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public PagePublicApiResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class PagePublicApiResponse {
     
     @JsonProperty("id")
     public Long id;
+
     public PagePublicApiResponse withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PagePublicApiResponse {
     
     @JsonProperty("order")
     public Long order;
+
     public PagePublicApiResponse withOrder(Long order) {
         this.order = order;
         return this;
@@ -40,6 +43,7 @@ public class PagePublicApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public SectionInfo section;
+
     public PagePublicApiResponse withSection(SectionInfo section) {
         this.section = section;
         return this;
@@ -47,6 +51,7 @@ public class PagePublicApiResponse {
     
     @JsonProperty("status")
     public PagePublicApiResponseStatusEnum status;
+
     public PagePublicApiResponse withStatus(PagePublicApiResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -54,6 +59,7 @@ public class PagePublicApiResponse {
     
     @JsonProperty("title")
     public String title;
+
     public PagePublicApiResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -63,6 +69,7 @@ public class PagePublicApiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public PagePublicApiResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -71,6 +78,7 @@ public class PagePublicApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public SimpleUser updatedBy;
+
     public PagePublicApiResponse withUpdatedBy(SimpleUser updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -78,6 +86,7 @@ public class PagePublicApiResponse {
     
     @JsonProperty("url")
     public String url;
+
     public PagePublicApiResponse withUrl(String url) {
         this.url = url;
         return this;

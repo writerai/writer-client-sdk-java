@@ -16,6 +16,7 @@ public class ModelFile {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ModelFile withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class ModelFile {
     
     @JsonProperty("format")
     public String format;
+
     public ModelFile withFormat(String format) {
         this.format = format;
         return this;
@@ -30,6 +32,7 @@ public class ModelFile {
     
     @JsonProperty("id")
     public String id;
+
     public ModelFile withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +40,7 @@ public class ModelFile {
     
     @JsonProperty("name")
     public String name;
+
     public ModelFile withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class ModelFile {
     
     @JsonProperty("numberOfSamples")
     public Long numberOfSamples;
+
     public ModelFile withNumberOfSamples(Long numberOfSamples) {
         this.numberOfSamples = numberOfSamples;
         return this;
@@ -51,6 +56,7 @@ public class ModelFile {
     
     @JsonProperty("size")
     public Long size;
+
     public ModelFile withSize(Long size) {
         this.size = size;
         return this;

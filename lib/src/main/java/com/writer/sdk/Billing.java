@@ -37,6 +37,11 @@ public class Billing {
 		this._globals = globals;
 	}
 
+    /**
+     * Get your organization subscription details
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.GetSubscriptionDetailsResponse getSubscriptionDetails() throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(baseUrl, "/billing/subscription");

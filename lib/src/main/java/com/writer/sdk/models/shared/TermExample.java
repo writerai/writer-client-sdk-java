@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TermExample {
     @JsonProperty("example")
     public String example;
+
     public TermExample withExample(String example) {
         this.example = example;
         return this;
@@ -19,6 +20,7 @@ public class TermExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TermExample withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class TermExample {
     
     @JsonProperty("termBankId")
     public Long termBankId;
+
     public TermExample withTermBankId(Long termBankId) {
         this.termBankId = termBankId;
         return this;
@@ -33,6 +36,7 @@ public class TermExample {
     
     @JsonProperty("termId")
     public Long termId;
+
     public TermExample withTermId(Long termId) {
         this.termId = termId;
         return this;
@@ -40,6 +44,7 @@ public class TermExample {
     
     @JsonProperty("type")
     public TermExampleTypeEnum type;
+
     public TermExample withType(TermExampleTypeEnum type) {
         this.type = type;
         return this;

@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class CreateCompletionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.CompletionRequest completionRequest;
+
     public CreateCompletionRequest withCompletionRequest(com.writer.sdk.models.shared.CompletionRequest completionRequest) {
         this.completionRequest = completionRequest;
         return this;
@@ -17,6 +18,7 @@ public class CreateCompletionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public CreateCompletionRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -24,6 +26,7 @@ public class CreateCompletionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public CreateCompletionRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;

@@ -36,6 +36,12 @@ public class DownloadTheCustomizedModel {
 		this._globals = globals;
 	}
 
+    /**
+     * Download your fine-tuned model (available only for Palmyra Base and Palmyra Large)
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.FetchCustomizedModelFileResponse fetchFile(com.writer.sdk.models.operations.FetchCustomizedModelFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.FetchCustomizedModelFileRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}/fetch", request, this._globals);

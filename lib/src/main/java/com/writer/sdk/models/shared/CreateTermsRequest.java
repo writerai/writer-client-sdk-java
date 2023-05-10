@@ -12,6 +12,7 @@ public class CreateTermsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failHandling")
     public CreateTermsRequestFailHandlingEnum failHandling;
+
     public CreateTermsRequest withFailHandling(CreateTermsRequestFailHandlingEnum failHandling) {
         this.failHandling = failHandling;
         return this;
@@ -20,6 +21,7 @@ public class CreateTermsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("models")
     public TermCreate[] models;
+
     public CreateTermsRequest withModels(TermCreate[] models) {
         this.models = models;
         return this;

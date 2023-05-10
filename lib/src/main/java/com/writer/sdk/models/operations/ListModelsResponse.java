@@ -10,6 +10,7 @@ import java.net.http.HttpResponse;
 public class ListModelsResponse {
     
     public String contentType;
+
     public ListModelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -20,6 +21,7 @@ public class ListModelsResponse {
      */
     
     public com.writer.sdk.models.shared.FailResponse failResponse;
+
     public ListModelsResponse withFailResponse(com.writer.sdk.models.shared.FailResponse failResponse) {
         this.failResponse = failResponse;
         return this;
@@ -27,6 +29,7 @@ public class ListModelsResponse {
     
     
     public com.writer.sdk.models.shared.GenerationModelsResponse generationModelsResponse;
+
     public ListModelsResponse withGenerationModelsResponse(com.writer.sdk.models.shared.GenerationModelsResponse generationModelsResponse) {
         this.generationModelsResponse = generationModelsResponse;
         return this;
@@ -34,6 +37,7 @@ public class ListModelsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ListModelsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -41,6 +45,7 @@ public class ListModelsResponse {
     
     
     public Integer statusCode;
+
     public ListModelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -48,6 +53,7 @@ public class ListModelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListModelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

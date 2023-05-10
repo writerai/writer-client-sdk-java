@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class FindTermsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public FindTermsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -17,6 +18,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public FindTermsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -24,6 +26,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public FindTermsRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -31,6 +34,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partOfSpeech")
     public FindTermsPartOfSpeechEnum partOfSpeech;
+
     public FindTermsRequest withPartOfSpeech(FindTermsPartOfSpeechEnum partOfSpeech) {
         this.partOfSpeech = partOfSpeech;
         return this;
@@ -38,6 +42,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public FindTermsSortFieldEnum sortField;
+
     public FindTermsRequest withSortField(FindTermsSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -45,6 +50,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public FindTermsSortOrderEnum sortOrder;
+
     public FindTermsRequest withSortOrder(FindTermsSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -52,6 +58,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String[] tags;
+
     public FindTermsRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -59,6 +66,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public Long teamId;
+
     public FindTermsRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -66,6 +74,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
     public String term;
+
     public FindTermsRequest withTerm(String term) {
         this.term = term;
         return this;
@@ -73,6 +82,7 @@ public class FindTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public FindTermsTypeEnum type;
+
     public FindTermsRequest withType(FindTermsTypeEnum type) {
         this.type = type;
         return this;

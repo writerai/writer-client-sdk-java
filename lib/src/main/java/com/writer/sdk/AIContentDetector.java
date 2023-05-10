@@ -37,6 +37,12 @@ public class AIContentDetector {
 		this._globals = globals;
 	}
 
+    /**
+     * Content detector api
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.DetectContentResponse detect(com.writer.sdk.models.operations.DetectContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DetectContentRequest.class, baseUrl, "/content/organization/{organizationId}/detect", request, this._globals);

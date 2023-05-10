@@ -16,6 +16,7 @@ import java.time.OffsetDateTime;
 public class Draft {
     @JsonProperty("body")
     public String body;
+
     public Draft withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class Draft {
     
     @JsonProperty("createdUserId")
     public Long createdUserId;
+
     public Draft withCreatedUserId(Long createdUserId) {
         this.createdUserId = createdUserId;
         return this;
@@ -32,6 +34,7 @@ public class Draft {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public Draft withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -39,6 +42,7 @@ public class Draft {
     
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Draft withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -46,6 +50,7 @@ public class Draft {
     
     @JsonProperty("documentId")
     public String documentId;
+
     public Draft withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -54,6 +59,7 @@ public class Draft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Draft withId(Long id) {
         this.id = id;
         return this;
@@ -61,6 +67,7 @@ public class Draft {
     
     @JsonProperty("inputs")
     public Object inputs;
+
     public Draft withInputs(Object inputs) {
         this.inputs = inputs;
         return this;
@@ -68,6 +75,7 @@ public class Draft {
     
     @JsonProperty("organizationId")
     public Long organizationId;
+
     public Draft withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -75,6 +83,7 @@ public class Draft {
     
     @JsonProperty("teamId")
     public Long teamId;
+
     public Draft withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -82,6 +91,7 @@ public class Draft {
     
     @JsonProperty("templateId")
     public String templateId;
+
     public Draft withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
@@ -90,6 +100,7 @@ public class Draft {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Draft withTitle(String title) {
         this.title = title;
         return this;

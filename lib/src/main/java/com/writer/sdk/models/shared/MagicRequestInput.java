@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MagicRequestInput {
     @JsonProperty("name")
     public String name;
+
     public MagicRequestInput withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class MagicRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String[] value;
+
     public MagicRequestInput withValue(String[] value) {
         this.value = value;
         return this;

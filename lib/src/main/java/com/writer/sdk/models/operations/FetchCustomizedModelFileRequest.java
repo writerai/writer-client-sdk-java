@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class FetchCustomizedModelFileRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customizationId")
     public String customizationId;
+
     public FetchCustomizedModelFileRequest withCustomizationId(String customizationId) {
         this.customizationId = customizationId;
         return this;
@@ -17,6 +18,7 @@ public class FetchCustomizedModelFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public FetchCustomizedModelFileRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -24,6 +26,7 @@ public class FetchCustomizedModelFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public FetchCustomizedModelFileRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;

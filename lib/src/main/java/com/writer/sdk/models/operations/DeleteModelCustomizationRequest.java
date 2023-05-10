@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class DeleteModelCustomizationRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customizationId")
     public String customizationId;
+
     public DeleteModelCustomizationRequest withCustomizationId(String customizationId) {
         this.customizationId = customizationId;
         return this;
@@ -17,6 +18,7 @@ public class DeleteModelCustomizationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public DeleteModelCustomizationRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -24,6 +26,7 @@ public class DeleteModelCustomizationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public DeleteModelCustomizationRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;

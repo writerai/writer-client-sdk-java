@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class GetFileRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public GetFileRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -17,6 +18,7 @@ public class GetFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public GetFileRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;

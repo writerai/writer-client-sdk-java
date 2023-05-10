@@ -16,6 +16,7 @@ import java.time.OffsetDateTime;
 public class SnippetWithUser {
     @JsonProperty("createdUser")
     public TerminologyUser createdUser;
+
     public SnippetWithUser withCreatedUser(TerminologyUser createdUser) {
         this.createdUser = createdUser;
         return this;
@@ -25,6 +26,7 @@ public class SnippetWithUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public SnippetWithUser withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +35,7 @@ public class SnippetWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SnippetWithUser withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +43,7 @@ public class SnippetWithUser {
     
     @JsonProperty("id")
     public String id;
+
     public SnippetWithUser withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +53,7 @@ public class SnippetWithUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modificationTime")
     public OffsetDateTime modificationTime;
+
     public SnippetWithUser withModificationTime(OffsetDateTime modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -56,6 +61,7 @@ public class SnippetWithUser {
     
     @JsonProperty("modifiedUser")
     public TerminologyUser modifiedUser;
+
     public SnippetWithUser withModifiedUser(TerminologyUser modifiedUser) {
         this.modifiedUser = modifiedUser;
         return this;
@@ -64,6 +70,7 @@ public class SnippetWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortcut")
     public String shortcut;
+
     public SnippetWithUser withShortcut(String shortcut) {
         this.shortcut = shortcut;
         return this;
@@ -71,6 +78,7 @@ public class SnippetWithUser {
     
     @JsonProperty("snippet")
     public String snippet;
+
     public SnippetWithUser withSnippet(String snippet) {
         this.snippet = snippet;
         return this;
@@ -79,6 +87,7 @@ public class SnippetWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public SnippetTagV2[] tags;
+
     public SnippetWithUser withTags(SnippetTagV2[] tags) {
         this.tags = tags;
         return this;

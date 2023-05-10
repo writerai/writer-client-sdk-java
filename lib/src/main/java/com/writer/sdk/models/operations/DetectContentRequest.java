@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class DetectContentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.ContentDetectorRequest contentDetectorRequest;
+
     public DetectContentRequest withContentDetectorRequest(com.writer.sdk.models.shared.ContentDetectorRequest contentDetectorRequest) {
         this.contentDetectorRequest = contentDetectorRequest;
         return this;
@@ -17,6 +18,7 @@ public class DetectContentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public DetectContentRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;

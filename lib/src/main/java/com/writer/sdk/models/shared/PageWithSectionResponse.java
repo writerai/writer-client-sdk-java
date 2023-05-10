@@ -17,6 +17,7 @@ public class PageWithSectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public PageWithSectionResponse withContent(String content) {
         this.content = content;
         return this;
@@ -26,6 +27,7 @@ public class PageWithSectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public PageWithSectionResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,6 +35,7 @@ public class PageWithSectionResponse {
     
     @JsonProperty("id")
     public Long id;
+
     public PageWithSectionResponse withId(Long id) {
         this.id = id;
         return this;
@@ -40,6 +43,7 @@ public class PageWithSectionResponse {
     
     @JsonProperty("order")
     public Long order;
+
     public PageWithSectionResponse withOrder(Long order) {
         this.order = order;
         return this;
@@ -48,6 +52,7 @@ public class PageWithSectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public SectionInfo section;
+
     public PageWithSectionResponse withSection(SectionInfo section) {
         this.section = section;
         return this;
@@ -55,6 +60,7 @@ public class PageWithSectionResponse {
     
     @JsonProperty("status")
     public PageWithSectionResponseStatusEnum status;
+
     public PageWithSectionResponse withStatus(PageWithSectionResponseStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +68,7 @@ public class PageWithSectionResponse {
     
     @JsonProperty("title")
     public String title;
+
     public PageWithSectionResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -71,6 +78,7 @@ public class PageWithSectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public PageWithSectionResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -79,6 +87,7 @@ public class PageWithSectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public SimpleUser updatedBy;
+
     public PageWithSectionResponse withUpdatedBy(SimpleUser updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -86,6 +95,7 @@ public class PageWithSectionResponse {
     
     @JsonProperty("url")
     public String url;
+
     public PageWithSectionResponse withUrl(String url) {
         this.url = url;
         return this;

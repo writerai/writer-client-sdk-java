@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApprovedTermExtensionCreate {
     @JsonProperty("capitalize")
     public Boolean capitalize;
+
     public ApprovedTermExtensionCreate withCapitalize(Boolean capitalize) {
         this.capitalize = capitalize;
         return this;
@@ -16,6 +17,7 @@ public class ApprovedTermExtensionCreate {
     
     @JsonProperty("fixCase")
     public Boolean fixCase;
+
     public ApprovedTermExtensionCreate withFixCase(Boolean fixCase) {
         this.fixCase = fixCase;
         return this;
@@ -23,6 +25,7 @@ public class ApprovedTermExtensionCreate {
     
     @JsonProperty("fixCommonMistakes")
     public Boolean fixCommonMistakes;
+
     public ApprovedTermExtensionCreate withFixCommonMistakes(Boolean fixCommonMistakes) {
         this.fixCommonMistakes = fixCommonMistakes;
         return this;

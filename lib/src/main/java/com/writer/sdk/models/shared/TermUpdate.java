@@ -12,6 +12,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedTermExtension")
     public ApprovedTermExtensionCreate approvedTermExtension;
+
     public TermUpdate withApprovedTermExtension(ApprovedTermExtensionCreate approvedTermExtension) {
         this.approvedTermExtension = approvedTermExtension;
         return this;
@@ -19,6 +20,7 @@ public class TermUpdate {
     
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public TermUpdate withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -27,6 +29,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TermUpdate withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +38,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("examples")
     public TermExampleCreate[] examples;
+
     public TermUpdate withExamples(TermExampleCreate[] examples) {
         this.examples = examples;
         return this;
@@ -43,6 +47,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlight")
     public Boolean highlight;
+
     public TermUpdate withHighlight(Boolean highlight) {
         this.highlight = highlight;
         return this;
@@ -50,6 +55,7 @@ public class TermUpdate {
     
     @JsonProperty("id")
     public Long id;
+
     public TermUpdate withId(Long id) {
         this.id = id;
         return this;
@@ -58,6 +64,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedTerms")
     public LinkedTermCreate[] linkedTerms;
+
     public TermUpdate withLinkedTerms(LinkedTermCreate[] linkedTerms) {
         this.linkedTerms = linkedTerms;
         return this;
@@ -66,6 +73,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mistakes")
     public TermMistakeCreate[] mistakes;
+
     public TermUpdate withMistakes(TermMistakeCreate[] mistakes) {
         this.mistakes = mistakes;
         return this;
@@ -74,6 +82,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
     public TermUpdatePosEnum pos;
+
     public TermUpdate withPos(TermUpdatePosEnum pos) {
         this.pos = pos;
         return this;
@@ -82,6 +91,7 @@ public class TermUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public TermTagCreate[] tags;
+
     public TermUpdate withTags(TermTagCreate[] tags) {
         this.tags = tags;
         return this;
@@ -89,6 +99,7 @@ public class TermUpdate {
     
     @JsonProperty("term")
     public String term;
+
     public TermUpdate withTerm(String term) {
         this.term = term;
         return this;
@@ -96,6 +107,7 @@ public class TermUpdate {
     
     @JsonProperty("type")
     public TermUpdateTypeEnum type;
+
     public TermUpdate withType(TermUpdateTypeEnum type) {
         this.type = type;
         return this;

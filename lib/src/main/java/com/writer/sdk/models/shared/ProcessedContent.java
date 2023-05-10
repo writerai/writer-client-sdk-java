@@ -12,6 +12,7 @@ public class ProcessedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public ContentIssue[] issues;
+
     public ProcessedContent withIssues(ContentIssue[] issues) {
         this.issues = issues;
         return this;

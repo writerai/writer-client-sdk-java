@@ -12,6 +12,7 @@ public class GenerationModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GenerationModelInfoResponse[] data;
+
     public GenerationModelsResponse withData(GenerationModelInfoResponse[] data) {
         this.data = data;
         return this;

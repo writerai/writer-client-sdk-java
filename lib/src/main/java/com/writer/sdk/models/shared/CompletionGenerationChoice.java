@@ -12,6 +12,7 @@ public class CompletionGenerationChoice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logprobs")
     public CompletionGenerationChoiceLogprobs logprobs;
+
     public CompletionGenerationChoice withLogprobs(CompletionGenerationChoiceLogprobs logprobs) {
         this.logprobs = logprobs;
         return this;
@@ -19,6 +20,7 @@ public class CompletionGenerationChoice {
     
     @JsonProperty("text")
     public String text;
+
     public CompletionGenerationChoice withText(String text) {
         this.text = text;
         return this;

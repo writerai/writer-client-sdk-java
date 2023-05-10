@@ -16,6 +16,7 @@ import java.time.OffsetDateTime;
 public class UserPublicResponse {
     @JsonProperty("accountStatus")
     public UserPublicResponseAccountStatusEnum accountStatus;
+
     public UserPublicResponse withAccountStatus(UserPublicResponseAccountStatusEnum accountStatus) {
         this.accountStatus = accountStatus;
         return this;
@@ -24,6 +25,7 @@ public class UserPublicResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar")
     public String avatar;
+
     public UserPublicResponse withAvatar(String avatar) {
         this.avatar = avatar;
         return this;
@@ -33,6 +35,7 @@ public class UserPublicResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public UserPublicResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +44,7 @@ public class UserPublicResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserPublicResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -48,6 +52,7 @@ public class UserPublicResponse {
     
     @JsonProperty("firstName")
     public String firstName;
+
     public UserPublicResponse withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -55,6 +60,7 @@ public class UserPublicResponse {
     
     @JsonProperty("fullName")
     public String fullName;
+
     public UserPublicResponse withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -62,6 +68,7 @@ public class UserPublicResponse {
     
     @JsonProperty("id")
     public Long id;
+
     public UserPublicResponse withId(Long id) {
         this.id = id;
         return this;
@@ -70,6 +77,7 @@ public class UserPublicResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invitedBy")
     public Long invitedBy;
+
     public UserPublicResponse withInvitedBy(Long invitedBy) {
         this.invitedBy = invitedBy;
         return this;
@@ -78,6 +86,7 @@ public class UserPublicResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public UserPublicResponse withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -88,6 +97,7 @@ public class UserPublicResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSeenOnline")
     public OffsetDateTime lastSeenOnline;
+
     public UserPublicResponse withLastSeenOnline(OffsetDateTime lastSeenOnline) {
         this.lastSeenOnline = lastSeenOnline;
         return this;
@@ -96,6 +106,7 @@ public class UserPublicResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public UserPublicResponse withTimezone(String timezone) {
         this.timezone = timezone;
         return this;

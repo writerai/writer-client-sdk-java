@@ -17,6 +17,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedTermExtension")
     public ApprovedTermExtension approvedTermExtension;
+
     public FullTermWithUser withApprovedTermExtension(ApprovedTermExtension approvedTermExtension) {
         this.approvedTermExtension = approvedTermExtension;
         return this;
@@ -25,6 +26,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backlinkedTerms")
     public FullLinkedTerm[] backlinkedTerms;
+
     public FullTermWithUser withBacklinkedTerms(FullLinkedTerm[] backlinkedTerms) {
         this.backlinkedTerms = backlinkedTerms;
         return this;
@@ -32,6 +34,7 @@ public class FullTermWithUser {
     
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public FullTermWithUser withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -39,6 +42,7 @@ public class FullTermWithUser {
     
     @JsonProperty("createdUser")
     public TerminologyUser createdUser;
+
     public FullTermWithUser withCreatedUser(TerminologyUser createdUser) {
         this.createdUser = createdUser;
         return this;
@@ -48,6 +52,7 @@ public class FullTermWithUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public FullTermWithUser withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +61,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FullTermWithUser withDescription(String description) {
         this.description = description;
         return this;
@@ -64,6 +70,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("examples")
     public TermExample[] examples;
+
     public FullTermWithUser withExamples(TermExample[] examples) {
         this.examples = examples;
         return this;
@@ -71,6 +78,7 @@ public class FullTermWithUser {
     
     @JsonProperty("highlight")
     public Boolean highlight;
+
     public FullTermWithUser withHighlight(Boolean highlight) {
         this.highlight = highlight;
         return this;
@@ -78,6 +86,7 @@ public class FullTermWithUser {
     
     @JsonProperty("id")
     public Long id;
+
     public FullTermWithUser withId(Long id) {
         this.id = id;
         return this;
@@ -86,6 +95,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedTerms")
     public FullLinkedTerm[] linkedTerms;
+
     public FullTermWithUser withLinkedTerms(FullLinkedTerm[] linkedTerms) {
         this.linkedTerms = linkedTerms;
         return this;
@@ -94,6 +104,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mistakes")
     public TermMistake[] mistakes;
+
     public FullTermWithUser withMistakes(TermMistake[] mistakes) {
         this.mistakes = mistakes;
         return this;
@@ -103,6 +114,7 @@ public class FullTermWithUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modificationTime")
     public OffsetDateTime modificationTime;
+
     public FullTermWithUser withModificationTime(OffsetDateTime modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -110,6 +122,7 @@ public class FullTermWithUser {
     
     @JsonProperty("modifiedUser")
     public TerminologyUser modifiedUser;
+
     public FullTermWithUser withModifiedUser(TerminologyUser modifiedUser) {
         this.modifiedUser = modifiedUser;
         return this;
@@ -118,6 +131,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
     public FullTermWithUserPosEnum pos;
+
     public FullTermWithUser withPos(FullTermWithUserPosEnum pos) {
         this.pos = pos;
         return this;
@@ -126,6 +140,7 @@ public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public TermTagResponse[] tags;
+
     public FullTermWithUser withTags(TermTagResponse[] tags) {
         this.tags = tags;
         return this;
@@ -133,6 +148,7 @@ public class FullTermWithUser {
     
     @JsonProperty("term")
     public String term;
+
     public FullTermWithUser withTerm(String term) {
         this.term = term;
         return this;
@@ -140,6 +156,7 @@ public class FullTermWithUser {
     
     @JsonProperty("termBankId")
     public Long termBankId;
+
     public FullTermWithUser withTermBankId(Long termBankId) {
         this.termBankId = termBankId;
         return this;
@@ -147,6 +164,7 @@ public class FullTermWithUser {
     
     @JsonProperty("type")
     public FullTermWithUserTypeEnum type;
+
     public FullTermWithUser withType(FullTermWithUserTypeEnum type) {
         this.type = type;
         return this;

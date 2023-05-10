@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Usage {
     @JsonProperty("coWriteWords")
     public UsageItem coWriteWords;
+
     public Usage withCoWriteWords(UsageItem coWriteWords) {
         this.coWriteWords = coWriteWords;
         return this;
@@ -16,6 +17,7 @@ public class Usage {
     
     @JsonProperty("team")
     public UsageItem team;
+
     public Usage withTeam(UsageItem team) {
         this.team = team;
         return this;
@@ -23,6 +25,7 @@ public class Usage {
     
     @JsonProperty("user")
     public UsageItem user;
+
     public Usage withUser(UsageItem user) {
         this.user = user;
         return this;
@@ -30,6 +33,7 @@ public class Usage {
     
     @JsonProperty("words")
     public UsageItem words;
+
     public Usage withWords(UsageItem words) {
         this.words = words;
         return this;

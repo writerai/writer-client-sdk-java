@@ -12,6 +12,7 @@ public class LinkedTermCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedTermId")
     public Long linkedTermId;
+
     public LinkedTermCreate withLinkedTermId(Long linkedTermId) {
         this.linkedTermId = linkedTermId;
         return this;
@@ -20,6 +21,7 @@ public class LinkedTermCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public LinkedTermCreate withReference(String reference) {
         this.reference = reference;
         return this;

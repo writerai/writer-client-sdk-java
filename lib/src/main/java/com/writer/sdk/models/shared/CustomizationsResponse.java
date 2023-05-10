@@ -12,6 +12,7 @@ public class CustomizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customizations")
     public ModelCustomization[] customizations;
+
     public CustomizationsResponse withCustomizations(ModelCustomization[] customizations) {
         this.customizations = customizations;
         return this;

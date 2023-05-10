@@ -37,6 +37,12 @@ public class Completions {
 		this._globals = globals;
 	}
 
+    /**
+     * Create completion for LLM model
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.CreateCompletionResponse create(com.writer.sdk.models.operations.CreateCompletionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateCompletionRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/completions", request, this._globals);
@@ -85,6 +91,12 @@ public class Completions {
         return res;
     }
 
+    /**
+     * Create completion for LLM customization model
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse createModelCustomizationCompletion(com.writer.sdk.models.operations.CreateModelCustomizationCompletionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateModelCustomizationCompletionRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}/completions", request, this._globals);

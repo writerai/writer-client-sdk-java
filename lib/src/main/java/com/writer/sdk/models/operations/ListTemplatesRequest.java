@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class ListTemplatesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public ListTemplatesRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -17,6 +18,7 @@ public class ListTemplatesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public Long teamId;
+
     public ListTemplatesRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -24,6 +26,7 @@ public class ListTemplatesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateId")
     public String templateId;
+
     public ListTemplatesRequest withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;

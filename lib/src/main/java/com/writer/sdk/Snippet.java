@@ -38,6 +38,12 @@ public class Snippet {
 		this._globals = globals;
 	}
 
+    /**
+     * Delete snippets
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.DeleteSnippetsResponse delete(com.writer.sdk.models.operations.DeleteSnippetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this._globals);
@@ -95,6 +101,12 @@ public class Snippet {
         return res;
     }
 
+    /**
+     * Find snippets
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.FindSnippetsResponse find(com.writer.sdk.models.operations.FindSnippetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.FindSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this._globals);
@@ -144,6 +156,12 @@ public class Snippet {
         return res;
     }
 
+    /**
+     * Update snippets
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.UpdateSnippetsResponse update(com.writer.sdk.models.operations.UpdateSnippetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.UpdateSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this._globals);

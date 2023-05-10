@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class UploadFileRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public com.writer.sdk.models.shared.UploadModelFileRequest uploadModelFileRequest;
+
     public UploadFileRequest withUploadModelFileRequest(com.writer.sdk.models.shared.UploadModelFileRequest uploadModelFileRequest) {
         this.uploadModelFileRequest = uploadModelFileRequest;
         return this;
@@ -17,6 +18,7 @@ public class UploadFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public UploadFileRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;

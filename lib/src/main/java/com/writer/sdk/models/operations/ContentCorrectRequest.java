@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class ContentCorrectRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.ContentRequest contentRequest;
+
     public ContentCorrectRequest withContentRequest(com.writer.sdk.models.shared.ContentRequest contentRequest) {
         this.contentRequest = contentRequest;
         return this;
@@ -17,6 +18,7 @@ public class ContentCorrectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public ContentCorrectRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -24,6 +26,7 @@ public class ContentCorrectRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public ContentCorrectRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -31,6 +34,7 @@ public class ContentCorrectRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public Long teamId;
+
     public ContentCorrectRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;

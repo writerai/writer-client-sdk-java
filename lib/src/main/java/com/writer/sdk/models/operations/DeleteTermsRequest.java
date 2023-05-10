@@ -10,6 +10,7 @@ import com.writer.sdk.utils.SpeakeasyMetadata;
 public class DeleteTermsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public DeleteTermsRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -17,6 +18,7 @@ public class DeleteTermsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public Long[] ids;
+
     public DeleteTermsRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -24,6 +26,7 @@ public class DeleteTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public DeleteTermsRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -31,6 +34,7 @@ public class DeleteTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public Long teamId;
+
     public DeleteTermsRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;

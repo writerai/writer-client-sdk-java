@@ -38,6 +38,12 @@ public class Terminology {
 		this._globals = globals;
 	}
 
+    /**
+     * Add terms
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.AddTermsResponse add(com.writer.sdk.models.operations.AddTermsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.AddTermsRequest.class, baseUrl, "/terminology/organization/{organizationId}/team/{teamId}", request, this._globals);
@@ -86,6 +92,12 @@ public class Terminology {
         return res;
     }
 
+    /**
+     * Delete terms
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.DeleteTermsResponse delete(com.writer.sdk.models.operations.DeleteTermsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteTermsRequest.class, baseUrl, "/terminology/organization/{organizationId}/team/{teamId}", request, this._globals);
@@ -143,6 +155,12 @@ public class Terminology {
         return res;
     }
 
+    /**
+     * Find terms
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.FindTermsResponse find(com.writer.sdk.models.operations.FindTermsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.FindTermsRequest.class, baseUrl, "/terminology/organization/{organizationId}/team/{teamId}", request, this._globals);
@@ -192,6 +210,12 @@ public class Terminology {
         return res;
     }
 
+    /**
+     * Update terms
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public com.writer.sdk.models.operations.UpdateTermsResponse update(com.writer.sdk.models.operations.UpdateTermsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.UpdateTermsRequest.class, baseUrl, "/terminology/organization/{organizationId}/team/{teamId}", request, this._globals);

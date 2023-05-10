@@ -12,6 +12,7 @@ public class ModelFilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public ModelFile[] files;
+
     public ModelFilesResponse withFiles(ModelFile[] files) {
         this.files = files;
         return this;
