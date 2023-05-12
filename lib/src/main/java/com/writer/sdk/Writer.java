@@ -73,8 +73,8 @@ public class Writer {
 	private com.writer.sdk.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.8.3";
-	private String _genVersion = "2.26.3";
+	private String _sdkVersion = "0.8.4";
+	private String _genVersion = "2.26.4";
 	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
 	
 	/**
