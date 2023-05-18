@@ -51,6 +51,7 @@ public class User {
         req.setMethod("GET");
         req.setURL(url);
         
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         java.util.List<NameValuePair> queryParams = com.writer.sdk.utils.Utils.getQueryParams(com.writer.sdk.models.operations.ListUsersRequest.class, request, this._globals);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
