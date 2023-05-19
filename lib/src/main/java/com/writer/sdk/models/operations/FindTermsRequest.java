@@ -33,25 +33,25 @@ public class FindTermsRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partOfSpeech")
-    public FindTermsPartOfSpeechEnum partOfSpeech;
+    public FindTermsPartOfSpeech partOfSpeech;
 
-    public FindTermsRequest withPartOfSpeech(FindTermsPartOfSpeechEnum partOfSpeech) {
+    public FindTermsRequest withPartOfSpeech(FindTermsPartOfSpeech partOfSpeech) {
         this.partOfSpeech = partOfSpeech;
         return this;
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
-    public FindTermsSortFieldEnum sortField;
+    public FindTermsSortField sortField;
 
-    public FindTermsRequest withSortField(FindTermsSortFieldEnum sortField) {
+    public FindTermsRequest withSortField(FindTermsSortField sortField) {
         this.sortField = sortField;
         return this;
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
-    public FindTermsSortOrderEnum sortOrder;
+    public FindTermsSortOrder sortOrder;
 
-    public FindTermsRequest withSortOrder(FindTermsSortOrderEnum sortOrder) {
+    public FindTermsRequest withSortOrder(FindTermsSortOrder sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
@@ -81,9 +81,9 @@ public class FindTermsRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
-    public FindTermsTypeEnum type;
+    public FindTermsType type;
 
-    public FindTermsRequest withType(FindTermsTypeEnum type) {
+    public FindTermsRequest withType(FindTermsType type) {
         this.type = type;
         return this;
     }

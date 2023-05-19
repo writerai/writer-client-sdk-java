@@ -8,9 +8,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ContentDetectorResponse {
     @JsonProperty("label")
-    public ContentDetectorResponseLabelEnum label;
+    public ContentDetectorResponseLabel label;
 
-    public ContentDetectorResponse withLabel(ContentDetectorResponseLabelEnum label) {
+    public ContentDetectorResponse withLabel(ContentDetectorResponseLabel label) {
         this.label = label;
         return this;
     }
@@ -23,7 +23,7 @@ public class ContentDetectorResponse {
         return this;
     }
     
-    public ContentDetectorResponse(@JsonProperty("label") ContentDetectorResponseLabelEnum label, @JsonProperty("score") Double score) {
+    public ContentDetectorResponse(@JsonProperty("label") ContentDetectorResponseLabel label, @JsonProperty("score") Double score) {
         this.label = label;
         this.score = score;
   }

@@ -24,14 +24,14 @@ public class GenerationModelInfoResponse {
     }
     
     @JsonProperty("type")
-    public GenerationModelInfoResponseTypeEnum type;
+    public GenerationModelInfoResponseType type;
 
-    public GenerationModelInfoResponse withType(GenerationModelInfoResponseTypeEnum type) {
+    public GenerationModelInfoResponse withType(GenerationModelInfoResponseType type) {
         this.type = type;
         return this;
     }
     
-    public GenerationModelInfoResponse(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") GenerationModelInfoResponseTypeEnum type) {
+    public GenerationModelInfoResponse(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") GenerationModelInfoResponseType type) {
         this.id = id;
         this.name = name;
         this.type = type;

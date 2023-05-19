@@ -15,9 +15,9 @@ import java.time.OffsetDateTime;
 
 public class UserPublicResponse {
     @JsonProperty("accountStatus")
-    public UserPublicResponseAccountStatusEnum accountStatus;
+    public UserPublicResponseAccountStatus accountStatus;
 
-    public UserPublicResponse withAccountStatus(UserPublicResponseAccountStatusEnum accountStatus) {
+    public UserPublicResponse withAccountStatus(UserPublicResponseAccountStatus accountStatus) {
         this.accountStatus = accountStatus;
         return this;
     }
@@ -112,7 +112,7 @@ public class UserPublicResponse {
         return this;
     }
     
-    public UserPublicResponse(@JsonProperty("accountStatus") UserPublicResponseAccountStatusEnum accountStatus, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("firstName") String firstName, @JsonProperty("fullName") String fullName, @JsonProperty("id") Long id) {
+    public UserPublicResponse(@JsonProperty("accountStatus") UserPublicResponseAccountStatus accountStatus, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("firstName") String firstName, @JsonProperty("fullName") String fullName, @JsonProperty("id") Long id) {
         this.accountStatus = accountStatus;
         this.createdAt = createdAt;
         this.firstName = firstName;

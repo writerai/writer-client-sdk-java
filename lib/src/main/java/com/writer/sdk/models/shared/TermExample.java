@@ -43,14 +43,14 @@ public class TermExample {
     }
     
     @JsonProperty("type")
-    public TermExampleTypeEnum type;
+    public TermExampleType type;
 
-    public TermExample withType(TermExampleTypeEnum type) {
+    public TermExample withType(TermExampleType type) {
         this.type = type;
         return this;
     }
     
-    public TermExample(@JsonProperty("example") String example, @JsonProperty("termBankId") Long termBankId, @JsonProperty("termId") Long termId, @JsonProperty("type") TermExampleTypeEnum type) {
+    public TermExample(@JsonProperty("example") String example, @JsonProperty("termBankId") Long termBankId, @JsonProperty("termId") Long termId, @JsonProperty("type") TermExampleType type) {
         this.example = example;
         this.termBankId = termBankId;
         this.termId = termId;

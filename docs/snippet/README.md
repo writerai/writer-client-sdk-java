@@ -66,8 +66,8 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.FindSnippetsRequest;
 import com.writer.sdk.models.operations.FindSnippetsResponse;
-import com.writer.sdk.models.operations.FindSnippetsSortFieldEnum;
-import com.writer.sdk.models.operations.FindSnippetsSortOrderEnum;
+import com.writer.sdk.models.operations.FindSnippetsSortField;
+import com.writer.sdk.models.operations.FindSnippetsSortOrder;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -87,8 +87,8 @@ public class Application {
                 shortcuts = new String[]{{
                     add("error"),
                 }};
-                sortField = FindSnippetsSortFieldEnum.MODIFICATION_TIME;
-                sortOrder = FindSnippetsSortOrderEnum.DESC;
+                sortField = FindSnippetsSortField.MODIFICATION_TIME;
+                sortOrder = FindSnippetsSortOrder.DESC;
                 tags = new String[]{{
                     add("reiciendis"),
                 }};

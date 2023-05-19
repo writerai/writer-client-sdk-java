@@ -36,9 +36,9 @@ public class ContentIssue {
     }
     
     @JsonProperty("service")
-    public ContentIssueServiceEnum service;
+    public ContentIssueService service;
 
-    public ContentIssue withService(ContentIssueServiceEnum service) {
+    public ContentIssue withService(ContentIssueService service) {
         this.service = service;
         return this;
     }
@@ -60,7 +60,7 @@ public class ContentIssue {
         return this;
     }
     
-    public ContentIssue(@JsonProperty("from") Long from, @JsonProperty("service") ContentIssueServiceEnum service, @JsonProperty("until") Long until) {
+    public ContentIssue(@JsonProperty("from") Long from, @JsonProperty("service") ContentIssueService service, @JsonProperty("until") Long until) {
         this.from = from;
         this.service = service;
         this.until = until;

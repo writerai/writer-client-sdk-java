@@ -73,9 +73,9 @@ public class TermCreate {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public TermCreatePosEnum pos;
+    public TermCreatePos pos;
 
-    public TermCreate withPos(TermCreatePosEnum pos) {
+    public TermCreate withPos(TermCreatePos pos) {
         this.pos = pos;
         return this;
     }
@@ -107,14 +107,14 @@ public class TermCreate {
     }
     
     @JsonProperty("type")
-    public TermCreateTypeEnum type;
+    public TermCreateType type;
 
-    public TermCreate withType(TermCreateTypeEnum type) {
+    public TermCreate withType(TermCreateType type) {
         this.type = type;
         return this;
     }
     
-    public TermCreate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("term") String term, @JsonProperty("type") TermCreateTypeEnum type) {
+    public TermCreate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("term") String term, @JsonProperty("type") TermCreateType type) {
         this.caseSensitive = caseSensitive;
         this.term = term;
         this.type = type;

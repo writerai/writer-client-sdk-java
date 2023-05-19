@@ -50,9 +50,9 @@ public class PagePublicApiResponse {
     }
     
     @JsonProperty("status")
-    public PagePublicApiResponseStatusEnum status;
+    public PagePublicApiResponseStatus status;
 
-    public PagePublicApiResponse withStatus(PagePublicApiResponseStatusEnum status) {
+    public PagePublicApiResponse withStatus(PagePublicApiResponseStatus status) {
         this.status = status;
         return this;
     }
@@ -92,7 +92,7 @@ public class PagePublicApiResponse {
         return this;
     }
     
-    public PagePublicApiResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("order") Long order, @JsonProperty("status") PagePublicApiResponseStatusEnum status, @JsonProperty("title") String title, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+    public PagePublicApiResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("order") Long order, @JsonProperty("status") PagePublicApiResponseStatus status, @JsonProperty("title") String title, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
         this.createdAt = createdAt;
         this.id = id;
         this.order = order;

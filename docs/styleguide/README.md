@@ -59,7 +59,7 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.ListPagesRequest;
 import com.writer.sdk.models.operations.ListPagesResponse;
-import com.writer.sdk.models.operations.ListPagesStatusEnum;
+import com.writer.sdk.models.operations.ListPagesStatus;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -75,7 +75,7 @@ public class Application {
             ListPagesRequest req = new ListPagesRequest() {{
                 limit = 97260L;
                 offset = 435865L;
-                status = ListPagesStatusEnum.OFFLINE;
+                status = ListPagesStatus.OFFLINE;
             }};            
 
             ListPagesResponse res = sdk.styleguide.listPages(req);

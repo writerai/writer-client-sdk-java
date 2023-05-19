@@ -79,9 +79,9 @@ public class Input {
     }
     
     @JsonProperty("type")
-    public InputTypeEnum type;
+    public InputType type;
 
-    public Input withType(InputTypeEnum type) {
+    public Input withType(InputType type) {
         this.type = type;
         return this;
     }
@@ -95,7 +95,7 @@ public class Input {
         return this;
     }
     
-    public Input(@JsonProperty("dynamic") Boolean dynamic, @JsonProperty("name") String name, @JsonProperty("required") Boolean required, @JsonProperty("type") InputTypeEnum type) {
+    public Input(@JsonProperty("dynamic") Boolean dynamic, @JsonProperty("name") String name, @JsonProperty("required") Boolean required, @JsonProperty("type") InputType type) {
         this.dynamic = dynamic;
         this.name = name;
         this.required = required;

@@ -16,14 +16,14 @@ public class TermExampleCreate {
     }
     
     @JsonProperty("type")
-    public TermExampleCreateTypeEnum type;
+    public TermExampleCreateType type;
 
-    public TermExampleCreate withType(TermExampleCreateTypeEnum type) {
+    public TermExampleCreate withType(TermExampleCreateType type) {
         this.type = type;
         return this;
     }
     
-    public TermExampleCreate(@JsonProperty("example") String example, @JsonProperty("type") TermExampleCreateTypeEnum type) {
+    public TermExampleCreate(@JsonProperty("example") String example, @JsonProperty("type") TermExampleCreateType type) {
         this.example = example;
         this.type = type;
   }

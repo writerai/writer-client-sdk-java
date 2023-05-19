@@ -49,17 +49,17 @@ public class FindSnippetsRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
-    public FindSnippetsSortFieldEnum sortField;
+    public FindSnippetsSortField sortField;
 
-    public FindSnippetsRequest withSortField(FindSnippetsSortFieldEnum sortField) {
+    public FindSnippetsRequest withSortField(FindSnippetsSortField sortField) {
         this.sortField = sortField;
         return this;
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
-    public FindSnippetsSortOrderEnum sortOrder;
+    public FindSnippetsSortOrder sortOrder;
 
-    public FindSnippetsRequest withSortOrder(FindSnippetsSortOrderEnum sortOrder) {
+    public FindSnippetsRequest withSortOrder(FindSnippetsSortOrder sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }

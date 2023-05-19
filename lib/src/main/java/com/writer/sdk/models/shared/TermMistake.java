@@ -36,9 +36,9 @@ public class TermMistake {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public TermMistakePosEnum pos;
+    public TermMistakePos pos;
 
-    public TermMistake withPos(TermMistakePosEnum pos) {
+    public TermMistake withPos(TermMistakePos pos) {
         this.pos = pos;
         return this;
     }

@@ -27,9 +27,9 @@ public class TermMistakeCreate {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public TermMistakeCreatePosEnum pos;
+    public TermMistakeCreatePos pos;
 
-    public TermMistakeCreate withPos(TermMistakeCreatePosEnum pos) {
+    public TermMistakeCreate withPos(TermMistakeCreatePos pos) {
         this.pos = pos;
         return this;
     }

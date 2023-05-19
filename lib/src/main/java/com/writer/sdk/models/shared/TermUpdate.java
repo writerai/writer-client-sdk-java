@@ -81,9 +81,9 @@ public class TermUpdate {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public TermUpdatePosEnum pos;
+    public TermUpdatePos pos;
 
-    public TermUpdate withPos(TermUpdatePosEnum pos) {
+    public TermUpdate withPos(TermUpdatePos pos) {
         this.pos = pos;
         return this;
     }
@@ -106,14 +106,14 @@ public class TermUpdate {
     }
     
     @JsonProperty("type")
-    public TermUpdateTypeEnum type;
+    public TermUpdateType type;
 
-    public TermUpdate withType(TermUpdateTypeEnum type) {
+    public TermUpdate withType(TermUpdateType type) {
         this.type = type;
         return this;
     }
     
-    public TermUpdate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("id") Long id, @JsonProperty("term") String term, @JsonProperty("type") TermUpdateTypeEnum type) {
+    public TermUpdate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("id") Long id, @JsonProperty("term") String term, @JsonProperty("type") TermUpdateType type) {
         this.caseSensitive = caseSensitive;
         this.id = id;
         this.term = term;

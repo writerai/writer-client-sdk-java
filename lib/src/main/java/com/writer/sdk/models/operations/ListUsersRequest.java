@@ -32,17 +32,17 @@ public class ListUsersRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
-    public ListUsersSortFieldEnum sortField;
+    public ListUsersSortField sortField;
 
-    public ListUsersRequest withSortField(ListUsersSortFieldEnum sortField) {
+    public ListUsersRequest withSortField(ListUsersSortField sortField) {
         this.sortField = sortField;
         return this;
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
-    public ListUsersSortOrderEnum sortOrder;
+    public ListUsersSortOrder sortOrder;
 
-    public ListUsersRequest withSortOrder(ListUsersSortOrderEnum sortOrder) {
+    public ListUsersRequest withSortOrder(ListUsersSortOrder sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }

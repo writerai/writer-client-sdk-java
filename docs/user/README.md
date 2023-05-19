@@ -20,8 +20,8 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.ListUsersRequest;
 import com.writer.sdk.models.operations.ListUsersResponse;
-import com.writer.sdk.models.operations.ListUsersSortFieldEnum;
-import com.writer.sdk.models.operations.ListUsersSortOrderEnum;
+import com.writer.sdk.models.operations.ListUsersSortField;
+import com.writer.sdk.models.operations.ListUsersSortOrder;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -38,8 +38,8 @@ public class Application {
                 limit = 486160L;
                 offset = 630448L;
                 search = "facilis";
-                sortField = ListUsersSortFieldEnum.LAST_SEEN;
-                sortOrder = ListUsersSortOrderEnum.ASC;
+                sortField = ListUsersSortField.LAST_SEEN;
+                sortOrder = ListUsersSortOrder.ASC;
             }};            
 
             ListUsersResponse res = sdk.user.list(req);

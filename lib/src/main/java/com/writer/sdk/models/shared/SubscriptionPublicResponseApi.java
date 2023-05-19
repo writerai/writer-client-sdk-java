@@ -31,9 +31,9 @@ public class SubscriptionPublicResponseApi {
     }
     
     @JsonProperty("productName")
-    public SubscriptionPublicResponseApiProductNameEnum productName;
+    public SubscriptionPublicResponseApiProductName productName;
 
-    public SubscriptionPublicResponseApi withProductName(SubscriptionPublicResponseApiProductNameEnum productName) {
+    public SubscriptionPublicResponseApi withProductName(SubscriptionPublicResponseApiProductName productName) {
         this.productName = productName;
         return this;
     }
@@ -47,9 +47,9 @@ public class SubscriptionPublicResponseApi {
     }
     
     @JsonProperty("status")
-    public SubscriptionPublicResponseApiStatusEnum status;
+    public SubscriptionPublicResponseApiStatus status;
 
-    public SubscriptionPublicResponseApi withStatus(SubscriptionPublicResponseApiStatusEnum status) {
+    public SubscriptionPublicResponseApi withStatus(SubscriptionPublicResponseApiStatus status) {
         this.status = status;
         return this;
     }
@@ -70,7 +70,7 @@ public class SubscriptionPublicResponseApi {
         return this;
     }
     
-    public SubscriptionPublicResponseApi(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("meta") MetaData meta, @JsonProperty("productName") SubscriptionPublicResponseApiProductNameEnum productName, @JsonProperty("seats") Long seats, @JsonProperty("status") SubscriptionPublicResponseApiStatusEnum status, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("usage") Usage usage) {
+    public SubscriptionPublicResponseApi(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("meta") MetaData meta, @JsonProperty("productName") SubscriptionPublicResponseApiProductName productName, @JsonProperty("seats") Long seats, @JsonProperty("status") SubscriptionPublicResponseApiStatus status, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("usage") Usage usage) {
         this.createdAt = createdAt;
         this.meta = meta;
         this.productName = productName;

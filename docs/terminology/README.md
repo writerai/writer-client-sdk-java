@@ -25,16 +25,16 @@ import com.writer.sdk.models.operations.AddTermsRequest;
 import com.writer.sdk.models.operations.AddTermsResponse;
 import com.writer.sdk.models.shared.ApprovedTermExtensionCreate;
 import com.writer.sdk.models.shared.CreateTermsRequest;
-import com.writer.sdk.models.shared.CreateTermsRequestFailHandlingEnum;
+import com.writer.sdk.models.shared.CreateTermsRequestFailHandling;
 import com.writer.sdk.models.shared.LinkedTermCreate;
 import com.writer.sdk.models.shared.Security;
 import com.writer.sdk.models.shared.TermCreate;
-import com.writer.sdk.models.shared.TermCreatePosEnum;
-import com.writer.sdk.models.shared.TermCreateTypeEnum;
+import com.writer.sdk.models.shared.TermCreatePos;
+import com.writer.sdk.models.shared.TermCreateType;
 import com.writer.sdk.models.shared.TermExampleCreate;
-import com.writer.sdk.models.shared.TermExampleCreateTypeEnum;
+import com.writer.sdk.models.shared.TermExampleCreateType;
 import com.writer.sdk.models.shared.TermMistakeCreate;
-import com.writer.sdk.models.shared.TermMistakeCreatePosEnum;
+import com.writer.sdk.models.shared.TermMistakeCreatePos;
 import com.writer.sdk.models.shared.TermTagCreate;
 
 public class Application {
@@ -48,9 +48,9 @@ public class Application {
                 .build();
 
             AddTermsRequest req = new AddTermsRequest(                new CreateTermsRequest() {{
-                                failHandling = CreateTermsRequestFailHandlingEnum.VALIDATE_ONLY;
+                                failHandling = CreateTermsRequestFailHandling.VALIDATE_ONLY;
                                 models = new com.writer.sdk.models.shared.TermCreate[]{{
-                                    add(new TermCreate(false, "ipsam", TermCreateTypeEnum.BANNED) {{
+                                    add(new TermCreate(false, "ipsam", TermCreateType.BANNED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
@@ -59,13 +59,13 @@ public class Application {
                                         caseSensitive = false;
                                         description = "facilis";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("repudiandae", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("repudiandae", TermExampleCreateType.GOOD) {{
                                                 example = "architecto";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
-                                            add(new TermExampleCreate("repellat", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("repellat", TermExampleCreateType.BAD) {{
                                                 example = "expedita";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
@@ -79,11 +79,11 @@ public class Application {
                                             add(new TermMistakeCreate(false, "magni") {{
                                                 caseSensitive = false;
                                                 mistake = "consequuntur";
-                                                pos = TermMistakeCreatePosEnum.ADVERB;
+                                                pos = TermMistakeCreatePos.ADVERB;
                                                 reference = "natus";
                                             }}),
                                         }};
-                                        pos = TermCreatePosEnum.NOUN;
+                                        pos = TermCreatePos.NOUN;
                                         reference = "quo";
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
                                             add(new TermTagCreate("maxime") {{
@@ -100,9 +100,9 @@ public class Application {
                                             }}),
                                         }};
                                         term = "maiores";
-                                        type = TermCreateTypeEnum.PENDING;
+                                        type = TermCreateType.PENDING;
                                     }}),
-                                    add(new TermCreate(false, "error", TermCreateTypeEnum.APPROVED) {{
+                                    add(new TermCreate(false, "error", TermCreateType.APPROVED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
@@ -111,17 +111,17 @@ public class Application {
                                         caseSensitive = false;
                                         description = "autem";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("nemo", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("nemo", TermExampleCreateType.BAD) {{
                                                 example = "eaque";
-                                                type = TermExampleCreateTypeEnum.BAD;
+                                                type = TermExampleCreateType.BAD;
                                             }}),
-                                            add(new TermExampleCreate("amet", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("amet", TermExampleCreateType.GOOD) {{
                                                 example = "perferendis";
-                                                type = TermExampleCreateTypeEnum.BAD;
+                                                type = TermExampleCreateType.BAD;
                                             }}),
-                                            add(new TermExampleCreate("hic", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("hic", TermExampleCreateType.BAD) {{
                                                 example = "cumque";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
@@ -143,11 +143,11 @@ public class Application {
                                             add(new TermMistakeCreate(false, "minus") {{
                                                 caseSensitive = false;
                                                 mistake = "eos";
-                                                pos = TermMistakeCreatePosEnum.NOUN;
+                                                pos = TermMistakeCreatePos.NOUN;
                                                 reference = "dolores";
                                             }}),
                                         }};
-                                        pos = TermCreatePosEnum.VERB;
+                                        pos = TermCreatePos.VERB;
                                         reference = "dolor";
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
                                             add(new TermTagCreate("hic") {{
@@ -164,9 +164,9 @@ public class Application {
                                             }}),
                                         }};
                                         term = "consequuntur";
-                                        type = TermCreateTypeEnum.BANNED;
+                                        type = TermCreateType.BANNED;
                                     }}),
-                                    add(new TermCreate(false, "ipsa", TermCreateTypeEnum.BANNED) {{
+                                    add(new TermCreate(false, "ipsa", TermCreateType.BANNED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
@@ -175,17 +175,17 @@ public class Application {
                                         caseSensitive = false;
                                         description = "occaecati";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("earum", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("earum", TermExampleCreateType.GOOD) {{
                                                 example = "adipisci";
-                                                type = TermExampleCreateTypeEnum.BAD;
+                                                type = TermExampleCreateType.BAD;
                                             }}),
-                                            add(new TermExampleCreate("deleniti", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("deleniti", TermExampleCreateType.BAD) {{
                                                 example = "iste";
-                                                type = TermExampleCreateTypeEnum.BAD;
+                                                type = TermExampleCreateType.BAD;
                                             }}),
-                                            add(new TermExampleCreate("libero", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("libero", TermExampleCreateType.BAD) {{
                                                 example = "provident";
-                                                type = TermExampleCreateTypeEnum.BAD;
+                                                type = TermExampleCreateType.BAD;
                                             }}),
                                         }};
                                         highlight = false;
@@ -203,11 +203,11 @@ public class Application {
                                             add(new TermMistakeCreate(false, "excepturi") {{
                                                 caseSensitive = false;
                                                 mistake = "qui";
-                                                pos = TermMistakeCreatePosEnum.NOUN;
+                                                pos = TermMistakeCreatePos.NOUN;
                                                 reference = "hic";
                                             }}),
                                         }};
-                                        pos = TermCreatePosEnum.ADVERB;
+                                        pos = TermCreatePos.ADVERB;
                                         reference = "voluptate";
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
                                             add(new TermTagCreate("amet") {{
@@ -218,7 +218,7 @@ public class Application {
                                             }}),
                                         }};
                                         term = "veritatis";
-                                        type = TermCreateTypeEnum.APPROVED;
+                                        type = TermCreateType.APPROVED;
                                     }}),
                                 }};
                             }};, 487838L);            
@@ -289,12 +289,12 @@ Find terms
 package hello.world;
 
 import com.writer.sdk.Writer;
-import com.writer.sdk.models.operations.FindTermsPartOfSpeechEnum;
+import com.writer.sdk.models.operations.FindTermsPartOfSpeech;
 import com.writer.sdk.models.operations.FindTermsRequest;
 import com.writer.sdk.models.operations.FindTermsResponse;
-import com.writer.sdk.models.operations.FindTermsSortFieldEnum;
-import com.writer.sdk.models.operations.FindTermsSortOrderEnum;
-import com.writer.sdk.models.operations.FindTermsTypeEnum;
+import com.writer.sdk.models.operations.FindTermsSortField;
+import com.writer.sdk.models.operations.FindTermsSortOrder;
+import com.writer.sdk.models.operations.FindTermsType;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -310,16 +310,16 @@ public class Application {
             FindTermsRequest req = new FindTermsRequest(854614L) {{
                 limit = 67249L;
                 offset = 743835L;
-                partOfSpeech = FindTermsPartOfSpeechEnum.ADVERB;
-                sortField = FindTermsSortFieldEnum.CREATION_TIME;
-                sortOrder = FindTermsSortOrderEnum.ASC;
+                partOfSpeech = FindTermsPartOfSpeech.ADVERB;
+                sortField = FindTermsSortField.CREATION_TIME;
+                sortOrder = FindTermsSortOrder.ASC;
                 tags = new String[]{{
                     add("deleniti"),
                     add("omnis"),
                     add("necessitatibus"),
                 }};
                 term = "distinctio";
-                type = FindTermsTypeEnum.PENDING;
+                type = FindTermsType.PENDING;
             }};            
 
             FindTermsResponse res = sdk.terminology.find(req);
@@ -350,15 +350,15 @@ import com.writer.sdk.models.shared.ApprovedTermExtensionCreate;
 import com.writer.sdk.models.shared.LinkedTermCreate;
 import com.writer.sdk.models.shared.Security;
 import com.writer.sdk.models.shared.TermExampleCreate;
-import com.writer.sdk.models.shared.TermExampleCreateTypeEnum;
+import com.writer.sdk.models.shared.TermExampleCreateType;
 import com.writer.sdk.models.shared.TermMistakeCreate;
-import com.writer.sdk.models.shared.TermMistakeCreatePosEnum;
+import com.writer.sdk.models.shared.TermMistakeCreatePos;
 import com.writer.sdk.models.shared.TermTagCreate;
 import com.writer.sdk.models.shared.TermUpdate;
-import com.writer.sdk.models.shared.TermUpdatePosEnum;
-import com.writer.sdk.models.shared.TermUpdateTypeEnum;
+import com.writer.sdk.models.shared.TermUpdatePos;
+import com.writer.sdk.models.shared.TermUpdateType;
 import com.writer.sdk.models.shared.UpdateTermsRequest;
-import com.writer.sdk.models.shared.UpdateTermsRequestFailHandlingEnum;
+import com.writer.sdk.models.shared.UpdateTermsRequestFailHandling;
 
 public class Application {
     public static void main(String[] args) {
@@ -371,9 +371,9 @@ public class Application {
                 .build();
 
             UpdateTermsRequest req = new UpdateTermsRequest(                new UpdateTermsRequest() {{
-                                failHandling = UpdateTermsRequestFailHandlingEnum.VALIDATE;
+                                failHandling = UpdateTermsRequestFailHandling.VALIDATE;
                                 models = new com.writer.sdk.models.shared.TermUpdate[]{{
-                                    add(new TermUpdate(false, 253941L, "enim", TermUpdateTypeEnum.APPROVED) {{
+                                    add(new TermUpdate(false, 253941L, "enim", TermUpdateType.APPROVED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
@@ -382,13 +382,13 @@ public class Application {
                                         caseSensitive = false;
                                         description = "saepe";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("amet", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("amet", TermExampleCreateType.BAD) {{
                                                 example = "aspernatur";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
-                                            add(new TermExampleCreate("saepe", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("saepe", TermExampleCreateType.GOOD) {{
                                                 example = "accusamus";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
@@ -411,17 +411,17 @@ public class Application {
                                             add(new TermMistakeCreate(false, "officiis") {{
                                                 caseSensitive = false;
                                                 mistake = "tempora";
-                                                pos = TermMistakeCreatePosEnum.VERB;
+                                                pos = TermMistakeCreatePos.VERB;
                                                 reference = "quod";
                                             }}),
                                             add(new TermMistakeCreate(false, "esse") {{
                                                 caseSensitive = false;
                                                 mistake = "qui";
-                                                pos = TermMistakeCreatePosEnum.ADVERB;
+                                                pos = TermMistakeCreatePos.ADVERB;
                                                 reference = "a";
                                             }}),
                                         }};
-                                        pos = TermUpdatePosEnum.ADVERB;
+                                        pos = TermUpdatePos.ADVERB;
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
                                             add(new TermTagCreate("quisquam") {{
                                                 tag = "ipsum";
@@ -431,9 +431,9 @@ public class Application {
                                             }}),
                                         }};
                                         term = "tempore";
-                                        type = TermUpdateTypeEnum.PENDING;
+                                        type = TermUpdateType.PENDING;
                                     }}),
-                                    add(new TermUpdate(false, 355613L, "nam", TermUpdateTypeEnum.PENDING) {{
+                                    add(new TermUpdate(false, 355613L, "nam", TermUpdateType.PENDING) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
@@ -442,17 +442,17 @@ public class Application {
                                         caseSensitive = false;
                                         description = "sapiente";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("expedita", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("expedita", TermExampleCreateType.GOOD) {{
                                                 example = "nihil";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
-                                            add(new TermExampleCreate("libero", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("libero", TermExampleCreateType.GOOD) {{
                                                 example = "sed";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
-                                            add(new TermExampleCreate("ipsum", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("ipsum", TermExampleCreateType.GOOD) {{
                                                 example = "deserunt";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
@@ -475,26 +475,26 @@ public class Application {
                                             add(new TermMistakeCreate(false, "facilis") {{
                                                 caseSensitive = false;
                                                 mistake = "aspernatur";
-                                                pos = TermMistakeCreatePosEnum.NOUN;
+                                                pos = TermMistakeCreatePos.NOUN;
                                                 reference = "distinctio";
                                             }}),
                                             add(new TermMistakeCreate(false, "temporibus") {{
                                                 caseSensitive = false;
                                                 mistake = "aliquid";
-                                                pos = TermMistakeCreatePosEnum.VERB;
+                                                pos = TermMistakeCreatePos.VERB;
                                                 reference = "molestias";
                                             }}),
                                         }};
-                                        pos = TermUpdatePosEnum.NOUN;
+                                        pos = TermUpdatePos.NOUN;
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
                                             add(new TermTagCreate("magni") {{
                                                 tag = "fugit";
                                             }}),
                                         }};
                                         term = "odio";
-                                        type = TermUpdateTypeEnum.APPROVED;
+                                        type = TermUpdateType.APPROVED;
                                     }}),
-                                    add(new TermUpdate(false, 231701L, "vero", TermUpdateTypeEnum.PENDING) {{
+                                    add(new TermUpdate(false, 231701L, "vero", TermUpdateType.PENDING) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
@@ -503,21 +503,21 @@ public class Application {
                                         caseSensitive = false;
                                         description = "voluptatem";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("et", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("et", TermExampleCreateType.BAD) {{
                                                 example = "soluta";
-                                                type = TermExampleCreateTypeEnum.BAD;
+                                                type = TermExampleCreateType.BAD;
                                             }}),
-                                            add(new TermExampleCreate("nobis", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("nobis", TermExampleCreateType.BAD) {{
                                                 example = "ipsum";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
-                                            add(new TermExampleCreate("aperiam", TermExampleCreateTypeEnum.BAD) {{
+                                            add(new TermExampleCreate("aperiam", TermExampleCreateType.BAD) {{
                                                 example = "tempore";
-                                                type = TermExampleCreateTypeEnum.BAD;
+                                                type = TermExampleCreateType.BAD;
                                             }}),
-                                            add(new TermExampleCreate("labore", TermExampleCreateTypeEnum.GOOD) {{
+                                            add(new TermExampleCreate("labore", TermExampleCreateType.GOOD) {{
                                                 example = "dolorem";
-                                                type = TermExampleCreateTypeEnum.GOOD;
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
@@ -532,23 +532,23 @@ public class Application {
                                             add(new TermMistakeCreate(false, "repellendus") {{
                                                 caseSensitive = false;
                                                 mistake = "itaque";
-                                                pos = TermMistakeCreatePosEnum.NOUN;
+                                                pos = TermMistakeCreatePos.NOUN;
                                                 reference = "est";
                                             }}),
                                             add(new TermMistakeCreate(false, "facilis") {{
                                                 caseSensitive = false;
                                                 mistake = "porro";
-                                                pos = TermMistakeCreatePosEnum.ADJECTIVE;
+                                                pos = TermMistakeCreatePos.ADJECTIVE;
                                                 reference = "ut";
                                             }}),
                                             add(new TermMistakeCreate(false, "laudantium") {{
                                                 caseSensitive = false;
                                                 mistake = "cupiditate";
-                                                pos = TermMistakeCreatePosEnum.NOUN;
+                                                pos = TermMistakeCreatePos.NOUN;
                                                 reference = "quae";
                                             }}),
                                         }};
-                                        pos = TermUpdatePosEnum.VERB;
+                                        pos = TermUpdatePos.VERB;
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
                                             add(new TermTagCreate("quisquam") {{
                                                 tag = "voluptatibus";
@@ -561,7 +561,7 @@ public class Application {
                                             }}),
                                         }};
                                         term = "delectus";
-                                        type = TermUpdateTypeEnum.BANNED;
+                                        type = TermUpdateType.BANNED;
                                     }}),
                                 }};
                             }};, 492268L) {{

@@ -11,9 +11,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTermsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failHandling")
-    public UpdateTermsRequestFailHandlingEnum failHandling;
+    public UpdateTermsRequestFailHandling failHandling;
 
-    public UpdateTermsRequest withFailHandling(UpdateTermsRequestFailHandlingEnum failHandling) {
+    public UpdateTermsRequest withFailHandling(UpdateTermsRequestFailHandling failHandling) {
         this.failHandling = failHandling;
         return this;
     }

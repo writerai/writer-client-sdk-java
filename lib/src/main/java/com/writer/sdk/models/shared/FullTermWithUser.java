@@ -130,9 +130,9 @@ public class FullTermWithUser {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public FullTermWithUserPosEnum pos;
+    public FullTermWithUserPos pos;
 
-    public FullTermWithUser withPos(FullTermWithUserPosEnum pos) {
+    public FullTermWithUser withPos(FullTermWithUserPos pos) {
         this.pos = pos;
         return this;
     }
@@ -163,14 +163,14 @@ public class FullTermWithUser {
     }
     
     @JsonProperty("type")
-    public FullTermWithUserTypeEnum type;
+    public FullTermWithUserType type;
 
-    public FullTermWithUser withType(FullTermWithUserTypeEnum type) {
+    public FullTermWithUser withType(FullTermWithUserType type) {
         this.type = type;
         return this;
     }
     
-    public FullTermWithUser(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("createdUser") TerminologyUser createdUser, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("highlight") Boolean highlight, @JsonProperty("id") Long id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("modifiedUser") TerminologyUser modifiedUser, @JsonProperty("term") String term, @JsonProperty("termBankId") Long termBankId, @JsonProperty("type") FullTermWithUserTypeEnum type) {
+    public FullTermWithUser(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("createdUser") TerminologyUser createdUser, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("highlight") Boolean highlight, @JsonProperty("id") Long id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("modifiedUser") TerminologyUser modifiedUser, @JsonProperty("term") String term, @JsonProperty("termBankId") Long termBankId, @JsonProperty("type") FullTermWithUserType type) {
         this.caseSensitive = caseSensitive;
         this.createdUser = createdUser;
         this.creationTime = creationTime;
