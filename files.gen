@@ -1,3 +1,4 @@
+lib/src/main/java/com/writer/sdk/SDKConfiguration.java
 lib/src/main/java/com/writer/sdk/AIContentDetector.java
 lib/src/main/java/com/writer/sdk/Billing.java
 lib/src/main/java/com/writer/sdk/CoWrite.java

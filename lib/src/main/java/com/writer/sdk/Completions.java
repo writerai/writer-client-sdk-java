@@ -19,22 +19,10 @@ import java.util.stream.Collectors;
  */
 public class Completions {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
-	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
+	private SDKConfiguration sdkConfiguration;
 
-	public Completions(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion, java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
-		this._globals = globals;
+	public Completions(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -44,8 +32,8 @@ public class Completions {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.CreateCompletionResponse create(com.writer.sdk.models.operations.CreateCompletionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateCompletionRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/completions", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateCompletionRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/completions", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -57,9 +45,9 @@ public class Completions {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -100,8 +88,8 @@ public class Completions {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse createModelCustomizationCompletion(com.writer.sdk.models.operations.CreateModelCustomizationCompletionRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateModelCustomizationCompletionRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}/completions", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateModelCustomizationCompletionRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}/completions", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -113,9 +101,9 @@ public class Completions {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json;q=1, application/json;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
