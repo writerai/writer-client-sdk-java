@@ -32,7 +32,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("enim") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(607831L)
                 .build();
@@ -78,7 +78,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("dolorem") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(635059L)
                 .build();
@@ -116,7 +116,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("mollitia") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(581850L)
                 .build();
@@ -154,7 +154,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("quam") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(474697L)
                 .build();

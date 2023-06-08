@@ -29,7 +29,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("distinctio") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(799203L)
                 .build();

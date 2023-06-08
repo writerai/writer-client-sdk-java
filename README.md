@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.16.1'
+implementation 'com.writer.sdk:api:0.17.0'
 ```
 <!-- End SDK Installation -->
 
@@ -46,7 +46,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("corrupti") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(592845L)
                 .build();

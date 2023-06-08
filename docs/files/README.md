@@ -30,7 +30,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("quidem") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(99280L)
                 .build();
@@ -68,7 +68,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("reiciendis") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(666767L)
                 .build();
@@ -106,7 +106,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("laborum") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(170909L)
                 .build();
@@ -146,7 +146,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security("dolorem") {{
-                    apiKey = "YOUR_API_KEY_HERE";
+                    apiKey = "";
                 }})
                 .setOrganizationId(358152L)
                 .build();
