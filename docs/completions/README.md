@@ -36,17 +36,17 @@ public class Application {
 
             CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("maiores") {{
                                 bestOf = 473608L;
-                                frequencyPenalty = 7991.59;
+                                frequencyPenalty = 7991.59d;
                                 logprobs = 800911L;
                                 maxTokens = 461479L;
                                 minTokens = 520478L;
                                 n = 780529L;
-                                presencePenalty = 6788.8;
+                                presencePenalty = 6788.8d;
                                 stop = new String[]{{
                                     add("nam"),
                                 }};
-                                temperature = 6399.21;
-                                topP = 5820.2;
+                                temperature = 6399.21d;
+                                topP = 5820.2d;
                             }};, "fugit");            
 
             CreateCompletionResponse res = sdk.completions.create(req);
@@ -88,19 +88,19 @@ public class Application {
 
             CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("optio") {{
                                 bestOf = 521848L;
-                                frequencyPenalty = 1059.07;
+                                frequencyPenalty = 1059.07d;
                                 logprobs = 414662L;
                                 maxTokens = 473600L;
                                 minTokens = 264555L;
                                 n = 186332L;
-                                presencePenalty = 7742.34;
+                                presencePenalty = 7742.34d;
                                 stop = new String[]{{
                                     add("esse"),
                                     add("ipsum"),
                                     add("excepturi"),
                                 }};
-                                temperature = 1352.18;
-                                topP = 187.89;
+                                temperature = 1352.18d;
+                                topP = 187.89d;
                             }};, "ad", "natus");            
 
             CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);

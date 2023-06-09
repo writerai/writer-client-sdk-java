@@ -42,7 +42,7 @@ public class Application {
                                 batchSize = 38425L;
                                 description = "iure";
                                 epochs = 634274L;
-                                learningRate = 9883.74;
+                                learningRate = 9883.74d;
                                 promptTemplate = "sapiente";
                                 validationDatasetFileId = "architecto";
                             }};, "mollitia");            
