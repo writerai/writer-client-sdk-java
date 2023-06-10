@@ -52,9 +52,9 @@ public class DeleteFileResponse {
     }
     
     
-    public java.util.Map<String, Object> deleteFile200ApplicationJSONObject;
+    public DeleteFile200ApplicationJSON deleteFile200ApplicationJSONObject;
 
-    public DeleteFileResponse withDeleteFile200ApplicationJSONObject(java.util.Map<String, Object> deleteFile200ApplicationJSONObject) {
+    public DeleteFileResponse withDeleteFile200ApplicationJSONObject(DeleteFile200ApplicationJSON deleteFile200ApplicationJSONObject) {
         this.deleteFile200ApplicationJSONObject = deleteFile200ApplicationJSONObject;
         return this;
     }

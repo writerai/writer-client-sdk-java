@@ -52,9 +52,9 @@ public class DeleteModelCustomizationResponse {
     }
     
     
-    public java.util.Map<String, Object> deleteModelCustomization200ApplicationJSONObject;
+    public DeleteModelCustomization200ApplicationJSON deleteModelCustomization200ApplicationJSONObject;
 
-    public DeleteModelCustomizationResponse withDeleteModelCustomization200ApplicationJSONObject(java.util.Map<String, Object> deleteModelCustomization200ApplicationJSONObject) {
+    public DeleteModelCustomizationResponse withDeleteModelCustomization200ApplicationJSONObject(DeleteModelCustomization200ApplicationJSON deleteModelCustomization200ApplicationJSONObject) {
         this.deleteModelCustomization200ApplicationJSONObject = deleteModelCustomization200ApplicationJSONObject;
         return this;
     }

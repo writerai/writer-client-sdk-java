@@ -1,0 +1,10 @@
+# GenerateContentRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `generateTemplateRequest`                                                                              | [com.writer.sdk.models.shared.GenerateTemplateRequest](../../models/shared/GenerateTemplateRequest.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `organizationId`                                                                                       | *Long*                                                                                                 | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `teamId`                                                                                               | *Long*                                                                                                 | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

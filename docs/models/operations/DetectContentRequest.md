@@ -1,0 +1,9 @@
+# DetectContentRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `contentDetectorRequest`                                                                             | [com.writer.sdk.models.shared.ContentDetectorRequest](../../models/shared/ContentDetectorRequest.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `organizationId`                                                                                     | *Long*                                                                                               | :heavy_minus_sign:                                                                                   | N/A                                                                                                  |

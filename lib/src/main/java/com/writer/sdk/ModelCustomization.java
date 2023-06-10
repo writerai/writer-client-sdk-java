@@ -4,7 +4,6 @@
 
 package com.writer.sdk;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.writer.sdk.utils.HTTPClient;
 import com.writer.sdk.utils.HTTPRequest;
@@ -117,7 +116,7 @@ public class ModelCustomization {
             
             if (com.writer.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                com.writer.sdk.models.operations.DeleteModelCustomization200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.operations.DeleteModelCustomization200ApplicationJSON.class);
                 res.deleteModelCustomization200ApplicationJSONObject = out;
             }
         }
