@@ -6,6 +6,7 @@ package com.writer.sdk.models.operations;
 
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
+
 public class ListPagesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;

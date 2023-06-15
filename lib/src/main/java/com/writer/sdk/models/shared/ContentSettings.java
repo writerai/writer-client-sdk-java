@@ -6,6 +6,7 @@ package com.writer.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class ContentSettings {
     @JsonProperty("ageAndFamilyStatus")
     public Boolean ageAndFamilyStatus;

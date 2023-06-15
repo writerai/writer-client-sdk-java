@@ -7,6 +7,7 @@ package com.writer.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
+
 public class ListModelCustomizationsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;

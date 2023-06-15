@@ -13,6 +13,7 @@ import com.writer.sdk.utils.DateTimeDeserializer;
 import com.writer.sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+
 public class UserPublicResponse {
     @JsonProperty("accountStatus")
     public UserPublicResponseAccountStatus accountStatus;

@@ -7,6 +7,7 @@ package com.writer.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
+
 public class UploadModelFileRequest {
     @SpeakeasyMetadata("multipartForm:file")
     public UploadModelFileRequestFile file;

@@ -7,6 +7,7 @@ package com.writer.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
+
 public class GenerateContentResponse {
     
     public String contentType;

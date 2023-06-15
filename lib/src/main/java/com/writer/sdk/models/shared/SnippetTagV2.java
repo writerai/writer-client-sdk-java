@@ -6,6 +6,7 @@ package com.writer.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class SnippetTagV2 {
     @JsonProperty("tag")
     public String tag;

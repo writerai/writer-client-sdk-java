@@ -6,6 +6,7 @@ package com.writer.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class SectionInfo {
     @JsonProperty("id")
     public Long id;

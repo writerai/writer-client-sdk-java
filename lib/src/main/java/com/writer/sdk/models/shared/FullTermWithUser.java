@@ -13,6 +13,7 @@ import com.writer.sdk.utils.DateTimeDeserializer;
 import com.writer.sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+
 public class FullTermWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedTermExtension")

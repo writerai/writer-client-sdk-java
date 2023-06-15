@@ -6,6 +6,7 @@ package com.writer.sdk.models.operations;
 
 
 
+
 public class DeleteFile200ApplicationJSON {
     public DeleteFile200ApplicationJSON(){}
 }

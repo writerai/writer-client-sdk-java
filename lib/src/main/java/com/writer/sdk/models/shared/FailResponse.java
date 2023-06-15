@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * FailResponse - Bad Request
  */
+
 public class FailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")

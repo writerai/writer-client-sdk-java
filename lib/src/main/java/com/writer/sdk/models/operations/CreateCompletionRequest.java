@@ -7,6 +7,7 @@ package com.writer.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
 
+
 public class CreateCompletionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.CompletionRequest completionRequest;
