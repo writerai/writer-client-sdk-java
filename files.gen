@@ -14,7 +14,6 @@ lib/src/main/java/com/writer/sdk/Terminology.java
 lib/src/main/java/com/writer/sdk/User.java
 lib/src/main/java/com/writer/sdk/Writer.java
 .gitattributes
-.gitignore
 gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
