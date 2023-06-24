@@ -66,7 +66,11 @@ public class Writer {
     /**
      * Methods related to User
      */
-    public User user;	
+    public User user;
+    /**
+     * Methods related to document
+     */
+    public Document document;	
 
 	private SDKConfiguration sdkConfiguration;
 
@@ -213,5 +217,7 @@ public class Writer {
 		this.terminology = new Terminology(this.sdkConfiguration);
 		
 		this.user = new User(this.sdkConfiguration);
+		
+		this.document = new Document(this.sdkConfiguration);
 	}
 }
