@@ -11,11 +11,13 @@ import com.writer.sdk.utils.DateTimeDeserializer;
 import com.writer.sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+
 public class SubscriptionPublicResponseApi {
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SubscriptionPublicResponseApi withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,34 +25,39 @@ public class SubscriptionPublicResponseApi {
     
     @JsonProperty("meta")
     public MetaData meta;
+
     public SubscriptionPublicResponseApi withMeta(MetaData meta) {
         this.meta = meta;
         return this;
     }
     
     @JsonProperty("productName")
-    public SubscriptionPublicResponseApiProductNameEnum productName;
-    public SubscriptionPublicResponseApi withProductName(SubscriptionPublicResponseApiProductNameEnum productName) {
+    public SubscriptionPublicResponseApiProductName productName;
+
+    public SubscriptionPublicResponseApi withProductName(SubscriptionPublicResponseApiProductName productName) {
         this.productName = productName;
         return this;
     }
     
     @JsonProperty("seats")
     public Long seats;
+
     public SubscriptionPublicResponseApi withSeats(Long seats) {
         this.seats = seats;
         return this;
     }
     
     @JsonProperty("status")
-    public SubscriptionPublicResponseApiStatusEnum status;
-    public SubscriptionPublicResponseApi withStatus(SubscriptionPublicResponseApiStatusEnum status) {
+    public SubscriptionPublicResponseApiStatus status;
+
+    public SubscriptionPublicResponseApi withStatus(SubscriptionPublicResponseApiStatus status) {
         this.status = status;
         return this;
     }
     
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public SubscriptionPublicResponseApi withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -58,9 +65,19 @@ public class SubscriptionPublicResponseApi {
     
     @JsonProperty("usage")
     public Usage usage;
+
     public SubscriptionPublicResponseApi withUsage(Usage usage) {
         this.usage = usage;
         return this;
     }
     
+    public SubscriptionPublicResponseApi(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("meta") MetaData meta, @JsonProperty("productName") SubscriptionPublicResponseApiProductName productName, @JsonProperty("seats") Long seats, @JsonProperty("status") SubscriptionPublicResponseApiStatus status, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("usage") Usage usage) {
+        this.createdAt = createdAt;
+        this.meta = meta;
+        this.productName = productName;
+        this.seats = seats;
+        this.status = status;
+        this.subscriptionId = subscriptionId;
+        this.usage = usage;
+  }
 }

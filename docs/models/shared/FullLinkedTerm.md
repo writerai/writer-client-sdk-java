@@ -1,0 +1,14 @@
+# FullLinkedTerm
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `approvedTermExtension`                                               | [ApprovedTermExtension](../../models/shared/ApprovedTermExtension.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `caseSensitive`                                                       | *Boolean*                                                             | :heavy_check_mark:                                                    | N/A                                                                   |
+| `id`                                                                  | *Long*                                                                | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `linkedTermId`                                                        | *Long*                                                                | :heavy_check_mark:                                                    | N/A                                                                   |
+| `pos`                                                                 | [FullLinkedTermPos](../../models/shared/FullLinkedTermPos.md)         | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `term`                                                                | *String*                                                              | :heavy_check_mark:                                                    | N/A                                                                   |
+| `termId`                                                              | *Long*                                                                | :heavy_check_mark:                                                    | N/A                                                                   |

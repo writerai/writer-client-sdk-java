@@ -6,9 +6,11 @@ package com.writer.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class UsageItem {
     @JsonProperty("limit")
     public Long limit;
+
     public UsageItem withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -16,9 +18,14 @@ public class UsageItem {
     
     @JsonProperty("value")
     public Long value;
+
     public UsageItem withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public UsageItem(@JsonProperty("limit") Long limit, @JsonProperty("value") Long value) {
+        this.limit = limit;
+        this.value = value;
+  }
 }

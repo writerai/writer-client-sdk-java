@@ -4,11 +4,14 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
+
 
 public class AddTermsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.CreateTermsRequest createTermsRequest;
+
     public AddTermsRequest withCreateTermsRequest(com.writer.sdk.models.shared.CreateTermsRequest createTermsRequest) {
         this.createTermsRequest = createTermsRequest;
         return this;
@@ -16,6 +19,7 @@ public class AddTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public AddTermsRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -23,9 +27,14 @@ public class AddTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public Long teamId;
+
     public AddTermsRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public AddTermsRequest(@JsonProperty("CreateTermsRequest") com.writer.sdk.models.shared.CreateTermsRequest createTermsRequest, @JsonProperty("teamId") Long teamId) {
+        this.createTermsRequest = createTermsRequest;
+        this.teamId = teamId;
+  }
 }

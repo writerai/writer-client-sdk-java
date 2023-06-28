@@ -4,11 +4,14 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
+
 
 public class ListFilesResponse {
     
     public String contentType;
+
     public ListFilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +22,7 @@ public class ListFilesResponse {
      */
     
     public com.writer.sdk.models.shared.FailResponse failResponse;
+
     public ListFilesResponse withFailResponse(com.writer.sdk.models.shared.FailResponse failResponse) {
         this.failResponse = failResponse;
         return this;
@@ -26,6 +30,7 @@ public class ListFilesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ListFilesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +38,7 @@ public class ListFilesResponse {
     
     
     public com.writer.sdk.models.shared.ModelFilesResponse modelFilesResponse;
+
     public ListFilesResponse withModelFilesResponse(com.writer.sdk.models.shared.ModelFilesResponse modelFilesResponse) {
         this.modelFilesResponse = modelFilesResponse;
         return this;
@@ -40,6 +46,7 @@ public class ListFilesResponse {
     
     
     public Integer statusCode;
+
     public ListFilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +54,14 @@ public class ListFilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListFilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

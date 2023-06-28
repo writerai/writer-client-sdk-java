@@ -4,11 +4,14 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
+
 
 public class ListModelCustomizationsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public ListModelCustomizationsRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -16,9 +19,13 @@ public class ListModelCustomizationsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public ListModelCustomizationsRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public ListModelCustomizationsRequest(@JsonProperty("modelId") String modelId) {
+        this.modelId = modelId;
+  }
 }

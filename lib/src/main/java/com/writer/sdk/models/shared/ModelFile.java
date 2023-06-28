@@ -11,11 +11,13 @@ import com.writer.sdk.utils.DateTimeDeserializer;
 import com.writer.sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+
 public class ModelFile {
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ModelFile withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +25,7 @@ public class ModelFile {
     
     @JsonProperty("format")
     public String format;
+
     public ModelFile withFormat(String format) {
         this.format = format;
         return this;
@@ -30,6 +33,7 @@ public class ModelFile {
     
     @JsonProperty("id")
     public String id;
+
     public ModelFile withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +41,7 @@ public class ModelFile {
     
     @JsonProperty("name")
     public String name;
+
     public ModelFile withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class ModelFile {
     
     @JsonProperty("numberOfSamples")
     public Long numberOfSamples;
+
     public ModelFile withNumberOfSamples(Long numberOfSamples) {
         this.numberOfSamples = numberOfSamples;
         return this;
@@ -51,9 +57,18 @@ public class ModelFile {
     
     @JsonProperty("size")
     public Long size;
+
     public ModelFile withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public ModelFile(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("format") String format, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("numberOfSamples") Long numberOfSamples, @JsonProperty("size") Long size) {
+        this.createdAt = createdAt;
+        this.format = format;
+        this.id = id;
+        this.name = name;
+        this.numberOfSamples = numberOfSamples;
+        this.size = size;
+  }
 }

@@ -4,11 +4,14 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
+
 
 public class DeleteFileRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DeleteFileRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -16,9 +19,13 @@ public class DeleteFileRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public DeleteFileRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DeleteFileRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

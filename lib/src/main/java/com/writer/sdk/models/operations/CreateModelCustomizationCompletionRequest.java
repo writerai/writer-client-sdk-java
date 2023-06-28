@@ -4,11 +4,14 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
+
 
 public class CreateModelCustomizationCompletionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.CompletionRequest completionRequest;
+
     public CreateModelCustomizationCompletionRequest withCompletionRequest(com.writer.sdk.models.shared.CompletionRequest completionRequest) {
         this.completionRequest = completionRequest;
         return this;
@@ -16,6 +19,7 @@ public class CreateModelCustomizationCompletionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customizationId")
     public String customizationId;
+
     public CreateModelCustomizationCompletionRequest withCustomizationId(String customizationId) {
         this.customizationId = customizationId;
         return this;
@@ -23,6 +27,7 @@ public class CreateModelCustomizationCompletionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public CreateModelCustomizationCompletionRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -30,9 +35,15 @@ public class CreateModelCustomizationCompletionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public CreateModelCustomizationCompletionRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public CreateModelCustomizationCompletionRequest(@JsonProperty("CompletionRequest") com.writer.sdk.models.shared.CompletionRequest completionRequest, @JsonProperty("customizationId") String customizationId, @JsonProperty("modelId") String modelId) {
+        this.completionRequest = completionRequest;
+        this.customizationId = customizationId;
+        this.modelId = modelId;
+  }
 }

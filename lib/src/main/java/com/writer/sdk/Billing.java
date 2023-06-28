@@ -19,22 +19,10 @@ import java.util.stream.Collectors;
  */
 public class Billing {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
-	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
+	private SDKConfiguration sdkConfiguration;
 
-	public Billing(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion, java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
-		this._globals = globals;
+	public Billing(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -43,26 +31,26 @@ public class Billing {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.GetSubscriptionDetailsResponse getSubscriptionDetails() throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = com.writer.sdk.utils.Utils.generateURL(baseUrl, "/billing/subscription");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.GetSubscriptionDetailsResponse res = new com.writer.sdk.models.operations.GetSubscriptionDetailsResponse() {{
+        com.writer.sdk.models.operations.GetSubscriptionDetailsResponse res = new com.writer.sdk.models.operations.GetSubscriptionDetailsResponse(contentType, httpRes.statusCode()) {{
             subscriptionPublicResponseApi = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -6,9 +6,11 @@ package com.writer.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class TermTagResponse {
     @JsonProperty("id")
     public Long id;
+
     public TermTagResponse withId(Long id) {
         this.id = id;
         return this;
@@ -16,6 +18,7 @@ public class TermTagResponse {
     
     @JsonProperty("parentTagId")
     public Long parentTagId;
+
     public TermTagResponse withParentTagId(Long parentTagId) {
         this.parentTagId = parentTagId;
         return this;
@@ -23,6 +26,7 @@ public class TermTagResponse {
     
     @JsonProperty("tag")
     public String tag;
+
     public TermTagResponse withTag(String tag) {
         this.tag = tag;
         return this;
@@ -30,9 +34,16 @@ public class TermTagResponse {
     
     @JsonProperty("termId")
     public Long termId;
+
     public TermTagResponse withTermId(Long termId) {
         this.termId = termId;
         return this;
     }
     
+    public TermTagResponse(@JsonProperty("id") Long id, @JsonProperty("parentTagId") Long parentTagId, @JsonProperty("tag") String tag, @JsonProperty("termId") Long termId) {
+        this.id = id;
+        this.parentTagId = parentTagId;
+        this.tag = tag;
+        this.termId = termId;
+  }
 }

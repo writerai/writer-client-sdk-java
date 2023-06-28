@@ -1,0 +1,11 @@
+# UpdateTermsRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `updateTermsRequest`                                                                         | [com.writer.sdk.models.shared.UpdateTermsRequest](../../models/shared/UpdateTermsRequest.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `xRequestID`                                                                                 | *String*                                                                                     | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `organizationId`                                                                             | *Long*                                                                                       | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `teamId`                                                                                     | *Long*                                                                                       | :heavy_check_mark:                                                                           | N/A                                                                                          |

@@ -1,0 +1,10 @@
+# AddTermsRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `createTermsRequest`                                                                         | [com.writer.sdk.models.shared.CreateTermsRequest](../../models/shared/CreateTermsRequest.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `organizationId`                                                                             | *Long*                                                                                       | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `teamId`                                                                                     | *Long*                                                                                       | :heavy_check_mark:                                                                           | N/A                                                                                          |

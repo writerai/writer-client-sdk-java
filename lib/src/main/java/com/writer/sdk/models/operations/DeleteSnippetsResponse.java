@@ -4,11 +4,14 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
+
 
 public class DeleteSnippetsResponse {
     
     public String contentType;
+
     public DeleteSnippetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +19,7 @@ public class DeleteSnippetsResponse {
     
     
     public com.writer.sdk.models.shared.DeleteResponse deleteResponse;
+
     public DeleteSnippetsResponse withDeleteResponse(com.writer.sdk.models.shared.DeleteResponse deleteResponse) {
         this.deleteResponse = deleteResponse;
         return this;
@@ -26,6 +30,7 @@ public class DeleteSnippetsResponse {
      */
     
     public com.writer.sdk.models.shared.FailResponse failResponse;
+
     public DeleteSnippetsResponse withFailResponse(com.writer.sdk.models.shared.FailResponse failResponse) {
         this.failResponse = failResponse;
         return this;
@@ -33,6 +38,7 @@ public class DeleteSnippetsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DeleteSnippetsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +46,7 @@ public class DeleteSnippetsResponse {
     
     
     public Integer statusCode;
+
     public DeleteSnippetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +54,14 @@ public class DeleteSnippetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSnippetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSnippetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

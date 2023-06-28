@@ -6,9 +6,11 @@ package com.writer.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class ContentSettings {
     @JsonProperty("ageAndFamilyStatus")
     public Boolean ageAndFamilyStatus;
+
     public ContentSettings withAgeAndFamilyStatus(Boolean ageAndFamilyStatus) {
         this.ageAndFamilyStatus = ageAndFamilyStatus;
         return this;
@@ -16,6 +18,7 @@ public class ContentSettings {
     
     @JsonProperty("confidence")
     public Boolean confidence;
+
     public ContentSettings withConfidence(Boolean confidence) {
         this.confidence = confidence;
         return this;
@@ -23,6 +26,7 @@ public class ContentSettings {
     
     @JsonProperty("contentSafeguards")
     public Boolean contentSafeguards;
+
     public ContentSettings withContentSafeguards(Boolean contentSafeguards) {
         this.contentSafeguards = contentSafeguards;
         return this;
@@ -30,6 +34,7 @@ public class ContentSettings {
     
     @JsonProperty("disability")
     public Boolean disability;
+
     public ContentSettings withDisability(Boolean disability) {
         this.disability = disability;
         return this;
@@ -37,6 +42,7 @@ public class ContentSettings {
     
     @JsonProperty("genderIdentitySensitivity")
     public Boolean genderIdentitySensitivity;
+
     public ContentSettings withGenderIdentitySensitivity(Boolean genderIdentitySensitivity) {
         this.genderIdentitySensitivity = genderIdentitySensitivity;
         return this;
@@ -44,6 +50,7 @@ public class ContentSettings {
     
     @JsonProperty("genderInclusiveNouns")
     public Boolean genderInclusiveNouns;
+
     public ContentSettings withGenderInclusiveNouns(Boolean genderInclusiveNouns) {
         this.genderInclusiveNouns = genderInclusiveNouns;
         return this;
@@ -51,6 +58,7 @@ public class ContentSettings {
     
     @JsonProperty("genderInclusivePronouns")
     public Boolean genderInclusivePronouns;
+
     public ContentSettings withGenderInclusivePronouns(Boolean genderInclusivePronouns) {
         this.genderInclusivePronouns = genderInclusivePronouns;
         return this;
@@ -58,6 +66,7 @@ public class ContentSettings {
     
     @JsonProperty("grammar")
     public Boolean grammar;
+
     public ContentSettings withGrammar(Boolean grammar) {
         this.grammar = grammar;
         return this;
@@ -65,6 +74,7 @@ public class ContentSettings {
     
     @JsonProperty("healthyCommunication")
     public Boolean healthyCommunication;
+
     public ContentSettings withHealthyCommunication(Boolean healthyCommunication) {
         this.healthyCommunication = healthyCommunication;
         return this;
@@ -72,6 +82,7 @@ public class ContentSettings {
     
     @JsonProperty("passiveVoice")
     public Boolean passiveVoice;
+
     public ContentSettings withPassiveVoice(Boolean passiveVoice) {
         this.passiveVoice = passiveVoice;
         return this;
@@ -79,6 +90,7 @@ public class ContentSettings {
     
     @JsonProperty("raceEthnicityNationalitySensitivity")
     public Boolean raceEthnicityNationalitySensitivity;
+
     public ContentSettings withRaceEthnicityNationalitySensitivity(Boolean raceEthnicityNationalitySensitivity) {
         this.raceEthnicityNationalitySensitivity = raceEthnicityNationalitySensitivity;
         return this;
@@ -86,6 +98,7 @@ public class ContentSettings {
     
     @JsonProperty("sexualOrientationSensitivity")
     public Boolean sexualOrientationSensitivity;
+
     public ContentSettings withSexualOrientationSensitivity(Boolean sexualOrientationSensitivity) {
         this.sexualOrientationSensitivity = sexualOrientationSensitivity;
         return this;
@@ -93,6 +106,7 @@ public class ContentSettings {
     
     @JsonProperty("spelling")
     public Boolean spelling;
+
     public ContentSettings withSpelling(Boolean spelling) {
         this.spelling = spelling;
         return this;
@@ -100,6 +114,7 @@ public class ContentSettings {
     
     @JsonProperty("substanceUseSensitivity")
     public Boolean substanceUseSensitivity;
+
     public ContentSettings withSubstanceUseSensitivity(Boolean substanceUseSensitivity) {
         this.substanceUseSensitivity = substanceUseSensitivity;
         return this;
@@ -107,6 +122,7 @@ public class ContentSettings {
     
     @JsonProperty("unclearReference")
     public Boolean unclearReference;
+
     public ContentSettings withUnclearReference(Boolean unclearReference) {
         this.unclearReference = unclearReference;
         return this;
@@ -114,9 +130,28 @@ public class ContentSettings {
     
     @JsonProperty("wordiness")
     public Boolean wordiness;
+
     public ContentSettings withWordiness(Boolean wordiness) {
         this.wordiness = wordiness;
         return this;
     }
     
+    public ContentSettings(@JsonProperty("ageAndFamilyStatus") Boolean ageAndFamilyStatus, @JsonProperty("confidence") Boolean confidence, @JsonProperty("contentSafeguards") Boolean contentSafeguards, @JsonProperty("disability") Boolean disability, @JsonProperty("genderIdentitySensitivity") Boolean genderIdentitySensitivity, @JsonProperty("genderInclusiveNouns") Boolean genderInclusiveNouns, @JsonProperty("genderInclusivePronouns") Boolean genderInclusivePronouns, @JsonProperty("grammar") Boolean grammar, @JsonProperty("healthyCommunication") Boolean healthyCommunication, @JsonProperty("passiveVoice") Boolean passiveVoice, @JsonProperty("raceEthnicityNationalitySensitivity") Boolean raceEthnicityNationalitySensitivity, @JsonProperty("sexualOrientationSensitivity") Boolean sexualOrientationSensitivity, @JsonProperty("spelling") Boolean spelling, @JsonProperty("substanceUseSensitivity") Boolean substanceUseSensitivity, @JsonProperty("unclearReference") Boolean unclearReference, @JsonProperty("wordiness") Boolean wordiness) {
+        this.ageAndFamilyStatus = ageAndFamilyStatus;
+        this.confidence = confidence;
+        this.contentSafeguards = contentSafeguards;
+        this.disability = disability;
+        this.genderIdentitySensitivity = genderIdentitySensitivity;
+        this.genderInclusiveNouns = genderInclusiveNouns;
+        this.genderInclusivePronouns = genderInclusivePronouns;
+        this.grammar = grammar;
+        this.healthyCommunication = healthyCommunication;
+        this.passiveVoice = passiveVoice;
+        this.raceEthnicityNationalitySensitivity = raceEthnicityNationalitySensitivity;
+        this.sexualOrientationSensitivity = sexualOrientationSensitivity;
+        this.spelling = spelling;
+        this.substanceUseSensitivity = substanceUseSensitivity;
+        this.unclearReference = unclearReference;
+        this.wordiness = wordiness;
+  }
 }

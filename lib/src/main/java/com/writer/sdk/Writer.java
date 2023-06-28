@@ -66,28 +66,19 @@ public class Writer {
     /**
      * Methods related to User
      */
-    public User user;	
+    public User user;
+    /**
+     * Methods related to document
+     */
+    public Document document;	
 
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private com.writer.sdk.models.shared.Security _security;
-	private String _serverUrl;
-	private String _language = "java";
-	private String _sdkVersion = "0.3.0";
-	private String _genVersion = "2.18.0";
-	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
-	
+	private SDKConfiguration sdkConfiguration;
+
 	/**
 	 * The Builder class allows the configuration of a new instance of the SDK.
 	 */
 	public static class Builder {
-		private HTTPClient client;
-		private com.writer.sdk.models.shared.Security security;
-		private String serverUrl;
-		private java.util.Map<String, String> params = new java.util.HashMap<String, String>();
-		private java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals = new java.util.HashMap<String, java.util.Map<String, java.util.Map<String, Object>>>(){{
-			put("parameters", new java.util.HashMap<String, java.util.Map<String, Object>>());
-		}};
+		private SDKConfiguration sdkConfiguration = new SDKConfiguration();
 
 		private Builder() {
 		}
@@ -98,7 +89,7 @@ public class Writer {
 		 * @return The builder instance.
 		 */
 		public Builder setClient(HTTPClient client) {
-			this.client = client;
+			this.sdkConfiguration.defaultClient = client;
 			return this;
 		}
 		
@@ -108,7 +99,7 @@ public class Writer {
 		 * @return The builder instance.
 		 */
 		public Builder setSecurity(com.writer.sdk.models.shared.Security security) {
-			this.security = security;
+			this.sdkConfiguration.security = security;
 			return this;
 		}
 		
@@ -118,7 +109,7 @@ public class Writer {
 		 * @return The builder instance.
 		 */
 		public Builder setServerURL(String serverUrl) {
-			this.serverUrl = serverUrl;
+			this.sdkConfiguration.serverUrl = serverUrl;
 			return this;
 		}
 		
@@ -129,8 +120,18 @@ public class Writer {
 		 * @return The builder instance.
 		 */
 		public Builder setServerURL(String serverUrl, java.util.Map<String, String> params) {
-			this.serverUrl = serverUrl;
-			this.params = params;
+			this.sdkConfiguration.serverUrl = com.writer.sdk.utils.Utils.templateUrl(serverUrl, params);
+			return this;
+		}
+		
+		/**
+		 * Allows the overriding of the default server by index
+		 * @param serverIdx The server to use for all requests.
+		 * @return The builder instance.
+		 */
+		public Builder setServerIndex(int serverIdx) {
+			this.sdkConfiguration.serverIdx = serverIdx;
+			this.sdkConfiguration.serverUrl = SERVERS[serverIdx];
 			return this;
 		}
 		
@@ -140,11 +141,11 @@ public class Writer {
 		 * @return The builder instance.
 		 */
 		public Builder setOrganizationId(Long organizationId) {
-			if (!this.globals.get("parameters").containsKey("pathParam")) {
-				this.globals.get("parameters").put("pathParam", new java.util.HashMap<String, Object>());
+			if (!this.sdkConfiguration.globals.get("parameters").containsKey("pathParam")) {
+				this.sdkConfiguration.globals.get("parameters").put("pathParam", new java.util.HashMap<String, Object>());
 			}
 
-			this.globals.get("parameters").get("pathParam").put("organizationId", organizationId);
+			this.sdkConfiguration.globals.get("parameters").get("pathParam").put("organizationId", organizationId);
 
 			return this;
 		}
@@ -155,7 +156,28 @@ public class Writer {
 		 * @throws Exception Thrown if the SDK could not be built.
 		 */
 		public Writer build() throws Exception {
-			return new Writer(this.client, this.security, this.serverUrl, this.params, this.globals);
+			if (this.sdkConfiguration.defaultClient == null) {
+				this.sdkConfiguration.defaultClient = new SpeakeasyHTTPClient();
+			}
+			
+			if (this.sdkConfiguration.security != null) {
+				this.sdkConfiguration.securityClient = com.writer.sdk.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, this.sdkConfiguration.security);
+			}
+			
+			if (this.sdkConfiguration.securityClient == null) {
+				this.sdkConfiguration.securityClient = this.sdkConfiguration.defaultClient;
+			}
+			
+			if (this.sdkConfiguration.serverUrl == null || this.sdkConfiguration.serverUrl.isBlank()) {
+				this.sdkConfiguration.serverUrl = SERVERS[0];
+				this.sdkConfiguration.serverIdx = 0;
+			}
+
+			if (this.sdkConfiguration.serverUrl.endsWith("/")) {
+				this.sdkConfiguration.serverUrl = this.sdkConfiguration.serverUrl.substring(0, this.sdkConfiguration.serverUrl.length() - 1);
+			}
+			
+			return new Writer(this.sdkConfiguration);
 		}
 	}
 
@@ -167,160 +189,35 @@ public class Writer {
 		return new Builder();
 	}
 
-	private Writer(HTTPClient client, com.writer.sdk.models.shared.Security security, String serverUrl, java.util.Map<String, String> params, java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals) throws Exception {
-		this._defaultClient = client;
+	private Writer(SDKConfiguration sdkConfiguration) throws Exception {
+		this.sdkConfiguration = sdkConfiguration;
 		
-		if (this._defaultClient == null) {
-			this._defaultClient = new SpeakeasyHTTPClient();
-		}
+		this.aiContentDetector = new AIContentDetector(this.sdkConfiguration);
 		
-		if (security != null) {
-			this._security = security;
-			this._securityClient = com.writer.sdk.utils.Utils.configureSecurityClient(this._defaultClient, this._security);
-		}
+		this.billing = new Billing(this.sdkConfiguration);
 		
-		if (this._securityClient == null) {
-			this._securityClient = this._defaultClient;
-		}
-
-		if (serverUrl != null && !serverUrl.isBlank()) {
-			this._serverUrl = com.writer.sdk.utils.Utils.templateUrl(serverUrl, params);
-		}
+		this.coWrite = new CoWrite(this.sdkConfiguration);
 		
-		if (this._serverUrl == null) {
-			this._serverUrl = SERVERS[0];
-		}
+		this.completions = new Completions(this.sdkConfiguration);
 		
-		this._globals = globals;
+		this.content = new Content(this.sdkConfiguration);
 		
-		this.aiContentDetector = new AIContentDetector(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.downloadTheCustomizedModel = new DownloadTheCustomizedModel(this.sdkConfiguration);
 		
-		this.billing = new Billing(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.files = new Files(this.sdkConfiguration);
 		
-		this.coWrite = new CoWrite(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.modelCustomization = new ModelCustomization(this.sdkConfiguration);
 		
-		this.completions = new Completions(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.models = new Models(this.sdkConfiguration);
 		
-		this.content = new Content(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.snippet = new Snippet(this.sdkConfiguration);
 		
-		this.downloadTheCustomizedModel = new DownloadTheCustomizedModel(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.styleguide = new Styleguide(this.sdkConfiguration);
 		
-		this.files = new Files(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.terminology = new Terminology(this.sdkConfiguration);
 		
-		this.modelCustomization = new ModelCustomization(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.user = new User(this.sdkConfiguration);
 		
-		this.models = new Models(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
-		
-		this.snippet = new Snippet(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
-		
-		this.styleguide = new Styleguide(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
-		
-		this.terminology = new Terminology(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
-		
-		this.user = new User(
-			this._defaultClient,
-			this._securityClient,
-			this._serverUrl,
-			this._language,
-			this._sdkVersion,
-			this._genVersion,
-			this._globals
-		);
+		this.document = new Document(this.sdkConfiguration);
 	}
 }

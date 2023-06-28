@@ -19,22 +19,10 @@ import java.util.stream.Collectors;
  */
 public class AIContentDetector {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
-	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
+	private SDKConfiguration sdkConfiguration;
 
-	public AIContentDetector(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion, java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
-		this._globals = globals;
+	public AIContentDetector(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -44,8 +32,8 @@ public class AIContentDetector {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.DetectContentResponse detect(com.writer.sdk.models.operations.DetectContentRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DetectContentRequest.class, baseUrl, "/content/organization/{organizationId}/detect", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DetectContentRequest.class, baseUrl, "/content/organization/{organizationId}/detect", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -55,20 +43,20 @@ public class AIContentDetector {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DetectContentResponse res = new com.writer.sdk.models.operations.DetectContentResponse() {{
+        com.writer.sdk.models.operations.DetectContentResponse res = new com.writer.sdk.models.operations.DetectContentResponse(contentType, httpRes.statusCode()) {{
             contentDetectorResponses = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

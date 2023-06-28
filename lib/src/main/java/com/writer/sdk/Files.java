@@ -4,7 +4,6 @@
 
 package com.writer.sdk;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.writer.sdk.utils.HTTPClient;
 import com.writer.sdk.utils.HTTPRequest;
@@ -21,22 +20,10 @@ import java.util.stream.Collectors;
  */
 public class Files {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
-	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
+	private SDKConfiguration sdkConfiguration;
 
-	public Files(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion, java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
-		this._globals = globals;
+	public Files(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -46,26 +33,26 @@ public class Files {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.DeleteFileResponse delete(com.writer.sdk.models.operations.DeleteFileRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file/{fileId}", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file/{fileId}", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DeleteFileResponse res = new com.writer.sdk.models.operations.DeleteFileResponse() {{
+        com.writer.sdk.models.operations.DeleteFileResponse res = new com.writer.sdk.models.operations.DeleteFileResponse(contentType, httpRes.statusCode()) {{
             deleteFile200ApplicationJSONObject = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -73,7 +60,7 @@ public class Files {
             
             if (com.writer.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                com.writer.sdk.models.operations.DeleteFile200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.operations.DeleteFile200ApplicationJSON.class);
                 res.deleteFile200ApplicationJSONObject = out;
             }
         }
@@ -97,26 +84,26 @@ public class Files {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.GetFileResponse get(com.writer.sdk.models.operations.GetFileRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.GetFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file/{fileId}", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.GetFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file/{fileId}", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.GetFileResponse res = new com.writer.sdk.models.operations.GetFileResponse() {{
+        com.writer.sdk.models.operations.GetFileResponse res = new com.writer.sdk.models.operations.GetFileResponse(contentType, httpRes.statusCode()) {{
             modelFile = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,26 +135,26 @@ public class Files {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.ListFilesResponse list(com.writer.sdk.models.operations.ListFilesRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListFilesRequest.class, baseUrl, "/llm/organization/{organizationId}/file", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListFilesRequest.class, baseUrl, "/llm/organization/{organizationId}/file", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListFilesResponse res = new com.writer.sdk.models.operations.ListFilesResponse() {{
+        com.writer.sdk.models.operations.ListFilesResponse res = new com.writer.sdk.models.operations.ListFilesResponse(contentType, httpRes.statusCode()) {{
             modelFilesResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,8 +186,8 @@ public class Files {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.UploadFileResponse upload(com.writer.sdk.models.operations.UploadFileRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.UploadFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.UploadFileRequest.class, baseUrl, "/llm/organization/{organizationId}/file", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -210,20 +197,20 @@ public class Files {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.UploadFileResponse res = new com.writer.sdk.models.operations.UploadFileResponse() {{
+        com.writer.sdk.models.operations.UploadFileResponse res = new com.writer.sdk.models.operations.UploadFileResponse(contentType, httpRes.statusCode()) {{
             modelFile = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

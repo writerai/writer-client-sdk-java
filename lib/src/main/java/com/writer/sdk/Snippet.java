@@ -20,22 +20,10 @@ import org.apache.http.NameValuePair;
  */
 public class Snippet {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
-	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
+	private SDKConfiguration sdkConfiguration;
 
-	public Snippet(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion, java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
-		this._globals = globals;
+	public Snippet(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -45,14 +33,16 @@ public class Snippet {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.DeleteSnippetsResponse delete(com.writer.sdk.models.operations.DeleteSnippetsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = com.writer.sdk.utils.Utils.getQueryParams(com.writer.sdk.models.operations.DeleteSnippetsRequest.class, request, this._globals);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        java.util.List<NameValuePair> queryParams = com.writer.sdk.utils.Utils.getQueryParams(com.writer.sdk.models.operations.DeleteSnippetsRequest.class, request, this.sdkConfiguration.globals);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -67,18 +57,16 @@ public class Snippet {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DeleteSnippetsResponse res = new com.writer.sdk.models.operations.DeleteSnippetsResponse() {{
+        com.writer.sdk.models.operations.DeleteSnippetsResponse res = new com.writer.sdk.models.operations.DeleteSnippetsResponse(contentType, httpRes.statusCode()) {{
             deleteResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,32 +98,32 @@ public class Snippet {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.FindSnippetsResponse find(com.writer.sdk.models.operations.FindSnippetsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.FindSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.FindSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = com.writer.sdk.utils.Utils.getQueryParams(com.writer.sdk.models.operations.FindSnippetsRequest.class, request, this._globals);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        java.util.List<NameValuePair> queryParams = com.writer.sdk.utils.Utils.getQueryParams(com.writer.sdk.models.operations.FindSnippetsRequest.class, request, this.sdkConfiguration.globals);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.FindSnippetsResponse res = new com.writer.sdk.models.operations.FindSnippetsResponse() {{
+        com.writer.sdk.models.operations.FindSnippetsResponse res = new com.writer.sdk.models.operations.FindSnippetsResponse(contentType, httpRes.statusCode()) {{
             paginatedResultSnippetWithUser = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,15 +155,17 @@ public class Snippet {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.UpdateSnippetsResponse update(com.writer.sdk.models.operations.UpdateSnippetsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.UpdateSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.UpdateSnippetsRequest.class, baseUrl, "/snippet/organization/{organizationId}/team/{teamId}", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         SerializedBody serializedRequestBody = com.writer.sdk.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
-        
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         java.util.Map<String, java.util.List<String>> headers = com.writer.sdk.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
@@ -185,18 +175,16 @@ public class Snippet {
             }
         }
         
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.UpdateSnippetsResponse res = new com.writer.sdk.models.operations.UpdateSnippetsResponse() {{
+        com.writer.sdk.models.operations.UpdateSnippetsResponse res = new com.writer.sdk.models.operations.UpdateSnippetsResponse(contentType, httpRes.statusCode()) {{
             snippetWithUsers = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

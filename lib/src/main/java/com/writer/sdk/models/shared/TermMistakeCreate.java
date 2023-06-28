@@ -8,9 +8,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class TermMistakeCreate {
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public TermMistakeCreate withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -18,6 +20,7 @@ public class TermMistakeCreate {
     
     @JsonProperty("mistake")
     public String mistake;
+
     public TermMistakeCreate withMistake(String mistake) {
         this.mistake = mistake;
         return this;
@@ -25,8 +28,9 @@ public class TermMistakeCreate {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public TermMistakeCreatePosEnum pos;
-    public TermMistakeCreate withPos(TermMistakeCreatePosEnum pos) {
+    public TermMistakeCreatePos pos;
+
+    public TermMistakeCreate withPos(TermMistakeCreatePos pos) {
         this.pos = pos;
         return this;
     }
@@ -34,9 +38,14 @@ public class TermMistakeCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public TermMistakeCreate withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public TermMistakeCreate(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("mistake") String mistake) {
+        this.caseSensitive = caseSensitive;
+        this.mistake = mistake;
+  }
 }

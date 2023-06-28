@@ -13,11 +13,13 @@ import com.writer.sdk.utils.DateTimeDeserializer;
 import com.writer.sdk.utils.DateTimeSerializer;
 import java.time.OffsetDateTime;
 
+
 public class PagePublicApiResponse {
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public PagePublicApiResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +27,7 @@ public class PagePublicApiResponse {
     
     @JsonProperty("id")
     public Long id;
+
     public PagePublicApiResponse withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class PagePublicApiResponse {
     
     @JsonProperty("order")
     public Long order;
+
     public PagePublicApiResponse withOrder(Long order) {
         this.order = order;
         return this;
@@ -40,20 +44,23 @@ public class PagePublicApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public SectionInfo section;
+
     public PagePublicApiResponse withSection(SectionInfo section) {
         this.section = section;
         return this;
     }
     
     @JsonProperty("status")
-    public PagePublicApiResponseStatusEnum status;
-    public PagePublicApiResponse withStatus(PagePublicApiResponseStatusEnum status) {
+    public PagePublicApiResponseStatus status;
+
+    public PagePublicApiResponse withStatus(PagePublicApiResponseStatus status) {
         this.status = status;
         return this;
     }
     
     @JsonProperty("title")
     public String title;
+
     public PagePublicApiResponse withTitle(String title) {
         this.title = title;
         return this;
@@ -63,6 +70,7 @@ public class PagePublicApiResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public PagePublicApiResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -71,6 +79,7 @@ public class PagePublicApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedBy")
     public SimpleUser updatedBy;
+
     public PagePublicApiResponse withUpdatedBy(SimpleUser updatedBy) {
         this.updatedBy = updatedBy;
         return this;
@@ -78,9 +87,19 @@ public class PagePublicApiResponse {
     
     @JsonProperty("url")
     public String url;
+
     public PagePublicApiResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PagePublicApiResponse(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("order") Long order, @JsonProperty("status") PagePublicApiResponseStatus status, @JsonProperty("title") String title, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.id = id;
+        this.order = order;
+        this.status = status;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

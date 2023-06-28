@@ -11,10 +11,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * FailResponse - Bad Request
  */
+
 public class FailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public FailMessage[] errors;
+
     public FailResponse withErrors(FailMessage[] errors) {
         this.errors = errors;
         return this;
@@ -22,6 +24,7 @@ public class FailResponse {
     
     @JsonProperty("extras")
     public Object extras;
+
     public FailResponse withExtras(Object extras) {
         this.extras = extras;
         return this;
@@ -29,9 +32,14 @@ public class FailResponse {
     
     @JsonProperty("tpe")
     public String tpe;
+
     public FailResponse withTpe(String tpe) {
         this.tpe = tpe;
         return this;
     }
     
+    public FailResponse(@JsonProperty("extras") Object extras, @JsonProperty("tpe") String tpe) {
+        this.extras = extras;
+        this.tpe = tpe;
+  }
 }

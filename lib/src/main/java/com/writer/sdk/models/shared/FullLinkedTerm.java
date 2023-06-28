@@ -8,10 +8,12 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class FullLinkedTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvedTermExtension")
     public ApprovedTermExtension approvedTermExtension;
+
     public FullLinkedTerm withApprovedTermExtension(ApprovedTermExtension approvedTermExtension) {
         this.approvedTermExtension = approvedTermExtension;
         return this;
@@ -19,6 +21,7 @@ public class FullLinkedTerm {
     
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public FullLinkedTerm withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -27,6 +30,7 @@ public class FullLinkedTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public FullLinkedTerm withId(Long id) {
         this.id = id;
         return this;
@@ -34,6 +38,7 @@ public class FullLinkedTerm {
     
     @JsonProperty("linkedTermId")
     public Long linkedTermId;
+
     public FullLinkedTerm withLinkedTermId(Long linkedTermId) {
         this.linkedTermId = linkedTermId;
         return this;
@@ -41,14 +46,16 @@ public class FullLinkedTerm {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public FullLinkedTermPosEnum pos;
-    public FullLinkedTerm withPos(FullLinkedTermPosEnum pos) {
+    public FullLinkedTermPos pos;
+
+    public FullLinkedTerm withPos(FullLinkedTermPos pos) {
         this.pos = pos;
         return this;
     }
     
     @JsonProperty("term")
     public String term;
+
     public FullLinkedTerm withTerm(String term) {
         this.term = term;
         return this;
@@ -56,9 +63,16 @@ public class FullLinkedTerm {
     
     @JsonProperty("termId")
     public Long termId;
+
     public FullLinkedTerm withTermId(Long termId) {
         this.termId = termId;
         return this;
     }
     
+    public FullLinkedTerm(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("linkedTermId") Long linkedTermId, @JsonProperty("term") String term, @JsonProperty("termId") Long termId) {
+        this.caseSensitive = caseSensitive;
+        this.linkedTermId = linkedTermId;
+        this.term = term;
+        this.termId = termId;
+  }
 }

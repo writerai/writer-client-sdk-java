@@ -4,11 +4,14 @@
 
 package com.writer.sdk.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.writer.sdk.utils.SpeakeasyMetadata;
+
 
 public class UpdateTermsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public com.writer.sdk.models.shared.UpdateTermsRequest updateTermsRequest;
+
     public UpdateTermsRequest withUpdateTermsRequest(com.writer.sdk.models.shared.UpdateTermsRequest updateTermsRequest) {
         this.updateTermsRequest = updateTermsRequest;
         return this;
@@ -16,6 +19,7 @@ public class UpdateTermsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public UpdateTermsRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -23,6 +27,7 @@ public class UpdateTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public Long organizationId;
+
     public UpdateTermsRequest withOrganizationId(Long organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -30,9 +35,14 @@ public class UpdateTermsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
     public Long teamId;
+
     public UpdateTermsRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public UpdateTermsRequest(@JsonProperty("UpdateTermsRequest") com.writer.sdk.models.shared.UpdateTermsRequest updateTermsRequest, @JsonProperty("teamId") Long teamId) {
+        this.updateTermsRequest = updateTermsRequest;
+        this.teamId = teamId;
+  }
 }

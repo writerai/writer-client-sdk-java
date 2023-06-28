@@ -8,10 +8,12 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class ContentIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ContentIssue withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +21,7 @@ public class ContentIssue {
     
     @JsonProperty("from")
     public Long from;
+
     public ContentIssue withFrom(Long from) {
         this.from = from;
         return this;
@@ -27,14 +30,16 @@ public class ContentIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public Object meta;
+
     public ContentIssue withMeta(Object meta) {
         this.meta = meta;
         return this;
     }
     
     @JsonProperty("service")
-    public ContentIssueServiceEnum service;
-    public ContentIssue withService(ContentIssueServiceEnum service) {
+    public ContentIssueService service;
+
+    public ContentIssue withService(ContentIssueService service) {
         this.service = service;
         return this;
     }
@@ -42,6 +47,7 @@ public class ContentIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public String[] suggestions;
+
     public ContentIssue withSuggestions(String[] suggestions) {
         this.suggestions = suggestions;
         return this;
@@ -49,9 +55,15 @@ public class ContentIssue {
     
     @JsonProperty("until")
     public Long until;
+
     public ContentIssue withUntil(Long until) {
         this.until = until;
         return this;
     }
     
+    public ContentIssue(@JsonProperty("from") Long from, @JsonProperty("service") ContentIssueService service, @JsonProperty("until") Long until) {
+        this.from = from;
+        this.service = service;
+        this.until = until;
+  }
 }

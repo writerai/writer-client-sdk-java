@@ -8,9 +8,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class PaginatedResultSnippetWithUser {
     @JsonProperty("pagination")
     public Pagination pagination;
+
     public PaginatedResultSnippetWithUser withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
@@ -19,6 +21,7 @@ public class PaginatedResultSnippetWithUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public SnippetWithUser[] result;
+
     public PaginatedResultSnippetWithUser withResult(SnippetWithUser[] result) {
         this.result = result;
         return this;
@@ -26,9 +29,14 @@ public class PaginatedResultSnippetWithUser {
     
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public PaginatedResultSnippetWithUser withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public PaginatedResultSnippetWithUser(@JsonProperty("pagination") Pagination pagination, @JsonProperty("totalCount") Long totalCount) {
+        this.pagination = pagination;
+        this.totalCount = totalCount;
+  }
 }

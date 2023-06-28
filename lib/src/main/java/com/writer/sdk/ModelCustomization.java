@@ -4,7 +4,6 @@
 
 package com.writer.sdk;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.writer.sdk.utils.HTTPClient;
 import com.writer.sdk.utils.HTTPRequest;
@@ -21,22 +20,10 @@ import java.util.stream.Collectors;
  */
 public class ModelCustomization {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
-	java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> _globals;
+	private SDKConfiguration sdkConfiguration;
 
-	public ModelCustomization(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion, java.util.Map<String, java.util.Map<String, java.util.Map<String, Object>>> globals) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
-		this._globals = globals;
+	public ModelCustomization(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -46,8 +33,8 @@ public class ModelCustomization {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.CreateModelCustomizationResponse create(com.writer.sdk.models.operations.CreateModelCustomizationRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.CreateModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -57,20 +44,20 @@ public class ModelCustomization {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.CreateModelCustomizationResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationResponse() {{
+        com.writer.sdk.models.operations.CreateModelCustomizationResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationResponse(contentType, httpRes.statusCode()) {{
             modelCustomization = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,26 +89,26 @@ public class ModelCustomization {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.DeleteModelCustomizationResponse delete(com.writer.sdk.models.operations.DeleteModelCustomizationRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.DeleteModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = new com.writer.sdk.models.operations.DeleteModelCustomizationResponse() {{
+        com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = new com.writer.sdk.models.operations.DeleteModelCustomizationResponse(contentType, httpRes.statusCode()) {{
             deleteModelCustomization200ApplicationJSONObject = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,7 +116,7 @@ public class ModelCustomization {
             
             if (com.writer.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                com.writer.sdk.models.operations.DeleteModelCustomization200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.operations.DeleteModelCustomization200ApplicationJSON.class);
                 res.deleteModelCustomization200ApplicationJSONObject = out;
             }
         }
@@ -153,26 +140,26 @@ public class ModelCustomization {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.GetModelCustomizationResponse get(com.writer.sdk.models.operations.GetModelCustomizationRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.GetModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.GetModelCustomizationRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization/{customizationId}", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.GetModelCustomizationResponse res = new com.writer.sdk.models.operations.GetModelCustomizationResponse() {{
+        com.writer.sdk.models.operations.GetModelCustomizationResponse res = new com.writer.sdk.models.operations.GetModelCustomizationResponse(contentType, httpRes.statusCode()) {{
             modelCustomization = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,26 +191,26 @@ public class ModelCustomization {
      * @throws Exception if the API call fails
      */
     public com.writer.sdk.models.operations.ListModelCustomizationsResponse list(com.writer.sdk.models.operations.ListModelCustomizationsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListModelCustomizationsRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization", request, this._globals);
+        String baseUrl = this.sdkConfiguration.serverUrl;
+        String url = com.writer.sdk.utils.Utils.generateURL(com.writer.sdk.models.operations.ListModelCustomizationsRequest.class, baseUrl, "/llm/organization/{organizationId}/model/{modelId}/customization", request, this.sdkConfiguration.globals);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
+
+        req.addHeader("Accept", "application/json;q=1, application/json;q=0");
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
         
-        
-        HTTPClient client = this._securityClient;
+        HTTPClient client = this.sdkConfiguration.securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        com.writer.sdk.models.operations.ListModelCustomizationsResponse res = new com.writer.sdk.models.operations.ListModelCustomizationsResponse() {{
+        com.writer.sdk.models.operations.ListModelCustomizationsResponse res = new com.writer.sdk.models.operations.ListModelCustomizationsResponse(contentType, httpRes.statusCode()) {{
             customizationsResponse = null;
             failResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
