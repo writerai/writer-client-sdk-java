@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.28.0'
+implementation 'com.writer.sdk:api:0.28.1'
 ```
 <!-- End SDK Installation -->
 
