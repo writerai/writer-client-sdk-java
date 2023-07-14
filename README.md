@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.29.0'
+implementation 'com.writer.sdk:api:0.30.0'
 ```
 <!-- End SDK Installation -->
 
@@ -32,6 +32,8 @@ If you cannot see your secret API keys in the Dashboard, this means you do not h
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+
+
 ```java
 package hello.world;
 
