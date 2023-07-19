@@ -28,17 +28,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("distinctio") {{
+                .setSecurity(new Security("facilis") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(799203L)
+                .setOrganizationId(874288L)
                 .build();
 
             ListUsersRequest req = new ListUsersRequest() {{
-                limit = 486160L;
-                offset = 630448L;
-                search = "facilis";
-                sortField = ListUsersSortField.LAST_SEEN;
+                limit = 498140L;
+                offset = 293020L;
+                search = "quibusdam";
+                sortField = ListUsersSortField.EMAIL;
                 sortOrder = ListUsersSortOrder.ASC;
             }};            
 

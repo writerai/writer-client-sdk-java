@@ -27,13 +27,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("dolore") {{
+                .setSecurity(new Security("natus") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(844550L)
+                .setOrganizationId(773326L)
                 .build();
 
-            GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(848944L, 194342L);            
+            GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(13236L, 974259L);            
 
             GetDocumentDetailsResponse res = sdk.document.get(req);
 
@@ -79,17 +79,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("exercitationem") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(773326L)
+                .setOrganizationId(862310L)
                 .build();
 
-            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(13236L) {{
-                limit = 974259;
-                offset = 347233L;
-                search = "nulla";
-                sortField = ListTeamDocumentsSortField.TITLE;
+            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(148141L) {{
+                limit = 780427;
+                offset = 981830L;
+                search = "doloribus";
+                sortField = ListTeamDocumentsSortField.MODIFICATION_TIME;
                 sortOrder = ListTeamDocumentsSortOrder.DESC;
             }};            
 

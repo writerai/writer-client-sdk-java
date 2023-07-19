@@ -26,13 +26,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corporis") {{
+                .setSecurity(new Security("natus") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(613064L)
+                .setOrganizationId(149675L)
                 .build();
 
-            FetchCustomizedModelFileRequest req = new FetchCustomizedModelFileRequest("iure", "saepe");            
+            FetchCustomizedModelFileRequest req = new FetchCustomizedModelFileRequest("iste", "dolor");            
 
             FetchCustomizedModelFileResponse res = sdk.downloadTheCustomizedModel.fetchFile(req);
 
