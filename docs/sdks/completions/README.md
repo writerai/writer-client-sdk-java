@@ -38,7 +38,7 @@ public class Application {
                                 bestOf = 1L;
                                 frequencyPenalty = 4736.08d;
                                 logprobs = 799159L;
-                                maxTokens = 2048L;
+                                maxTokens = 1024L;
                                 minTokens = 1L;
                                 n = 800911L;
                                 presencePenalty = 4614.79d;
@@ -104,7 +104,7 @@ public class Application {
                                 bestOf = 1L;
                                 frequencyPenalty = 5373.73d;
                                 logprobs = 944669L;
-                                maxTokens = 2048L;
+                                maxTokens = 1024L;
                                 minTokens = 1L;
                                 n = 758616L;
                                 presencePenalty = 5218.48d;
