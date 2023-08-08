@@ -2,14 +2,21 @@ configVersion: 1.0.0
 management:
   docChecksum: 044ba6ea348a6fb8206cacad6926373d
   docVersion: "1.7"
-  speakeasyVersion: 1.68.3
-  generationVersion: 2.81.1
+  speakeasyVersion: 1.69.1
+  generationVersion: 2.82.0
 generation:
   sdkClassName: writer
   singleTagPerOp: false
   telemetryEnabled: false
+features:
+  java:
+    core: 2.82.0
+    globalSecurity: 2.81.1
+    globalServerURLs: 2.81.1
+    globals: 2.81.1
+    nameOverrides: 2.81.1
 java:
-  version: 0.36.0
+  version: 0.37.0
   artifactID: sdk
   companyEmail: info@mycompany.com
   companyName: My Company
