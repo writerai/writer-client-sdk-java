@@ -41,7 +41,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.writer'
             artifactId = 'sdk'
-            version = '0.38.0'
+            version = '0.38.1'
 
             from components.java
 
