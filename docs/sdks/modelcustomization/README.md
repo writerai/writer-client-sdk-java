@@ -31,21 +31,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("enim") {{
+                .setSecurity(new Security("ipsa") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(607831L)
+                .setOrganizationId(969810L)
                 .build();
 
-            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(                new CreateCustomizationRequest("nemo", "minima") {{
-                                additionalHyperParameters = new HyperParameters(570197L);;
-                                batchSize = 38425L;
-                                description = "iure";
-                                epochs = 634274L;
-                                learningRate = 9883.74d;
-                                promptTemplate = "sapiente";
-                                validationDatasetFileId = "architecto";
-                            }};, "mollitia");            
+            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(                new CreateCustomizationRequest("est", "mollitia") {{
+                                additionalHyperParameters = new HyperParameters(670638L);;
+                                batchSize = 170909L;
+                                description = "dolorem";
+                                epochs = 358152L;
+                                learningRate = 1289.26d;
+                                promptTemplate = "nobis";
+                                validationDatasetFileId = "enim";
+                            }};, "omnis");            
 
             CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
 
@@ -89,13 +89,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("dolorem") {{
+                .setSecurity(new Security("nemo") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(635059L)
+                .setOrganizationId(325047L)
                 .build();
 
-            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("consequuntur", "repellat");            
+            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("excepturi", "accusantium");            
 
             DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
 
@@ -139,13 +139,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("mollitia") {{
+                .setSecurity(new Security("iure") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(581850L)
+                .setOrganizationId(634274L)
                 .build();
 
-            GetModelCustomizationRequest req = new GetModelCustomizationRequest("numquam", "commodi");            
+            GetModelCustomizationRequest req = new GetModelCustomizationRequest("doloribus", "sapiente");            
 
             GetModelCustomizationResponse res = sdk.modelCustomization.get(req);
 
@@ -189,13 +189,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("quam") {{
+                .setSecurity(new Security("architecto") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(474697L)
+                .setOrganizationId(652790L)
                 .build();
 
-            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("velit");            
+            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("dolorem");            
 
             ListModelCustomizationsResponse res = sdk.modelCustomization.list(req);
 

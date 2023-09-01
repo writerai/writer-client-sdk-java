@@ -35,19 +35,21 @@ public class Application {
                 .build();
 
             CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("maiores") {{
-                                bestOf = 473608L;
-                                frequencyPenalty = 7991.59d;
-                                logprobs = 800911L;
-                                maxTokens = 461479L;
-                                minTokens = 520478L;
-                                n = 780529L;
-                                presencePenalty = 6788.8d;
+                                bestOf = 1L;
+                                frequencyPenalty = 4736.08d;
+                                logprobs = 799159L;
+                                maxTokens = 1024L;
+                                minTokens = 1L;
+                                n = 800911L;
+                                presencePenalty = 4614.79d;
                                 stop = new String[]{{
-                                    add("nam"),
+                                    add("porro"),
+                                    add("dolorum"),
+                                    add("dicta"),
                                 }};
-                                temperature = 6399.21d;
-                                topP = 5820.2d;
-                            }};, "fugit");            
+                                temperature = 0.7d;
+                                topP = 1d;
+                            }};, "nam");            
 
             CreateCompletionResponse res = sdk.completions.create(req);
 
@@ -92,28 +94,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("deleniti") {{
+                .setSecurity(new Security("officia") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(944669L)
+                .setOrganizationId(582020L)
                 .build();
 
-            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("optio") {{
-                                bestOf = 521848L;
-                                frequencyPenalty = 1059.07d;
-                                logprobs = 414662L;
-                                maxTokens = 473600L;
-                                minTokens = 264555L;
-                                n = 186332L;
-                                presencePenalty = 7742.34d;
+            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("fugit") {{
+                                bestOf = 1L;
+                                frequencyPenalty = 5373.73d;
+                                logprobs = 944669L;
+                                maxTokens = 1024L;
+                                minTokens = 1L;
+                                n = 758616L;
+                                presencePenalty = 5218.48d;
                                 stop = new String[]{{
-                                    add("esse"),
-                                    add("ipsum"),
-                                    add("excepturi"),
+                                    add("commodi"),
                                 }};
-                                temperature = 1352.18d;
-                                topP = 187.89d;
-                            }};, "ad", "natus");            
+                                temperature = 0.7d;
+                                topP = 1d;
+                            }};, "molestiae", "modi");            
 
             CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 

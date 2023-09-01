@@ -27,13 +27,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("eum") {{
+                .setSecurity(new Security("illum") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(221262L)
+                .setOrganizationId(864934L)
                 .build();
 
-            PageDetailsRequest req = new PageDetailsRequest(896547L);            
+            PageDetailsRequest req = new PageDetailsRequest(807319L);            
 
             PageDetailsResponse res = sdk.styleguide.get(req);
 
@@ -78,16 +78,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("odit") {{
+                .setSecurity(new Security("ea") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(367562L)
+                .setOrganizationId(569101L)
                 .build();
 
             ListPagesRequest req = new ListPagesRequest() {{
-                limit = 97260L;
-                offset = 435865L;
-                status = ListPagesStatus.OFFLINE;
+                limit = 139972L;
+                offset = 407183L;
+                status = ListPagesStatus.LIVE;
             }};            
 
             ListPagesResponse res = sdk.styleguide.listPages(req);
