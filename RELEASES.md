@@ -363,3 +363,11 @@ Based on:
 - Speakeasy CLI 1.75.0 (2.89.1) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.40.0] .
+
+## 2023-09-01 00:22:26
+### Changes
+Based on:
+- OpenAPI Doc 1.7 https://raw.githubusercontent.com/speakeasy-sdks/w-ai-openapi/main/openapi.yaml
+- Speakeasy CLI 1.77.0 (2.91.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.41.0] .
