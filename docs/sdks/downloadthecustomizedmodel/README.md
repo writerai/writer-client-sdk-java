@@ -1,4 +1,4 @@
-# downloadTheCustomizedModel
+# DownloadTheCustomizedModel
 
 ## Overview
 
@@ -26,13 +26,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("fugit") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(149675L)
+                .setOrganizationId(537373L)
                 .build();
 
-            FetchCustomizedModelFileRequest req = new FetchCustomizedModelFileRequest("iste", "dolor");            
+            FetchCustomizedModelFileRequest req = new FetchCustomizedModelFileRequest("hic", "optio");            
 
             FetchCustomizedModelFileResponse res = sdk.downloadTheCustomizedModel.fetchFile(req);
 

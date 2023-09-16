@@ -1,4 +1,4 @@
-# files
+# Files
 
 ## Overview
 
@@ -29,13 +29,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("totam") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(386489L)
+                .setOrganizationId(105907L)
                 .build();
 
-            DeleteFileRequest req = new DeleteFileRequest("hic");            
+            DeleteFileRequest req = new DeleteFileRequest("commodi");            
 
             DeleteFileResponse res = sdk.files.delete(req);
 
@@ -79,13 +79,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("molestiae") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(681820L)
+                .setOrganizationId(264555L)
                 .build();
 
-            GetFileRequest req = new GetFileRequest("in");            
+            GetFileRequest req = new GetFileRequest("qui");            
 
             GetFileResponse res = sdk.files.get(req);
 
@@ -129,10 +129,10 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corporis") {{
+                .setSecurity(new Security("impedit") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(613064L)
+                .setOrganizationId(736918L)
                 .build();
 
             ListFilesRequest req = new ListFilesRequest();            
@@ -181,13 +181,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("iure") {{
+                .setSecurity(new Security("esse") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(902349L)
+                .setOrganizationId(216550L)
                 .build();
 
-            UploadFileRequest req = new UploadFileRequest(                new UploadModelFileRequest(                new UploadModelFileRequestFile("quidem".getBytes(), "architecto");););            
+            UploadFileRequest req = new UploadFileRequest(                new UploadModelFileRequest(                new UploadModelFileRequestFile("excepturi".getBytes(), "aspernatur");););            
 
             UploadFileResponse res = sdk.files.upload(req);
 

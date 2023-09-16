@@ -1,4 +1,4 @@
-# styleguide
+# Styleguide
 
 ## Overview
 
@@ -27,13 +27,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("illum") {{
+                .setSecurity(new Security("doloremque") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(864934L)
+                .setOrganizationId(441711L)
                 .build();
 
-            PageDetailsRequest req = new PageDetailsRequest(807319L);            
+            PageDetailsRequest req = new PageDetailsRequest(282807L);            
 
             PageDetailsResponse res = sdk.styleguide.get(req);
 
@@ -78,15 +78,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("ea") {{
+                .setSecurity(new Security("maiores") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(569101L)
+                .setOrganizationId(120196L)
                 .build();
 
             ListPagesRequest req = new ListPagesRequest() {{
-                limit = 139972L;
-                offset = 407183L;
+                limit = 359444L;
+                offset = 296140L;
                 status = ListPagesStatus.LIVE;
             }};            
 

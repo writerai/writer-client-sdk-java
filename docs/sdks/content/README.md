@@ -1,4 +1,4 @@
-# content
+# Content
 
 ## Overview
 
@@ -29,13 +29,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("qui") {{
+                .setSecurity(new Security("quod") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(774234L)
+                .setOrganizationId(461479L)
                 .build();
 
-            ContentCheckRequest req = new ContentCheckRequest(                new ContentRequest("cum",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 456150L);            
+            ContentCheckRequest req = new ContentCheckRequest(                new ContentRequest("totam",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 780529L);            
 
             ContentCheckResponse res = sdk.content.check(req);
 
@@ -81,14 +81,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("ipsum") {{
+                .setSecurity(new Security("dolorum") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(568434L)
+                .setOrganizationId(118274L)
                 .build();
 
-            ContentCorrectRequest req = new ContentCorrectRequest(                new ContentRequest("aspernatur",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 18789L) {{
-                xRequestID = "ad";
+            ContentCorrectRequest req = new ContentCorrectRequest(                new ContentRequest("nam",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 639921L) {{
+                xRequestID = "occaecati";
             }};            
 
             ContentCorrectResponse res = sdk.content.correct(req);

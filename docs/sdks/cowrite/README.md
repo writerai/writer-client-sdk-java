@@ -1,4 +1,4 @@
-# coWrite
+# CoWrite
 
 ## Overview
 
@@ -37,24 +37,14 @@ public class Application {
 
             GenerateContentRequest req = new GenerateContentRequest(                new GenerateTemplateRequest("deserunt") {{
                                 inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
-                                    add(new MagicRequestInput("placeat") {{
-                                        name = "Dr. Valerie Toy";
+                                    add(new MagicRequestInput("suscipit") {{
+                                        name = "Willie Gulgowski DVM";
                                         value = new String[]{{
-                                            add("molestiae"),
-                                            add("minus"),
-                                        }};
-                                    }}),
-                                    add(new MagicRequestInput("perferendis") {{
-                                        name = "Ted Mante";
-                                        value = new String[]{{
-                                            add("ab"),
-                                            add("quis"),
-                                            add("veritatis"),
-                                            add("deserunt"),
+                                            add("tempora"),
                                         }};
                                     }}),
                                 }};
-                            }};, 368241L);            
+                            }};, 477665L);            
 
             GenerateContentResponse res = sdk.coWrite.generateContent(req);
 
@@ -98,13 +88,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("repellendus") {{
+                .setSecurity(new Security("minus") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(957156L)
+                .setOrganizationId(812169L)
                 .build();
 
-            ListTemplatesRequest req = new ListTemplatesRequest(778157L, "odit");            
+            ListTemplatesRequest req = new ListTemplatesRequest(528895L, "iusto");            
 
             ListTemplatesResponse res = sdk.coWrite.listTemplates(req);
 
