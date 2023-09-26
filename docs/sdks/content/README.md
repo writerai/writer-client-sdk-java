@@ -29,13 +29,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("quod") {{
+                .setSecurity(new Security("totam") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(461479L)
+                .setOrganizationId(780529L)
                 .build();
 
-            ContentCheckRequest req = new ContentCheckRequest(                new ContentRequest("totam",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 780529L);            
+            ContentCheckRequest req = new ContentCheckRequest(                new ContentRequest("dolorum",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 118274L);            
 
             ContentCheckResponse res = sdk.content.check(req);
 
@@ -81,14 +81,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("dolorum") {{
+                .setSecurity(new Security("nam") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(118274L)
+                .setOrganizationId(639921L)
                 .build();
 
-            ContentCorrectRequest req = new ContentCorrectRequest(                new ContentRequest("nam",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 639921L) {{
-                xRequestID = "occaecati";
+            ContentCorrectRequest req = new ContentCorrectRequest(                new ContentRequest("occaecati",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 143353L) {{
+                xRequestID = "deleniti";
             }};            
 
             ContentCorrectResponse res = sdk.content.correct(req);

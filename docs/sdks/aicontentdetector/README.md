@@ -27,13 +27,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(602763L)
+                .setOrganizationId(847252L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("nulla"););            
+            DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("vel"););            
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 

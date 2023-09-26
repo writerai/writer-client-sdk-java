@@ -31,21 +31,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("perferendis") {{
+                .setSecurity(new Security("natus") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(324141L)
+                .setOrganizationId(149675L)
                 .build();
 
-            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(                new CreateCustomizationRequest("natus", "sed") {{
-                                additionalHyperParameters = new HyperParameters(612096L);;
-                                batchSize = 222321L;
-                                description = "natus";
-                                epochs = 386489L;
-                                learningRate = 9437.49d;
-                                promptTemplate = "saepe";
-                                validationDatasetFileId = "fuga";
-                            }};, "in");            
+            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(                new CreateCustomizationRequest("iste", "dolor") {{
+                                additionalHyperParameters = new HyperParameters(616934L);;
+                                batchSize = 386489L;
+                                description = "hic";
+                                epochs = 902599L;
+                                learningRate = 6818.2d;
+                                promptTemplate = "in";
+                                validationDatasetFileId = "corporis";
+                            }};, "iste");            
 
             CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
 
@@ -89,13 +89,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corporis") {{
+                .setSecurity(new Security("iure") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(613064L)
+                .setOrganizationId(902349L)
                 .build();
 
-            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("iure", "saepe");            
+            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("quidem", "architecto");            
 
             DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
 
@@ -139,13 +139,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("quidem") {{
+                .setSecurity(new Security("ipsa") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(99280L)
+                .setOrganizationId(969810L)
                 .build();
 
-            GetModelCustomizationRequest req = new GetModelCustomizationRequest("ipsa", "reiciendis");            
+            GetModelCustomizationRequest req = new GetModelCustomizationRequest("est", "mollitia");            
 
             GetModelCustomizationResponse res = sdk.modelCustomization.get(req);
 
@@ -189,13 +189,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("est") {{
+                .setSecurity(new Security("laborum") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(653140L)
+                .setOrganizationId(170909L)
                 .build();
 
-            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("laborum");            
+            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("dolorem");            
 
             ListModelCustomizationsResponse res = sdk.modelCustomization.list(req);
 

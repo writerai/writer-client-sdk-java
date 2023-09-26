@@ -28,26 +28,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("recusandae") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(392785L)
+                .setOrganizationId(836079L)
                 .build();
 
-            CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("recusandae") {{
+            CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("ab") {{
                                 bestOf = 1L;
-                                frequencyPenalty = 8360.79d;
-                                logprobs = 71036L;
+                                frequencyPenalty = 3373.96d;
+                                logprobs = 87129L;
                                 maxTokens = 1024L;
                                 minTokens = 1L;
-                                n = 337396L;
-                                presencePenalty = 871.29d;
+                                n = 648172L;
+                                presencePenalty = 202.18d;
                                 stop = new String[]{{
-                                    add("deserunt"),
+                                    add("ipsam"),
                                 }};
                                 temperature = 0.7d;
                                 topP = 1d;
-                            }};, "perferendis");            
+                            }};, "repellendus");            
 
             CreateCompletionResponse res = sdk.completions.create(req);
 
@@ -92,26 +92,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("ipsam") {{
+                .setSecurity(new Security("sapiente") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(832620L)
+                .setOrganizationId(778157L)
                 .build();
 
-            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("sapiente") {{
+            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("odit") {{
                                 bestOf = 1L;
-                                frequencyPenalty = 7781.57d;
-                                logprobs = 140350L;
+                                frequencyPenalty = 8700.13d;
+                                logprobs = 870088L;
                                 maxTokens = 1024L;
                                 minTokens = 1L;
-                                n = 870013L;
-                                presencePenalty = 8700.88d;
+                                n = 978619L;
+                                presencePenalty = 4736.08d;
                                 stop = new String[]{{
-                                    add("maiores"),
+                                    add("quod"),
                                 }};
                                 temperature = 0.7d;
                                 topP = 1d;
-                            }};, "molestiae", "quod");            
+                            }};, "quod", "esse");            
 
             CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 

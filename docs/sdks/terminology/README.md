@@ -41,56 +41,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("dicta") {{
+                .setSecurity(new Security("enim") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(688661L)
+                .setOrganizationId(880476L)
                 .build();
 
             AddTermsRequest req = new AddTermsRequest(                new CreateTermsRequest() {{
                                 failHandling = CreateTermsRequestFailHandling.VALIDATE;
                                 models = new com.writer.sdk.models.shared.TermCreate[]{{
-                                    add(new TermCreate(false, "itaque", TermCreateType.APPROVED) {{
+                                    add(new TermCreate(false, "enim", TermCreateType.APPROVED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
                                             fixCommonMistakes = false;
                                         }};
                                         caseSensitive = false;
-                                        description = "accusamus";
+                                        description = "repudiandae";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("quae", TermExampleCreateType.GOOD) {{
-                                                example = "commodi";
-                                                type = TermExampleCreateType.BAD;
+                                            add(new TermExampleCreate("quidem", TermExampleCreateType.BAD) {{
+                                                example = "quae";
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
                                         linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
                                             add(new LinkedTermCreate() {{
-                                                linkedTermId = 692472L;
-                                                reference = "molestias";
+                                                linkedTermId = 566602L;
+                                                reference = "pariatur";
                                             }}),
                                         }};
                                         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                            add(new TermMistakeCreate(false, "praesentium") {{
+                                            add(new TermMistakeCreate(false, "voluptates") {{
                                                 caseSensitive = false;
-                                                mistake = "excepturi";
-                                                pos = TermMistakeCreatePos.ADJECTIVE;
-                                                reference = "modi";
+                                                mistake = "modi";
+                                                pos = TermMistakeCreatePos.ADVERB;
+                                                reference = "rem";
                                             }}),
                                         }};
-                                        pos = TermCreatePos.ADVERB;
-                                        reference = "voluptates";
+                                        pos = TermCreatePos.NOUN;
+                                        reference = "repudiandae";
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                            add(new TermTagCreate("repudiandae") {{
-                                                tag = "quasi";
+                                            add(new TermTagCreate("veritatis") {{
+                                                tag = "sint";
                                             }}),
                                         }};
-                                        term = "sint";
+                                        term = "itaque";
                                         type = TermCreateType.APPROVED;
                                     }}),
                                 }};
-                            }};, 318569L);            
+                            }};, 667411L);            
 
             AddTermsResponse res = sdk.terminology.add(req);
 
@@ -134,16 +134,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("consequatur") {{
+                .setSecurity(new Security("quibusdam") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(667411L)
+                .setOrganizationId(131797L)
                 .build();
 
-            DeleteTermsRequest req = new DeleteTermsRequest(842342L) {{
-                xRequestID = "explicabo";
+            DeleteTermsRequest req = new DeleteTermsRequest(647174L) {{
+                xRequestID = "distinctio";
                 ids = new Long[]{{
-                    add(647174L),
+                    add(841386L),
                 }};
             }};            
 
@@ -193,23 +193,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("distinctio") {{
+                .setSecurity(new Security("labore") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(841386L)
+                .setOrganizationId(264730L)
                 .build();
 
-            FindTermsRequest req = new FindTermsRequest(289406L) {{
-                limit = 264730L;
-                offset = 183191L;
-                partOfSpeech = FindTermsPartOfSpeech.VERB;
-                sortField = FindTermsSortField.MODIFICATION_TIME;
-                sortOrder = FindTermsSortOrder.DESC;
+            FindTermsRequest req = new FindTermsRequest(183191L) {{
+                limit = 397821L;
+                offset = 586513L;
+                partOfSpeech = FindTermsPartOfSpeech.ADVERB;
+                sortField = FindTermsSortField.TERM;
+                sortOrder = FindTermsSortOrder.ASC;
                 tags = new String[]{{
-                    add("perferendis"),
+                    add("assumenda"),
                 }};
-                term = "magni";
-                type = FindTermsType.PENDING;
+                term = "ipsam";
+                type = FindTermsType.APPROVED;
             }};            
 
             FindTermsResponse res = sdk.terminology.find(req);
@@ -266,57 +266,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("ipsam") {{
+                .setSecurity(new Security("fugit") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(4695L)
+                .setOrganizationId(677817L)
                 .build();
 
             UpdateTermsRequest req = new UpdateTermsRequest(                new UpdateTermsRequest() {{
-                                failHandling = UpdateTermsRequestFailHandling.ACCUMULATE;
+                                failHandling = UpdateTermsRequestFailHandling.SKIP;
                                 models = new com.writer.sdk.models.shared.TermUpdate[]{{
-                                    add(new TermUpdate(false, 891555L, "a", TermUpdateType.PENDING) {{
+                                    add(new TermUpdate(false, 680056L, "in", TermUpdateType.BANNED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
                                             fixCommonMistakes = false;
                                         }};
                                         caseSensitive = false;
-                                        description = "dolorum";
+                                        description = "tempora";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("facilis", TermExampleCreateType.BAD) {{
-                                                example = "excepturi";
-                                                type = TermExampleCreateType.GOOD;
+                                            add(new TermExampleCreate("labore", TermExampleCreateType.BAD) {{
+                                                example = "facilis";
+                                                type = TermExampleCreateType.BAD;
                                             }}),
                                         }};
                                         highlight = false;
-                                        id = 288476L;
+                                        id = 433288L;
                                         linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
                                             add(new LinkedTermCreate() {{
-                                                linkedTermId = 962189L;
-                                                reference = "eum";
+                                                linkedTermId = 248753L;
+                                                reference = "eligendi";
                                             }}),
                                         }};
                                         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                            add(new TermMistakeCreate(false, "aliquid") {{
+                                            add(new TermMistakeCreate(false, "necessitatibus") {{
                                                 caseSensitive = false;
-                                                mistake = "non";
-                                                pos = TermMistakeCreatePos.ADJECTIVE;
-                                                reference = "sint";
+                                                mistake = "sint";
+                                                pos = TermMistakeCreatePos.VERB;
+                                                reference = "provident";
                                             }}),
                                         }};
                                         pos = TermUpdatePos.ADVERB;
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                            add(new TermTagCreate("sint") {{
-                                                tag = "necessitatibus";
+                                            add(new TermTagCreate("dolor") {{
+                                                tag = "officia";
                                             }}),
                                         }};
-                                        term = "officia";
-                                        type = TermUpdateType.APPROVED;
+                                        term = "debitis";
+                                        type = TermUpdateType.PENDING;
                                     }}),
                                 }};
-                            }};, 447125L) {{
-                xRequestID = "in";
+                            }};, 846409L) {{
+                xRequestID = "maiores";
             }};            
 
             UpdateTermsResponse res = sdk.terminology.update(req);

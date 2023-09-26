@@ -25,10 +25,10 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corrupti") {{
+                .setSecurity(new Security("error") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(847252L)
+                .setOrganizationId(645894L)
                 .build();
 
             GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
