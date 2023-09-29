@@ -26,10 +26,10 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("error") {{
+                .setSecurity(new Security("Hatchback") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(645894L)
+                .setOrganizationId(861458L)
                 .build();
 
             GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();

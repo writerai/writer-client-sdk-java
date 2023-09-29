@@ -27,10 +27,10 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corporis") {{
+                .setSecurity(new Security("Bicycle") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(128926L)
+                .setOrganizationId(257649L)
                 .build();
 
             ListModelsRequest req = new ListModelsRequest();            

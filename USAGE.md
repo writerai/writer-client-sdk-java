@@ -14,13 +14,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corrupti") {{
+                .setSecurity(new Security("Bronze") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(592845L)
+                .setOrganizationId(426278L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("distinctio"););            
+            DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("executive"););            
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 

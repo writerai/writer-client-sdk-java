@@ -29,18 +29,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("rerum") {{
+                .setSecurity(new Security("Bicycle") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(116202L)
+                .setOrganizationId(257649L)
                 .build();
 
             ListUsersRequest req = new ListUsersRequest() {{
-                limit = 297437L;
-                offset = 767024L;
-                search = "facere";
-                sortField = ListUsersSortField.CREATION_TIME;
-                sortOrder = ListUsersSortOrder.ASC;
+                limit = 678317L;
+                offset = 297548L;
+                search = "Canada";
+                sortField = ListUsersSortField.LAST_SEEN;
+                sortOrder = ListUsersSortOrder.DESC;
             }};            
 
             ListUsersResponse res = sdk.user.list(req);

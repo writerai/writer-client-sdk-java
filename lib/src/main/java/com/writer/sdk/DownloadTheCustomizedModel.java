@@ -39,7 +39,7 @@ public class DownloadTheCustomizedModel {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/octet-stream;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
         HTTPClient client = this.sdkConfiguration.securityClient;
         

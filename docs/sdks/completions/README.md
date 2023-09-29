@@ -29,26 +29,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("recusandae") {{
+                .setSecurity(new Security("online") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(836079L)
+                .setOrganizationId(638424L)
                 .build();
 
-            CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("ab") {{
+            CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("Extended") {{
                                 bestOf = 1L;
-                                frequencyPenalty = 3373.96d;
-                                logprobs = 87129L;
+                                frequencyPenalty = 1343.65d;
+                                logprobs = 786546L;
                                 maxTokens = 1024L;
                                 minTokens = 1L;
-                                n = 648172L;
-                                presencePenalty = 202.18d;
+                                n = 69025L;
+                                presencePenalty = 9967.06d;
                                 stop = new String[]{{
-                                    add("ipsam"),
+                                    add("grey"),
                                 }};
                                 temperature = 0.7d;
                                 topP = 1d;
-                            }};, "repellendus");            
+                            }};, "technology");            
 
             CreateCompletionResponse res = sdk.completions.create(req);
 
@@ -93,26 +93,26 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("sapiente") {{
+                .setSecurity(new Security("and") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(778157L)
+                .setOrganizationId(951257L)
                 .build();
 
-            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("odit") {{
+            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("streamline") {{
                                 bestOf = 1L;
-                                frequencyPenalty = 8700.13d;
-                                logprobs = 870088L;
+                                frequencyPenalty = 7443d;
+                                logprobs = 335513L;
                                 maxTokens = 1024L;
                                 minTokens = 1L;
-                                n = 978619L;
-                                presencePenalty = 4736.08d;
+                                n = 151932L;
+                                presencePenalty = 3280.71d;
                                 stop = new String[]{{
-                                    add("quod"),
+                                    add("1080p"),
                                 }};
                                 temperature = 0.7d;
                                 topP = 1d;
-                            }};, "quod", "esse");            
+                            }};, "Hybrid", "heavily");            
 
             CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 

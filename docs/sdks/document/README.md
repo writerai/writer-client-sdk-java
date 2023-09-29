@@ -28,13 +28,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("laborum") {{
+                .setSecurity(new Security("female") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(881104L)
+                .setOrganizationId(558834L)
                 .build();
 
-            GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(249796L, 581273L);            
+            GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(844199L, 544221L);            
 
             GetDocumentDetailsResponse res = sdk.document.get(req);
 
@@ -80,18 +80,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("enim") {{
+                .setSecurity(new Security("Bicycle") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(881736L)
+                .setOrganizationId(257649L)
                 .build();
 
-            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(965417L) {{
-                limit = 692532;
-                offset = 588465L;
-                search = "nam";
-                sortField = ListTeamDocumentsSortField.MODIFIED_BY_ME_TIME;
-                sortOrder = ListTeamDocumentsSortOrder.DESC;
+            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(678317L) {{
+                limit = 297548;
+                offset = 177706L;
+                search = "Ergonomic Shores";
+                sortField = ListTeamDocumentsSortField.CREATION_TIME;
+                sortOrder = ListTeamDocumentsSortOrder.ASC;
             }};            
 
             ListTeamDocumentsResponse res = sdk.document.list(req);

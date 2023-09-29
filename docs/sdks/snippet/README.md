@@ -29,16 +29,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("nobis") {{
+                .setSecurity(new Security("program") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(315428L)
+                .setOrganizationId(698486L)
                 .build();
 
-            DeleteSnippetsRequest req = new DeleteSnippetsRequest(607831L) {{
-                xRequestID = "nemo";
+            DeleteSnippetsRequest req = new DeleteSnippetsRequest(557937L) {{
+                xRequestID = "Sausages synergy";
                 ids = new String[]{{
-                    add("minima"),
+                    add("objective"),
                 }};
             }};            
 
@@ -86,23 +86,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("excepturi") {{
+                .setSecurity(new Security("Ghana") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(38425L)
+                .setOrganizationId(488098L)
                 .build();
 
-            FindSnippetsRequest req = new FindSnippetsRequest(438601L) {{
-                limit = 634274L;
-                offset = 988374L;
-                search = "sapiente";
+            FindSnippetsRequest req = new FindSnippetsRequest(949900L) {{
+                limit = 939943L;
+                offset = 111247L;
+                search = "Electric";
                 shortcuts = new String[]{{
-                    add("architecto"),
+                    add("Dynamic"),
                 }};
-                sortField = FindSnippetsSortField.CREATION_TIME;
-                sortOrder = FindSnippetsSortOrder.ASC;
+                sortField = FindSnippetsSortField.SHORTCUT;
+                sortOrder = FindSnippetsSortOrder.DESC;
                 tags = new String[]{{
-                    add("culpa"),
+                    add("World"),
                 }};
             }};            
 
@@ -150,27 +150,27 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("consequuntur") {{
+                .setSecurity(new Security("Van") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(995300L)
+                .setOrganizationId(15652L)
                 .build();
 
-            UpdateSnippetsRequest req = new UpdateSnippetsRequest(653108L) {{
+            UpdateSnippetsRequest req = new UpdateSnippetsRequest(344620L) {{
                 requestBody = new com.writer.sdk.models.shared.SnippetUpdate[]{{
-                    add(new SnippetUpdate("perferendis", "doloremque") {{
-                        description = "occaecati";
-                        id = "46773925-1aa5-42c3-b5ad-019da1ffe78f";
-                        shortcut = "ipsa";
-                        snippet = "omnis";
+                    add(new SnippetUpdate("Carolina", "syndicate") {{
+                        description = "Reactive zero tolerance definition";
+                        id = "<ID>";
+                        shortcut = "Analyst invoice";
+                        snippet = "Islands";
                         tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("cum") {{
-                                tag = "voluptate";
+                            add(new SnippetTagV2("Plastic") {{
+                                tag = "withdrawal extend";
                             }}),
                         }};
                     }}),
                 }};
-                xRequestID = "reprehenderit";
+                xRequestID = "implement JBOD";
             }};            
 
             UpdateSnippetsResponse res = sdk.snippet.update(req);

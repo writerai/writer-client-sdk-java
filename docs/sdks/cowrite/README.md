@@ -30,22 +30,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("suscipit") {{
+                .setSecurity(new Security("officiis") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(437587L)
+                .setOrganizationId(926220L)
                 .build();
 
-            GenerateContentRequest req = new GenerateContentRequest(                new GenerateTemplateRequest("magnam") {{
+            GenerateContentRequest req = new GenerateContentRequest(                new GenerateTemplateRequest("eek") {{
                                 inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
-                                    add(new MagicRequestInput("minus") {{
-                                        name = "Larry Windler";
+                                    add(new MagicRequestInput("Poland") {{
+                                        name = "female Cambridgeshire Northwest";
                                         value = new String[]{{
-                                            add("molestiae"),
+                                            add("Planner"),
                                         }};
                                     }}),
                                 }};
-                            }};, 812169L);            
+                            }};, 217362L);            
 
             GenerateContentResponse res = sdk.coWrite.generateContent(req);
 
@@ -89,13 +89,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("voluptatum") {{
+                .setSecurity(new Security("structure") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(479977L)
+                .setOrganizationId(55511L)
                 .build();
 
-            ListTemplatesRequest req = new ListTemplatesRequest(568045L, "nisi");            
+            ListTemplatesRequest req = new ListTemplatesRequest(599736L, "transmit");            
 
             ListTemplatesResponse res = sdk.coWrite.listTemplates(req);
 

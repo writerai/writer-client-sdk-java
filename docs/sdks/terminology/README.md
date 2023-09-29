@@ -42,56 +42,56 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("enim") {{
+                .setSecurity(new Security("transmit") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(880476L)
+                .setOrganizationId(554561L)
                 .build();
 
             AddTermsRequest req = new AddTermsRequest(                new CreateTermsRequest() {{
-                                failHandling = CreateTermsRequestFailHandling.VALIDATE;
+                                failHandling = CreateTermsRequestFailHandling.SKIP;
                                 models = new com.writer.sdk.models.shared.TermCreate[]{{
-                                    add(new TermCreate(false, "enim", TermCreateType.APPROVED) {{
+                                    add(new TermCreate(false, "Fiat", TermCreateType.BANNED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
                                             fixCommonMistakes = false;
                                         }};
                                         caseSensitive = false;
-                                        description = "repudiandae";
+                                        description = "Stand-alone upward-trending time-frame";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("quidem", TermExampleCreateType.BAD) {{
-                                                example = "quae";
+                                            add(new TermExampleCreate("kelvin", TermExampleCreateType.GOOD) {{
+                                                example = "bypass Chief";
                                                 type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
                                         linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
                                             add(new LinkedTermCreate() {{
-                                                linkedTermId = 566602L;
-                                                reference = "pariatur";
+                                                linkedTermId = 796304L;
+                                                reference = "generating payment quantify";
                                             }}),
                                         }};
                                         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                            add(new TermMistakeCreate(false, "voluptates") {{
+                                            add(new TermMistakeCreate(false, "Northeast") {{
                                                 caseSensitive = false;
-                                                mistake = "modi";
-                                                pos = TermMistakeCreatePos.ADVERB;
-                                                reference = "rem";
+                                                mistake = "AGP volt";
+                                                pos = TermMistakeCreatePos.NOUN;
+                                                reference = "at";
                                             }}),
                                         }};
-                                        pos = TermCreatePos.NOUN;
-                                        reference = "repudiandae";
+                                        pos = TermCreatePos.VERB;
+                                        reference = "female";
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                            add(new TermTagCreate("veritatis") {{
-                                                tag = "sint";
+                                            add(new TermTagCreate("Sharable") {{
+                                                tag = "policy";
                                             }}),
                                         }};
-                                        term = "itaque";
-                                        type = TermCreateType.APPROVED;
+                                        term = "about electric";
+                                        type = TermCreateType.BANNED;
                                     }}),
                                 }};
-                            }};, 667411L);            
+                            }};, 900532L);            
 
             AddTermsResponse res = sdk.terminology.add(req);
 
@@ -135,16 +135,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("program") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(131797L)
+                .setOrganizationId(698486L)
                 .build();
 
-            DeleteTermsRequest req = new DeleteTermsRequest(647174L) {{
-                xRequestID = "distinctio";
+            DeleteTermsRequest req = new DeleteTermsRequest(557937L) {{
+                xRequestID = "Sausages synergy";
                 ids = new Long[]{{
-                    add(841386L),
+                    add(953140L),
                 }};
             }};            
 
@@ -194,22 +194,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("labore") {{
+                .setSecurity(new Security("Ghana") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(264730L)
+                .setOrganizationId(488098L)
                 .build();
 
-            FindTermsRequest req = new FindTermsRequest(183191L) {{
-                limit = 397821L;
-                offset = 586513L;
-                partOfSpeech = FindTermsPartOfSpeech.ADVERB;
-                sortField = FindTermsSortField.TERM;
+            FindTermsRequest req = new FindTermsRequest(949900L) {{
+                limit = 939943L;
+                offset = 111247L;
+                partOfSpeech = FindTermsPartOfSpeech.NOUN;
+                sortField = FindTermsSortField.TYPE;
                 sortOrder = FindTermsSortOrder.ASC;
                 tags = new String[]{{
-                    add("assumenda"),
+                    add("Dynamic"),
                 }};
-                term = "ipsam";
+                term = "generating";
                 type = FindTermsType.APPROVED;
             }};            
 
@@ -267,57 +267,57 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("fugit") {{
+                .setSecurity(new Security("Van") {{
                     apiKey = "";
                 }})
-                .setOrganizationId(677817L)
+                .setOrganizationId(15652L)
                 .build();
 
             UpdateTermsRequest req = new UpdateTermsRequest(                new UpdateTermsRequest() {{
-                                failHandling = UpdateTermsRequestFailHandling.SKIP;
+                                failHandling = UpdateTermsRequestFailHandling.VALIDATE;
                                 models = new com.writer.sdk.models.shared.TermUpdate[]{{
-                                    add(new TermUpdate(false, 680056L, "in", TermUpdateType.BANNED) {{
+                                    add(new TermUpdate(false, 352933L, "Internal", TermUpdateType.BANNED) {{
                                         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
                                             capitalize = false;
                                             fixCase = false;
                                             fixCommonMistakes = false;
                                         }};
                                         caseSensitive = false;
-                                        description = "tempora";
+                                        description = "Reactive zero tolerance definition";
                                         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("labore", TermExampleCreateType.BAD) {{
-                                                example = "facilis";
-                                                type = TermExampleCreateType.BAD;
+                                            add(new TermExampleCreate("Islands", TermExampleCreateType.GOOD) {{
+                                                example = "Analyst invoice";
+                                                type = TermExampleCreateType.GOOD;
                                             }}),
                                         }};
                                         highlight = false;
-                                        id = 433288L;
+                                        id = 446863L;
                                         linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
                                             add(new LinkedTermCreate() {{
-                                                linkedTermId = 248753L;
-                                                reference = "eligendi";
+                                                linkedTermId = 369182L;
+                                                reference = "white";
                                             }}),
                                         }};
                                         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                            add(new TermMistakeCreate(false, "necessitatibus") {{
+                                            add(new TermMistakeCreate(false, "Baht") {{
                                                 caseSensitive = false;
-                                                mistake = "sint";
+                                                mistake = "Carolina syndicate";
                                                 pos = TermMistakeCreatePos.VERB;
-                                                reference = "provident";
+                                                reference = "East";
                                             }}),
                                         }};
                                         pos = TermUpdatePos.ADVERB;
                                         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                            add(new TermTagCreate("dolor") {{
-                                                tag = "officia";
+                                            add(new TermTagCreate("Sharable") {{
+                                                tag = "guestbook driver users";
                                             }}),
                                         }};
-                                        term = "debitis";
-                                        type = TermUpdateType.PENDING;
+                                        term = "Lev Wooden";
+                                        type = TermUpdateType.BANNED;
                                     }}),
                                 }};
-                            }};, 846409L) {{
-                xRequestID = "maiores";
+                            }};, 834574L) {{
+                xRequestID = "brightly";
             }};            
 
             UpdateTermsResponse res = sdk.terminology.update(req);
