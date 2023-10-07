@@ -28,7 +28,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("female") {{
+                .setSecurity(new Security("female"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(558834L)
@@ -80,13 +80,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Bicycle") {{
+                .setSecurity(new Security("Bicycle"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(257649L)
                 .build();
 
-            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(678317L) {{
+            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(678317L){{
                 limit = 297548;
                 offset = 177706L;
                 search = "Ergonomic Shores";

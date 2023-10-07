@@ -30,22 +30,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("officiis") {{
+                .setSecurity(new Security("officiis"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(926220L)
                 .build();
 
-            GenerateContentRequest req = new GenerateContentRequest(                new GenerateTemplateRequest("eek") {{
-                                inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
-                                    add(new MagicRequestInput("Poland") {{
-                                        name = "female Cambridgeshire Northwest";
-                                        value = new String[]{{
-                                            add("Planner"),
-                                        }};
-                                    }}),
-                                }};
-                            }};, 217362L);            
+            GenerateContentRequest req = new GenerateContentRequest(new GenerateTemplateRequest("eek"){{
+inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
+    add(new MagicRequestInput("Poland"){{
+        name = "female Cambridgeshire Northwest";
+        value = new String[]{{
+            add("Planner"),
+        }};
+    }}),
+}};
+}}, 217362L);            
 
             GenerateContentResponse res = sdk.coWrite.generateContent(req);
 
@@ -89,7 +89,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("structure") {{
+                .setSecurity(new Security("structure"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(55511L)

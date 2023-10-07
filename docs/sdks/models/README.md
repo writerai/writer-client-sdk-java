@@ -27,7 +27,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Bicycle") {{
+                .setSecurity(new Security("Bicycle"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(257649L)

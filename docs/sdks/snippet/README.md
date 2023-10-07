@@ -29,13 +29,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("program") {{
+                .setSecurity(new Security("program"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(698486L)
                 .build();
 
-            DeleteSnippetsRequest req = new DeleteSnippetsRequest(557937L) {{
+            DeleteSnippetsRequest req = new DeleteSnippetsRequest(557937L){{
                 xRequestID = "Sausages synergy";
                 ids = new String[]{{
                     add("objective"),
@@ -86,13 +86,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Ghana") {{
+                .setSecurity(new Security("Ghana"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(488098L)
                 .build();
 
-            FindSnippetsRequest req = new FindSnippetsRequest(949900L) {{
+            FindSnippetsRequest req = new FindSnippetsRequest(949900L){{
                 limit = 939943L;
                 offset = 111247L;
                 search = "Electric";
@@ -150,22 +150,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Van") {{
+                .setSecurity(new Security("Van"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(15652L)
                 .build();
 
-            UpdateSnippetsRequest req = new UpdateSnippetsRequest(344620L) {{
+            UpdateSnippetsRequest req = new UpdateSnippetsRequest(344620L){{
                 requestBody = new com.writer.sdk.models.shared.SnippetUpdate[]{{
-                    add(new SnippetUpdate("Carolina", "syndicate") {{
-                        description = "Reactive zero tolerance definition";
+                    add(new SnippetUpdate("Carolina", "syndicate"){{
                         id = "<ID>";
-                        shortcut = "Analyst invoice";
-                        snippet = "Islands";
+                        snippet = "dock Quality redundant";
                         tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("Plastic") {{
-                                tag = "withdrawal extend";
+                            add(new SnippetTagV2("Plastic"){{
+                                tag = "Arizona Cotton extend";
                             }}),
                         }};
                     }}),

@@ -26,7 +26,7 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Hatchback") {{
+                .setSecurity(new Security("Hatchback"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(861458L)

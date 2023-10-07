@@ -42,56 +42,47 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("transmit") {{
+                .setSecurity(new Security("transmit"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(554561L)
                 .build();
 
-            AddTermsRequest req = new AddTermsRequest(                new CreateTermsRequest() {{
-                                failHandling = CreateTermsRequestFailHandling.SKIP;
-                                models = new com.writer.sdk.models.shared.TermCreate[]{{
-                                    add(new TermCreate(false, "Fiat", TermCreateType.BANNED) {{
-                                        approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
-                                            capitalize = false;
-                                            fixCase = false;
-                                            fixCommonMistakes = false;
-                                        }};
-                                        caseSensitive = false;
-                                        description = "Stand-alone upward-trending time-frame";
-                                        examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("kelvin", TermExampleCreateType.GOOD) {{
-                                                example = "bypass Chief";
-                                                type = TermExampleCreateType.GOOD;
-                                            }}),
-                                        }};
-                                        highlight = false;
-                                        linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-                                            add(new LinkedTermCreate() {{
-                                                linkedTermId = 796304L;
-                                                reference = "generating payment quantify";
-                                            }}),
-                                        }};
-                                        mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                            add(new TermMistakeCreate(false, "Northeast") {{
-                                                caseSensitive = false;
-                                                mistake = "AGP volt";
-                                                pos = TermMistakeCreatePos.NOUN;
-                                                reference = "at";
-                                            }}),
-                                        }};
-                                        pos = TermCreatePos.VERB;
-                                        reference = "female";
-                                        tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                            add(new TermTagCreate("Sharable") {{
-                                                tag = "policy";
-                                            }}),
-                                        }};
-                                        term = "about electric";
-                                        type = TermCreateType.BANNED;
-                                    }}),
-                                }};
-                            }};, 900532L);            
+            AddTermsRequest req = new AddTermsRequest(new CreateTermsRequest(){{
+failHandling = CreateTermsRequestFailHandling.SKIP;
+models = new com.writer.sdk.models.shared.TermCreate[]{{
+    add(new TermCreate(false, "Northeast", TermCreateType.BANNED){{
+        approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
+            capitalize = false;
+            fixCase = false;
+            fixCommonMistakes = false;
+        }};
+        caseSensitive = false;
+        examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
+            add(new TermExampleCreate("ivory", TermExampleCreateType.GOOD){{
+                example = "ick Soul Borders";
+                type = TermExampleCreateType.BAD;
+            }}),
+        }};
+        linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
+            add(new LinkedTermCreate(){{}}),
+        }};
+        mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
+            add(new TermMistakeCreate(false, "generating"){{
+                caseSensitive = false;
+                mistake = "lime";
+            }}),
+        }};
+        tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
+            add(new TermTagCreate("AGP"){{
+                tag = "ohm Country";
+            }}),
+        }};
+        term = "Gasoline bypassing methodologies";
+        type = TermCreateType.APPROVED;
+    }}),
+}};
+}}, 25759L);            
 
             AddTermsResponse res = sdk.terminology.add(req);
 
@@ -135,13 +126,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("program") {{
+                .setSecurity(new Security("program"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(698486L)
                 .build();
 
-            DeleteTermsRequest req = new DeleteTermsRequest(557937L) {{
+            DeleteTermsRequest req = new DeleteTermsRequest(557937L){{
                 xRequestID = "Sausages synergy";
                 ids = new Long[]{{
                     add(953140L),
@@ -194,13 +185,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Ghana") {{
+                .setSecurity(new Security("Ghana"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(488098L)
                 .build();
 
-            FindTermsRequest req = new FindTermsRequest(949900L) {{
+            FindTermsRequest req = new FindTermsRequest(949900L){{
                 limit = 939943L;
                 offset = 111247L;
                 partOfSpeech = FindTermsPartOfSpeech.NOUN;
@@ -267,57 +258,49 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Van") {{
+                .setSecurity(new Security("Van"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(15652L)
                 .build();
 
-            UpdateTermsRequest req = new UpdateTermsRequest(                new UpdateTermsRequest() {{
-                                failHandling = UpdateTermsRequestFailHandling.VALIDATE;
-                                models = new com.writer.sdk.models.shared.TermUpdate[]{{
-                                    add(new TermUpdate(false, 352933L, "Internal", TermUpdateType.BANNED) {{
-                                        approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false) {{
-                                            capitalize = false;
-                                            fixCase = false;
-                                            fixCommonMistakes = false;
-                                        }};
-                                        caseSensitive = false;
-                                        description = "Reactive zero tolerance definition";
-                                        examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                            add(new TermExampleCreate("Islands", TermExampleCreateType.GOOD) {{
-                                                example = "Analyst invoice";
-                                                type = TermExampleCreateType.GOOD;
-                                            }}),
-                                        }};
-                                        highlight = false;
-                                        id = 446863L;
-                                        linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-                                            add(new LinkedTermCreate() {{
-                                                linkedTermId = 369182L;
-                                                reference = "white";
-                                            }}),
-                                        }};
-                                        mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                            add(new TermMistakeCreate(false, "Baht") {{
-                                                caseSensitive = false;
-                                                mistake = "Carolina syndicate";
-                                                pos = TermMistakeCreatePos.VERB;
-                                                reference = "East";
-                                            }}),
-                                        }};
-                                        pos = TermUpdatePos.ADVERB;
-                                        tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                            add(new TermTagCreate("Sharable") {{
-                                                tag = "guestbook driver users";
-                                            }}),
-                                        }};
-                                        term = "Lev Wooden";
-                                        type = TermUpdateType.BANNED;
-                                    }}),
-                                }};
-                            }};, 834574L) {{
-                xRequestID = "brightly";
+            UpdateTermsRequest req = new UpdateTermsRequest(new UpdateTermsRequest(){{
+failHandling = UpdateTermsRequestFailHandling.VALIDATE;
+models = new com.writer.sdk.models.shared.TermUpdate[]{{
+    add(new TermUpdate(false, 629817L, "Representative", TermUpdateType.BANNED){{
+        approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
+            capitalize = false;
+            fixCase = false;
+            fixCommonMistakes = false;
+        }};
+        caseSensitive = false;
+        examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
+            add(new TermExampleCreate("Arizona", TermExampleCreateType.GOOD){{
+                example = "dock Quality redundant";
+                type = TermExampleCreateType.BAD;
+            }}),
+        }};
+        id = 896501L;
+        linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
+            add(new LinkedTermCreate(){{}}),
+        }};
+        mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
+            add(new TermMistakeCreate(false, "Plastic"){{
+                caseSensitive = false;
+                mistake = "withdrawal extend";
+            }}),
+        }};
+        tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
+            add(new TermTagCreate("syndicate"){{
+                tag = "Forward";
+            }}),
+        }};
+        term = "implement JBOD";
+        type = TermUpdateType.PENDING;
+    }}),
+}};
+}}, 527511L){{
+                xRequestID = "users";
             }};            
 
             UpdateTermsResponse res = sdk.terminology.update(req);

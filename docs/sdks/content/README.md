@@ -30,13 +30,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("oh") {{
+                .setSecurity(new Security("oh"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(919579L)
                 .build();
 
-            ContentCheckRequest req = new ContentCheckRequest(                new ContentRequest("1080p",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 53397L);            
+            ContentCheckRequest req = new ContentCheckRequest(new ContentRequest("1080p", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 53397L);            
 
             ContentCheckResponse res = sdk.content.check(req);
 
@@ -82,13 +82,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("backing") {{
+                .setSecurity(new Security("backing"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(754764L)
                 .build();
 
-            ContentCorrectRequest req = new ContentCorrectRequest(                new ContentRequest("Folk",                 new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false););, 874845L) {{
+            ContentCorrectRequest req = new ContentCorrectRequest(new ContentRequest("Folk", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 874845L){{
                 xRequestID = "Island";
             }};            
 

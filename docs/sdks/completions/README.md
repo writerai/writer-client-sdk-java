@@ -29,26 +29,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("online") {{
+                .setSecurity(new Security("online"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(638424L)
                 .build();
 
-            CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("Extended") {{
-                                bestOf = 1L;
-                                frequencyPenalty = 1343.65d;
-                                logprobs = 786546L;
-                                maxTokens = 1024L;
-                                minTokens = 1L;
-                                n = 69025L;
-                                presencePenalty = 9967.06d;
-                                stop = new String[]{{
-                                    add("grey"),
-                                }};
-                                temperature = 0.7d;
-                                topP = 1d;
-                            }};, "technology");            
+            CreateCompletionRequest req = new CreateCompletionRequest(new CompletionRequest("Extended"){{
+bestOf = 1L;
+frequencyPenalty = 1343.65d;
+logprobs = 786546L;
+maxTokens = 1024L;
+minTokens = 1L;
+n = 69025L;
+presencePenalty = 9967.06d;
+stop = new String[]{{
+    add("the"),
+    add("is"),
+    add("and"),
+}};
+temperature = 0.7d;
+topP = 1d;
+}}, "grey");            
 
             CreateCompletionResponse res = sdk.completions.create(req);
 
@@ -93,26 +95,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("and") {{
+                .setSecurity(new Security("and"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(951257L)
                 .build();
 
-            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("streamline") {{
-                                bestOf = 1L;
-                                frequencyPenalty = 7443d;
-                                logprobs = 335513L;
-                                maxTokens = 1024L;
-                                minTokens = 1L;
-                                n = 151932L;
-                                presencePenalty = 3280.71d;
-                                stop = new String[]{{
-                                    add("1080p"),
-                                }};
-                                temperature = 0.7d;
-                                topP = 1d;
-                            }};, "Hybrid", "heavily");            
+            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(new CompletionRequest("streamline"){{
+bestOf = 1L;
+frequencyPenalty = 7443d;
+logprobs = 335513L;
+maxTokens = 1024L;
+minTokens = 1L;
+n = 151932L;
+presencePenalty = 3280.71d;
+stop = new String[]{{
+    add("the"),
+    add("is"),
+    add("and"),
+}};
+temperature = 0.7d;
+topP = 1d;
+}}, "1080p", "Hybrid");            
 
             CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 
