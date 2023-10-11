@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.44.2'
+implementation 'com.writer.sdk:api:0.45.0'
 ```
 <!-- End SDK Installation -->
 
@@ -148,6 +148,63 @@ public class Application {
 <!-- Start Dev Containers -->
 
 <!-- End Dev Containers -->
+
+
+
+<!-- Start Global Parameters -->
+# Global Parameters
+
+A parameter is configured globally. This parameter must be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
+
+For example, you can set `organizationId` to `840354L` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
+
+
+## Available Globals
+
+The following global parameter is available. The required parameter must be set when you initialize the SDK client.
+
+| Name | Type | Required | Description |
+| ---- | ---- |:--------:| ----------- |
+| organizationId | Long | ✔️ | The organizationId parameter. |
+
+
+
+## Example
+
+```java
+package hello.world;
+
+import com.writer.sdk.Writer;
+import com.writer.sdk.models.operations.DetectContentRequest;
+import com.writer.sdk.models.operations.DetectContentResponse;
+import com.writer.sdk.models.shared.ContentDetectorRequest;
+import com.writer.sdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Writer sdk = Writer.builder()
+                .setSecurity(new Security("Bronze"){{
+                    apiKey = "";
+                }})
+                .setOrganizationId(426278L)
+                .build();
+
+            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("executive"));            
+
+            DetectContentResponse res = sdk.aiContentDetector.detect(req);
+
+            if (res.contentDetectorResponses != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+
+<!-- End Global Parameters -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
