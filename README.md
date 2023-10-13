@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.45.0'
+implementation 'com.writer.sdk:api:0.46.0'
 ```
 <!-- End SDK Installation -->
 
@@ -203,7 +203,6 @@ public class Application {
     }
 }
 ```
-
 <!-- End Global Parameters -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
