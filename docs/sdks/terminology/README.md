@@ -51,7 +51,7 @@ public class Application {
             AddTermsRequest req = new AddTermsRequest(new CreateTermsRequest(){{
 failHandling = CreateTermsRequestFailHandling.SKIP;
 models = new com.writer.sdk.models.shared.TermCreate[]{{
-    add(new TermCreate(false, "Northeast", TermCreateType.BANNED){{
+    add(new TermCreate(false, "holistic", TermCreateType.APPROVED){{
         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
             capitalize = false;
             fixCase = false;
@@ -59,8 +59,8 @@ models = new com.writer.sdk.models.shared.TermCreate[]{{
         }};
         caseSensitive = false;
         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-            add(new TermExampleCreate("ivory", TermExampleCreateType.GOOD){{
-                example = "ick Soul Borders";
+            add(new TermExampleCreate("Soul", TermExampleCreateType.GOOD){{
+                example = "Toyota";
                 type = TermExampleCreateType.BAD;
             }}),
         }};
@@ -68,21 +68,21 @@ models = new com.writer.sdk.models.shared.TermCreate[]{{
             add(new LinkedTermCreate(){{}}),
         }};
         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-            add(new TermMistakeCreate(false, "generating"){{
+            add(new TermMistakeCreate(false, "ivory"){{
                 caseSensitive = false;
-                mistake = "lime";
+                mistake = "Chief";
             }}),
         }};
         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-            add(new TermTagCreate("AGP"){{
-                tag = "ohm Country";
+            add(new TermTagCreate("Division"){{
+                tag = "Rapids";
             }}),
         }};
-        term = "Gasoline bypassing methodologies";
-        type = TermCreateType.APPROVED;
+        term = "ohm";
+        type = TermCreateType.BANNED;
     }}),
 }};
-}}, 25759L);            
+}}, 927036L);            
 
             AddTermsResponse res = sdk.terminology.add(req);
 
@@ -133,9 +133,9 @@ public class Application {
                 .build();
 
             DeleteTermsRequest req = new DeleteTermsRequest(557937L){{
-                xRequestID = "Sausages synergy";
+                xRequestID = "complexity";
                 ids = new Long[]{{
-                    add(953140L),
+                    add(952479L),
                 }};
             }};            
 
@@ -200,8 +200,8 @@ public class Application {
                 tags = new String[]{{
                     add("Dynamic"),
                 }};
-                term = "generating";
-                type = FindTermsType.APPROVED;
+                term = "Granite";
+                type = FindTermsType.BANNED;
             }};            
 
             FindTermsResponse res = sdk.terminology.find(req);
@@ -267,7 +267,7 @@ public class Application {
             UpdateTermsRequest req = new UpdateTermsRequest(new UpdateTermsRequest(){{
 failHandling = UpdateTermsRequestFailHandling.VALIDATE;
 models = new com.writer.sdk.models.shared.TermUpdate[]{{
-    add(new TermUpdate(false, 629817L, "Representative", TermUpdateType.BANNED){{
+    add(new TermUpdate(false, 139579L, "Forward", TermUpdateType.PENDING){{
         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
             capitalize = false;
             fixCase = false;
@@ -275,32 +275,32 @@ models = new com.writer.sdk.models.shared.TermUpdate[]{{
         }};
         caseSensitive = false;
         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-            add(new TermExampleCreate("Arizona", TermExampleCreateType.GOOD){{
-                example = "dock Quality redundant";
-                type = TermExampleCreateType.BAD;
+            add(new TermExampleCreate("Quality", TermExampleCreateType.GOOD){{
+                example = "male";
+                type = TermExampleCreateType.GOOD;
             }}),
         }};
-        id = 896501L;
+        id = 443076L;
         linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
             add(new LinkedTermCreate(){{}}),
         }};
         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-            add(new TermMistakeCreate(false, "Plastic"){{
+            add(new TermMistakeCreate(false, "Islands"){{
                 caseSensitive = false;
-                mistake = "withdrawal extend";
+                mistake = "cheater";
             }}),
         }};
         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-            add(new TermTagCreate("syndicate"){{
-                tag = "Forward";
+            add(new TermTagCreate("dynamic"){{
+                tag = "online";
             }}),
         }};
-        term = "implement JBOD";
-        type = TermUpdateType.PENDING;
+        term = "white";
+        type = TermUpdateType.BANNED;
     }}),
 }};
-}}, 527511L){{
-                xRequestID = "users";
+}}, 889838L){{
+                xRequestID = "East";
             }};            
 
             UpdateTermsResponse res = sdk.terminology.update(req);

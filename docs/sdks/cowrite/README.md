@@ -38,14 +38,14 @@ public class Application {
 
             GenerateContentRequest req = new GenerateContentRequest(new GenerateTemplateRequest("eek"){{
 inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
-    add(new MagicRequestInput("Poland"){{
-        name = "female Cambridgeshire Northwest";
+    add(new MagicRequestInput("builder"){{
+        name = "Mini";
         value = new String[]{{
-            add("Planner"),
+            add("approach"),
         }};
     }}),
 }};
-}}, 217362L);            
+}}, 262568L);            
 
             GenerateContentResponse res = sdk.coWrite.generateContent(req);
 

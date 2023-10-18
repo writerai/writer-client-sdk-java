@@ -89,7 +89,7 @@ public class Application {
                 .build();
 
             ContentCorrectRequest req = new ContentCorrectRequest(new ContentRequest("Folk", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 874845L){{
-                xRequestID = "Island";
+                xRequestID = "Soft";
             }};            
 
             ContentCorrectResponse res = sdk.content.correct(req);

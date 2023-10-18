@@ -89,9 +89,9 @@ public class Application {
             ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(678317L){{
                 limit = 297548;
                 offset = 177706L;
-                search = "Ergonomic Shores";
-                sortField = ListTeamDocumentsSortField.CREATION_TIME;
-                sortOrder = ListTeamDocumentsSortOrder.ASC;
+                search = "Canada";
+                sortField = ListTeamDocumentsSortField.OPENED_BY_ME_TIME;
+                sortOrder = ListTeamDocumentsSortOrder.DESC;
             }};            
 
             ListTeamDocumentsResponse res = sdk.document.list(req);

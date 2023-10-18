@@ -36,9 +36,9 @@ public class Application {
                 .build();
 
             DeleteSnippetsRequest req = new DeleteSnippetsRequest(557937L){{
-                xRequestID = "Sausages synergy";
+                xRequestID = "complexity";
                 ids = new String[]{{
-                    add("objective"),
+                    add("gladiolus"),
                 }};
             }};            
 
@@ -95,9 +95,9 @@ public class Application {
             FindSnippetsRequest req = new FindSnippetsRequest(949900L){{
                 limit = 939943L;
                 offset = 111247L;
-                search = "Electric";
+                search = "West";
                 shortcuts = new String[]{{
-                    add("Dynamic"),
+                    add("Credit"),
                 }};
                 sortField = FindSnippetsSortField.SHORTCUT;
                 sortOrder = FindSnippetsSortOrder.DESC;
@@ -158,17 +158,17 @@ public class Application {
 
             UpdateSnippetsRequest req = new UpdateSnippetsRequest(344620L){{
                 requestBody = new com.writer.sdk.models.shared.SnippetUpdate[]{{
-                    add(new SnippetUpdate("Carolina", "syndicate"){{
+                    add(new SnippetUpdate("Islands", "online"){{
                         id = "<ID>";
-                        snippet = "dock Quality redundant";
+                        snippet = "male";
                         tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("Plastic"){{
-                                tag = "Arizona Cotton extend";
+                            add(new SnippetTagV2("cheater"){{
+                                tag = "Metal";
                             }}),
                         }};
                     }}),
                 }};
-                xRequestID = "implement JBOD";
+                xRequestID = "dynamic";
             }};            
 
             UpdateSnippetsResponse res = sdk.snippet.update(req);

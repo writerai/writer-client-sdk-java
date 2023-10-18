@@ -38,9 +38,9 @@ public class Application {
             ListUsersRequest req = new ListUsersRequest(){{
                 limit = 678317L;
                 offset = 297548L;
-                search = "Canada";
-                sortField = ListUsersSortField.LAST_SEEN;
-                sortOrder = ListUsersSortOrder.DESC;
+                search = "orchid";
+                sortField = ListUsersSortField.NAME;
+                sortOrder = ListUsersSortOrder.ASC;
             }};            
 
             ListUsersResponse res = sdk.user.list(req);

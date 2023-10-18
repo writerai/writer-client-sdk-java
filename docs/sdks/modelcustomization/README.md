@@ -44,9 +44,9 @@ batchSize = 796474L;
 description = "Implemented web-enabled success";
 epochs = 86L;
 learningRate = 4552.22d;
-promptTemplate = "evolve";
-validationDatasetFileId = "fuchsia Gasoline Screen";
-}}, "mobile");            
+promptTemplate = "orange";
+validationDatasetFileId = "Northwest";
+}}, "fuchsia");            
 
             CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
 
