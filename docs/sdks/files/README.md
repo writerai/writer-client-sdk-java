@@ -30,13 +30,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("program"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(698486L)
+                .setOrganizationId(545907L)
                 .build();
 
-            DeleteFileRequest req = new DeleteFileRequest("navigate");            
+            DeleteFileRequest req = new DeleteFileRequest("string");            
 
             DeleteFileResponse res = sdk.files.delete(req);
 
@@ -80,13 +80,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("female"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(558834L)
+                .setOrganizationId(700347L)
                 .build();
 
-            GetFileRequest req = new GetFileRequest("Hatchback");            
+            GetFileRequest req = new GetFileRequest("string");            
 
             GetFileResponse res = sdk.files.get(req);
 
@@ -130,10 +130,10 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Bicycle"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(257649L)
+                .setOrganizationId(768578L)
                 .build();
 
             ListFilesRequest req = new ListFilesRequest();            
@@ -182,13 +182,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Market"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(533607L)
+                .setOrganizationId(403654L)
                 .build();
 
-            UploadFileRequest req = new UploadFileRequest(new UploadModelFileRequest(new UploadModelFileRequestFile("SKG@^n=VA6".getBytes(), "Plastic")));            
+            UploadFileRequest req = new UploadFileRequest(new UploadModelFileRequest(new UploadModelFileRequestFile("?SRSKG@^n=".getBytes(), "string")));            
 
             UploadFileResponse res = sdk.files.upload(req);
 

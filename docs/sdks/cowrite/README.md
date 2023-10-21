@@ -30,22 +30,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("officiis"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(926220L)
+                .setOrganizationId(569932L)
                 .build();
 
-            GenerateContentRequest req = new GenerateContentRequest(new GenerateTemplateRequest("eek"){{
+            GenerateContentRequest req = new GenerateContentRequest(new GenerateTemplateRequest("string"){{
 inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
-    add(new MagicRequestInput("builder"){{
-        name = "Mini";
+    add(new MagicRequestInput("string"){{
+        name = "string";
         value = new String[]{{
-            add("approach"),
+            add("string"),
         }};
     }}),
 }};
-}}, 262568L);            
+}}, 888452L);            
 
             GenerateContentResponse res = sdk.coWrite.generateContent(req);
 
@@ -89,13 +89,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("structure"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(55511L)
+                .setOrganizationId(380445L)
                 .build();
 
-            ListTemplatesRequest req = new ListTemplatesRequest(599736L, "transmit");            
+            ListTemplatesRequest req = new ListTemplatesRequest(882866L, "string");            
 
             ListTemplatesResponse res = sdk.coWrite.listTemplates(req);
 

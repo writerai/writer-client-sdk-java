@@ -29,20 +29,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("online"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(638424L)
+                .setOrganizationId(486589L)
                 .build();
 
-            CreateCompletionRequest req = new CreateCompletionRequest(new CompletionRequest("Extended"){{
+            CreateCompletionRequest req = new CreateCompletionRequest(new CompletionRequest("string"){{
 bestOf = 1L;
-frequencyPenalty = 1343.65d;
-logprobs = 786546L;
+frequencyPenalty = 4893.82d;
+logprobs = 638424L;
 maxTokens = 1024L;
 minTokens = 1L;
-n = 69025L;
-presencePenalty = 9967.06d;
+n = 859213L;
+presencePenalty = 4174.58d;
 stop = new String[]{{
     add("the"),
     add("is"),
@@ -50,7 +50,7 @@ stop = new String[]{{
 }};
 temperature = 0.7d;
 topP = 1d;
-}}, "grey");            
+}}, "string");            
 
             CreateCompletionResponse res = sdk.completions.create(req);
 
@@ -95,20 +95,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("and"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(951257L)
+                .setOrganizationId(919503L)
                 .build();
 
-            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(new CompletionRequest("streamline"){{
+            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(new CompletionRequest("string"){{
 bestOf = 1L;
-frequencyPenalty = 7443d;
-logprobs = 335513L;
+frequencyPenalty = 412.97d;
+logprobs = 951257L;
 maxTokens = 1024L;
 minTokens = 1L;
-n = 151932L;
-presencePenalty = 3280.71d;
+n = 314952L;
+presencePenalty = 657.2d;
 stop = new String[]{{
     add("the"),
     add("is"),
@@ -116,7 +116,7 @@ stop = new String[]{{
 }};
 temperature = 0.7d;
 topP = 1d;
-}}, "1080p", "Hybrid");            
+}}, "string", "string");            
 
             CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 

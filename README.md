@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.47.0'
+implementation 'com.writer.sdk:api:0.48.0'
 ```
 <!-- End SDK Installation -->
 
@@ -45,13 +45,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Bronze"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(426278L)
+                .setOrganizationId(496531L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("executive"));            
+            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("string"));            
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 
@@ -156,7 +156,7 @@ public class Application {
 
 A parameter is configured globally. This parameter must be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
 
-For example, you can set `organizationId` to `785532L` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
+For example, you can set `organizationId` to `177706L` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
 
 
 ## Available Globals
@@ -184,13 +184,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Bronze"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(426278L)
+                .setOrganizationId(496531L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("executive"));            
+            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("string"));            
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 

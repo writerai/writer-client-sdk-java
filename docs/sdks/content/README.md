@@ -30,13 +30,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("oh"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(919579L)
+                .setOrganizationId(935464L)
                 .build();
 
-            ContentCheckRequest req = new ContentCheckRequest(new ContentRequest("1080p", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 53397L);            
+            ContentCheckRequest req = new ContentCheckRequest(new ContentRequest("string", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 38270L);            
 
             ContentCheckResponse res = sdk.content.check(req);
 
@@ -82,14 +82,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("backing"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(754764L)
+                .setOrganizationId(501355L)
                 .build();
 
-            ContentCorrectRequest req = new ContentCorrectRequest(new ContentRequest("Folk", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 874845L){{
-                xRequestID = "Soft";
+            ContentCorrectRequest req = new ContentCorrectRequest(new ContentRequest("string", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 31310L){{
+                xRequestID = "string";
             }};            
 
             ContentCorrectResponse res = sdk.content.correct(req);

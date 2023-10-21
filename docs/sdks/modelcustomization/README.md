@@ -32,21 +32,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("online"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(638424L)
+                .setOrganizationId(486589L)
                 .build();
 
-            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(new CreateCustomizationRequest("Extended", "South"){{
-additionalHyperParameters = new HyperParameters(996706L);
-batchSize = 796474L;
-description = "Implemented web-enabled success";
-epochs = 86L;
-learningRate = 4552.22d;
-promptTemplate = "orange";
-validationDatasetFileId = "Northwest";
-}}, "fuchsia");            
+            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(new CreateCustomizationRequest("string", "string"){{
+additionalHyperParameters = new HyperParameters(489382L);
+batchSize = 638424L;
+description = "Synchronised full-range emulation";
+epochs = 134365L;
+learningRate = 7865.46d;
+promptTemplate = "string";
+validationDatasetFileId = "string";
+}}, "string");            
 
             CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
 
@@ -90,13 +90,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("program"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(698486L)
+                .setOrganizationId(545907L)
                 .build();
 
-            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("navigate", "Sausages");            
+            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("string", "string");            
 
             DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
 
@@ -140,13 +140,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("female"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(558834L)
+                .setOrganizationId(700347L)
                 .build();
 
-            GetModelCustomizationRequest req = new GetModelCustomizationRequest("Hatchback", "Kia");            
+            GetModelCustomizationRequest req = new GetModelCustomizationRequest("string", "string");            
 
             GetModelCustomizationResponse res = sdk.modelCustomization.get(req);
 
@@ -190,13 +190,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Bicycle"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(257649L)
+                .setOrganizationId(768578L)
                 .build();
 
-            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("Product");            
+            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("string");            
 
             ListModelCustomizationsResponse res = sdk.modelCustomization.list(req);
 

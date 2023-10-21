@@ -42,16 +42,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("transmit"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(554561L)
+                .setOrganizationId(551477L)
                 .build();
 
             AddTermsRequest req = new AddTermsRequest(new CreateTermsRequest(){{
-failHandling = CreateTermsRequestFailHandling.SKIP;
+failHandling = CreateTermsRequestFailHandling.VALIDATE_ONLY;
 models = new com.writer.sdk.models.shared.TermCreate[]{{
-    add(new TermCreate(false, "holistic", TermCreateType.APPROVED){{
+    add(new TermCreate(false, "string", TermCreateType.PENDING){{
         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
             capitalize = false;
             fixCase = false;
@@ -59,8 +59,8 @@ models = new com.writer.sdk.models.shared.TermCreate[]{{
         }};
         caseSensitive = false;
         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-            add(new TermExampleCreate("Soul", TermExampleCreateType.GOOD){{
-                example = "Toyota";
+            add(new TermExampleCreate("string", TermExampleCreateType.BAD){{
+                example = "string";
                 type = TermExampleCreateType.BAD;
             }}),
         }};
@@ -68,21 +68,21 @@ models = new com.writer.sdk.models.shared.TermCreate[]{{
             add(new LinkedTermCreate(){{}}),
         }};
         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-            add(new TermMistakeCreate(false, "ivory"){{
+            add(new TermMistakeCreate(false, "string"){{
                 caseSensitive = false;
-                mistake = "Chief";
+                mistake = "string";
             }}),
         }};
         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-            add(new TermTagCreate("Division"){{
-                tag = "Rapids";
+            add(new TermTagCreate("string"){{
+                tag = "string";
             }}),
         }};
-        term = "ohm";
-        type = TermCreateType.BANNED;
+        term = "string";
+        type = TermCreateType.PENDING;
     }}),
 }};
-}}, 927036L);            
+}}, 953696L);            
 
             AddTermsResponse res = sdk.terminology.add(req);
 
@@ -126,16 +126,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("program"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(698486L)
+                .setOrganizationId(545907L)
                 .build();
 
-            DeleteTermsRequest req = new DeleteTermsRequest(557937L){{
-                xRequestID = "complexity";
+            DeleteTermsRequest req = new DeleteTermsRequest(841399L){{
+                xRequestID = "string";
                 ids = new Long[]{{
-                    add(952479L),
+                    add(698486L),
                 }};
             }};            
 
@@ -185,23 +185,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Ghana"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(488098L)
+                .setOrganizationId(40141L)
                 .build();
 
-            FindTermsRequest req = new FindTermsRequest(949900L){{
-                limit = 939943L;
-                offset = 111247L;
-                partOfSpeech = FindTermsPartOfSpeech.NOUN;
-                sortField = FindTermsSortField.TYPE;
+            FindTermsRequest req = new FindTermsRequest(326883L){{
+                limit = 488098L;
+                offset = 949900L;
+                partOfSpeech = FindTermsPartOfSpeech.ADJECTIVE;
+                sortField = FindTermsSortField.TERM;
                 sortOrder = FindTermsSortOrder.ASC;
                 tags = new String[]{{
-                    add("Dynamic"),
+                    add("string"),
                 }};
-                term = "Granite";
-                type = FindTermsType.BANNED;
+                term = "string";
+                type = FindTermsType.PENDING;
             }};            
 
             FindTermsResponse res = sdk.terminology.find(req);
@@ -258,16 +258,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Van"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(15652L)
+                .setOrganizationId(857478L)
                 .build();
 
             UpdateTermsRequest req = new UpdateTermsRequest(new UpdateTermsRequest(){{
-failHandling = UpdateTermsRequestFailHandling.VALIDATE;
+failHandling = UpdateTermsRequestFailHandling.ACCUMULATE;
 models = new com.writer.sdk.models.shared.TermUpdate[]{{
-    add(new TermUpdate(false, 139579L, "Forward", TermUpdateType.PENDING){{
+    add(new TermUpdate(false, 991464L, "string", TermUpdateType.APPROVED){{
         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
             capitalize = false;
             fixCase = false;
@@ -275,32 +275,32 @@ models = new com.writer.sdk.models.shared.TermUpdate[]{{
         }};
         caseSensitive = false;
         examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-            add(new TermExampleCreate("Quality", TermExampleCreateType.GOOD){{
-                example = "male";
-                type = TermExampleCreateType.GOOD;
+            add(new TermExampleCreate("string", TermExampleCreateType.GOOD){{
+                example = "string";
+                type = TermExampleCreateType.BAD;
             }}),
         }};
-        id = 443076L;
+        id = 344620L;
         linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
             add(new LinkedTermCreate(){{}}),
         }};
         mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-            add(new TermMistakeCreate(false, "Islands"){{
+            add(new TermMistakeCreate(false, "string"){{
                 caseSensitive = false;
-                mistake = "cheater";
+                mistake = "string";
             }}),
         }};
         tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-            add(new TermTagCreate("dynamic"){{
-                tag = "online";
+            add(new TermTagCreate("string"){{
+                tag = "string";
             }}),
         }};
-        term = "white";
-        type = TermUpdateType.BANNED;
+        term = "string";
+        type = TermUpdateType.PENDING;
     }}),
 }};
-}}, 889838L){{
-                xRequestID = "East";
+}}, 627690L){{
+                xRequestID = "string";
             }};            
 
             UpdateTermsResponse res = sdk.terminology.update(req);

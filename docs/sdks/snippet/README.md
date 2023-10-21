@@ -29,16 +29,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("program"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(698486L)
+                .setOrganizationId(545907L)
                 .build();
 
-            DeleteSnippetsRequest req = new DeleteSnippetsRequest(557937L){{
-                xRequestID = "complexity";
+            DeleteSnippetsRequest req = new DeleteSnippetsRequest(841399L){{
+                xRequestID = "string";
                 ids = new String[]{{
-                    add("gladiolus"),
+                    add("string"),
                 }};
             }};            
 
@@ -86,23 +86,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Ghana"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(488098L)
+                .setOrganizationId(40141L)
                 .build();
 
-            FindSnippetsRequest req = new FindSnippetsRequest(949900L){{
-                limit = 939943L;
-                offset = 111247L;
-                search = "West";
+            FindSnippetsRequest req = new FindSnippetsRequest(326883L){{
+                limit = 488098L;
+                offset = 949900L;
+                search = "string";
                 shortcuts = new String[]{{
-                    add("Credit"),
+                    add("string"),
                 }};
-                sortField = FindSnippetsSortField.SHORTCUT;
-                sortOrder = FindSnippetsSortOrder.DESC;
+                sortField = FindSnippetsSortField.MODIFICATION_TIME;
+                sortOrder = FindSnippetsSortOrder.ASC;
                 tags = new String[]{{
-                    add("World"),
+                    add("string"),
                 }};
             }};            
 
@@ -150,25 +150,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("Van"){{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(15652L)
+                .setOrganizationId(857478L)
                 .build();
 
-            UpdateSnippetsRequest req = new UpdateSnippetsRequest(344620L){{
+            UpdateSnippetsRequest req = new UpdateSnippetsRequest(24555L){{
                 requestBody = new com.writer.sdk.models.shared.SnippetUpdate[]{{
-                    add(new SnippetUpdate("Islands", "online"){{
+                    add(new SnippetUpdate("string", "string"){{
                         id = "<ID>";
-                        snippet = "male";
+                        snippet = "string";
                         tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("cheater"){{
-                                tag = "Metal";
+                            add(new SnippetTagV2("string"){{
+                                tag = "string";
                             }}),
                         }};
                     }}),
                 }};
-                xRequestID = "dynamic";
+                xRequestID = "string";
             }};            
 
             UpdateSnippetsResponse res = sdk.snippet.update(req);
