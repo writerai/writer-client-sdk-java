@@ -1,4 +1,5 @@
-# aiContentDetector
+# AIContentDetector
+(*aiContentDetector*)
 
 ## Overview
 
@@ -27,13 +28,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("quibusdam") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(602763L)
+                .setOrganizationId(496531L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("nulla"););            
+            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("string"));            
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 

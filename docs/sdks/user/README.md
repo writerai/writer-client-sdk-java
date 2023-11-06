@@ -1,4 +1,5 @@
-# user
+# User
+(*user*)
 
 ## Overview
 
@@ -28,18 +29,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("facilis") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(874288L)
+                .setOrganizationId(768578L)
                 .build();
 
-            ListUsersRequest req = new ListUsersRequest() {{
-                limit = 498140L;
-                offset = 293020L;
-                search = "quibusdam";
-                sortField = ListUsersSortField.EMAIL;
-                sortOrder = ListUsersSortOrder.ASC;
+            ListUsersRequest req = new ListUsersRequest(){{
+                limit = 99895L;
+                offset = 547272L;
+                search = "string";
+                sortField = ListUsersSortField.NAME;
+                sortOrder = ListUsersSortOrder.DESC;
             }};            
 
             ListUsersResponse res = sdk.user.list(req);

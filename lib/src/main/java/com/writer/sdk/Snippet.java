@@ -41,7 +41,7 @@ public class Snippet {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = com.writer.sdk.utils.Utils.getQueryParams(com.writer.sdk.models.operations.DeleteSnippetsRequest.class, request, this.sdkConfiguration.globals);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -106,7 +106,7 @@ public class Snippet {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.List<NameValuePair> queryParams = com.writer.sdk.utils.Utils.getQueryParams(com.writer.sdk.models.operations.FindSnippetsRequest.class, request, this.sdkConfiguration.globals);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
@@ -165,7 +165,7 @@ public class Snippet {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         java.util.Map<String, java.util.List<String>> headers = com.writer.sdk.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {

@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * FailResponse - Bad Request
- */
 
 public class FailResponse {
     @JsonInclude(Include.NON_ABSENT)

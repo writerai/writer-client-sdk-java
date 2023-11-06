@@ -17,6 +17,9 @@ public class CreateCompletionResponse {
         return this;
     }
     
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -44,6 +47,9 @@ public class CreateCompletionResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -52,6 +58,9 @@ public class CreateCompletionResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 

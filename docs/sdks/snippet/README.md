@@ -1,4 +1,5 @@
-# snippet
+# Snippet
+(*snippet*)
 
 ## Overview
 
@@ -28,17 +29,16 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("repellat") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(653108L)
+                .setOrganizationId(545907L)
                 .build();
 
-            DeleteSnippetsRequest req = new DeleteSnippetsRequest(581850L) {{
-                xRequestID = "numquam";
+            DeleteSnippetsRequest req = new DeleteSnippetsRequest(841399L){{
+                xRequestID = "string";
                 ids = new String[]{{
-                    add("quam"),
-                    add("molestiae"),
+                    add("string"),
                 }};
             }};            
 
@@ -86,26 +86,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("velit") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(623510L)
+                .setOrganizationId(40141L)
                 .build();
 
-            FindSnippetsRequest req = new FindSnippetsRequest(158969L) {{
-                limit = 338007L;
-                offset = 110375L;
-                search = "laborum";
+            FindSnippetsRequest req = new FindSnippetsRequest(326883L){{
+                limit = 488098L;
+                offset = 949900L;
+                search = "string";
                 shortcuts = new String[]{{
-                    add("enim"),
-                    add("odit"),
-                    add("quo"),
+                    add("string"),
                 }};
-                sortField = FindSnippetsSortField.SHORTCUT;
-                sortOrder = FindSnippetsSortOrder.DESC;
+                sortField = FindSnippetsSortField.MODIFICATION_TIME;
+                sortOrder = FindSnippetsSortOrder.ASC;
                 tags = new String[]{{
-                    add("id"),
-                    add("possimus"),
+                    add("string"),
                 }};
             }};            
 
@@ -153,84 +150,25 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("aut") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(97101L)
+                .setOrganizationId(857478L)
                 .build();
 
-            UpdateSnippetsRequest req = new UpdateSnippetsRequest(622846L) {{
+            UpdateSnippetsRequest req = new UpdateSnippetsRequest(24555L){{
                 requestBody = new com.writer.sdk.models.shared.SnippetUpdate[]{{
-                    add(new SnippetUpdate("itaque", "incidunt") {{
-                        description = "laborum";
-                        id = "1ffe78f0-97b0-4074-b154-71b5e6e13b99";
-                        shortcut = "pariatur";
-                        snippet = "modi";
+                    add(new SnippetUpdate("string", "string"){{
+                        id = "<ID>";
+                        snippet = "string";
                         tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("voluptates") {{
-                                tag = "rem";
-                            }}),
-                            add(new SnippetTagV2("repudiandae") {{
-                                tag = "quasi";
-                            }}),
-                            add(new SnippetTagV2("veritatis") {{
-                                tag = "sint";
-                            }}),
-                        }};
-                    }}),
-                    add(new SnippetUpdate("in", "illum") {{
-                        description = "enim";
-                        id = "0ad2abd4-4269-4802-9502-a94bb4f63c96";
-                        shortcut = "provident";
-                        snippet = "necessitatibus";
-                        tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("dolor") {{
-                                tag = "officia";
-                            }}),
-                            add(new SnippetTagV2("a") {{
-                                tag = "debitis";
-                            }}),
-                            add(new SnippetTagV2("in") {{
-                                tag = "dolorum";
-                            }}),
-                        }};
-                    }}),
-                    add(new SnippetUpdate("eum", "vero") {{
-                        description = "maiores";
-                        id = "b14cd66a-e395-4efb-9ba8-8f3a66997074";
-                        shortcut = "distinctio";
-                        snippet = "id";
-                        tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("suscipit") {{
-                                tag = "labore";
-                            }}),
-                            add(new SnippetTagV2("nobis") {{
-                                tag = "natus";
-                            }}),
-                        }};
-                    }}),
-                    add(new SnippetUpdate("magni", "sunt") {{
-                        description = "aspernatur";
-                        id = "14195989-0afa-4563-a251-6fe4c8b711e5";
-                        shortcut = "expedita";
-                        snippet = "nihil";
-                        tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("sed") {{
-                                tag = "quibusdam";
-                            }}),
-                            add(new SnippetTagV2("pariatur") {{
-                                tag = "saepe";
-                            }}),
-                            add(new SnippetTagV2("consequuntur") {{
-                                tag = "accusantium";
-                            }}),
-                            add(new SnippetTagV2("natus") {{
-                                tag = "praesentium";
+                            add(new SnippetTagV2("string"){{
+                                tag = "string";
                             }}),
                         }};
                     }}),
                 }};
-                xRequestID = "quo";
+                xRequestID = "string";
             }};            
 
             UpdateSnippetsResponse res = sdk.snippet.update(req);
