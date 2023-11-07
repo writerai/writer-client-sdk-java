@@ -1,5 +1,5 @@
 # Files
-(*files*)
+(*.files*)
 
 ## Overview
 
@@ -40,7 +40,7 @@ public class Application {
 
             DeleteFileResponse res = sdk.files.delete(req);
 
-            if (res.deleteFile200ApplicationJSONObject != null) {
+            if (res.object != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -174,9 +174,9 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.UploadFileRequest;
 import com.writer.sdk.models.operations.UploadFileResponse;
+import com.writer.sdk.models.shared.File;
 import com.writer.sdk.models.shared.Security;
 import com.writer.sdk.models.shared.UploadModelFileRequest;
-import com.writer.sdk.models.shared.UploadModelFileRequestFile;
 
 public class Application {
     public static void main(String[] args) {
@@ -188,7 +188,7 @@ public class Application {
                 .setOrganizationId(403654L)
                 .build();
 
-            UploadFileRequest req = new UploadFileRequest(new UploadModelFileRequest(new UploadModelFileRequestFile("?SRSKG@^n=".getBytes(), "string")));            
+            UploadFileRequest req = new UploadFileRequest(new UploadModelFileRequest(new File("0x7cbca97eC6".getBytes(), "string")));            
 
             UploadFileResponse res = sdk.files.upload(req);
 

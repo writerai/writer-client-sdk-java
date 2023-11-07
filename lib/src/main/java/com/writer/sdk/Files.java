@@ -50,7 +50,7 @@ public class Files {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.writer.sdk.models.operations.DeleteFileResponse res = new com.writer.sdk.models.operations.DeleteFileResponse(contentType, httpRes.statusCode()) {{
-            deleteFile200ApplicationJSONObject = null;
+            object = null;
             failResponse = null;
         }};
         res.rawResponse = httpRes;
@@ -60,8 +60,8 @@ public class Files {
             
             if (com.writer.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.writer.sdk.models.operations.DeleteFile200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.operations.DeleteFile200ApplicationJSON.class);
-                res.deleteFile200ApplicationJSONObject = out;
+                com.writer.sdk.models.operations.DeleteFileResponseBody out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.operations.DeleteFileResponseBody.class);
+                res.object = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

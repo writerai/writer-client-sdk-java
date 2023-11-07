@@ -1,5 +1,5 @@
 # Styleguide
-(*styleguide*)
+(*.styleguide*)
 
 ## Overview
 
@@ -72,7 +72,7 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.ListPagesRequest;
 import com.writer.sdk.models.operations.ListPagesResponse;
-import com.writer.sdk.models.operations.ListPagesStatus;
+import com.writer.sdk.models.operations.Status;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -88,7 +88,7 @@ public class Application {
             ListPagesRequest req = new ListPagesRequest(){{
                 limit = 760116L;
                 offset = 303332L;
-                status = ListPagesStatus.LIVE;
+                status = Status.LIVE;
             }};            
 
             ListPagesResponse res = sdk.styleguide.listPages(req);

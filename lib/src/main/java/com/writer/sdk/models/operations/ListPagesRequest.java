@@ -25,9 +25,9 @@ public class ListPagesRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
-    public ListPagesStatus status;
+    public Status status;
 
-    public ListPagesRequest withStatus(ListPagesStatus status) {
+    public ListPagesRequest withStatus(Status status) {
         this.status = status;
         return this;
     }

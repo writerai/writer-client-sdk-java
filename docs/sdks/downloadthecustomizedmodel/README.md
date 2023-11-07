@@ -1,5 +1,5 @@
 # DownloadTheCustomizedModel
-(*downloadTheCustomizedModel*)
+(*.downloadTheCustomizedModel*)
 
 ## Overview
 
@@ -37,7 +37,7 @@ public class Application {
 
             FetchCustomizedModelFileResponse res = sdk.downloadTheCustomizedModel.fetchFile(req);
 
-            if (res.fetchCustomizedModelFile200ApplicationOctetStreamBinaryString != null) {
+            if (res.bytes != null) {
                 // handle response
             }
         } catch (Exception e) {

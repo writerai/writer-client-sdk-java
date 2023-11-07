@@ -62,10 +62,10 @@ public class FetchCustomizedModelFileResponse {
     }
     
     
-    public byte[] fetchCustomizedModelFile200ApplicationOctetStreamBinaryString;
+    public byte[] bytes;
 
-    public FetchCustomizedModelFileResponse withFetchCustomizedModelFile200ApplicationOctetStreamBinaryString(byte[] fetchCustomizedModelFile200ApplicationOctetStreamBinaryString) {
-        this.fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = fetchCustomizedModelFile200ApplicationOctetStreamBinaryString;
+    public FetchCustomizedModelFileResponse withBytes(byte[] bytes) {
+        this.bytes = bytes;
         return this;
     }
     

@@ -1,5 +1,5 @@
 # ModelCustomization
-(*modelCustomization*)
+(*.modelCustomization*)
 
 ## Overview
 
@@ -100,7 +100,7 @@ public class Application {
 
             DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
 
-            if (res.deleteModelCustomization200ApplicationJSONObject != null) {
+            if (res.object != null) {
                 // handle response
             }
         } catch (Exception e) {

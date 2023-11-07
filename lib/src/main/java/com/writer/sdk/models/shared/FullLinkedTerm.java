@@ -46,9 +46,9 @@ public class FullLinkedTerm {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pos")
-    public FullLinkedTermPos pos;
+    public Pos pos;
 
-    public FullLinkedTerm withPos(FullLinkedTermPos pos) {
+    public FullLinkedTerm withPos(Pos pos) {
         this.pos = pos;
         return this;
     }

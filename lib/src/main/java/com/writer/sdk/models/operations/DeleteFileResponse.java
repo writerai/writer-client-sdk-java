@@ -62,10 +62,10 @@ public class DeleteFileResponse {
     }
     
     
-    public DeleteFile200ApplicationJSON deleteFile200ApplicationJSONObject;
+    public DeleteFileResponseBody object;
 
-    public DeleteFileResponse withDeleteFile200ApplicationJSONObject(DeleteFile200ApplicationJSON deleteFile200ApplicationJSONObject) {
-        this.deleteFile200ApplicationJSONObject = deleteFile200ApplicationJSONObject;
+    public DeleteFileResponse withObject(DeleteFileResponseBody object) {
+        this.object = object;
         return this;
     }
     

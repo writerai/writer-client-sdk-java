@@ -164,14 +164,14 @@ public class FullTermWithUser {
     }
     
     @JsonProperty("type")
-    public FullTermWithUserType type;
+    public Type type;
 
-    public FullTermWithUser withType(FullTermWithUserType type) {
+    public FullTermWithUser withType(Type type) {
         this.type = type;
         return this;
     }
     
-    public FullTermWithUser(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("createdUser") TerminologyUser createdUser, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("highlight") Boolean highlight, @JsonProperty("id") Long id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("modifiedUser") TerminologyUser modifiedUser, @JsonProperty("term") String term, @JsonProperty("termBankId") Long termBankId, @JsonProperty("type") FullTermWithUserType type) {
+    public FullTermWithUser(@JsonProperty("caseSensitive") Boolean caseSensitive, @JsonProperty("createdUser") TerminologyUser createdUser, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("highlight") Boolean highlight, @JsonProperty("id") Long id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("modifiedUser") TerminologyUser modifiedUser, @JsonProperty("term") String term, @JsonProperty("termBankId") Long termBankId, @JsonProperty("type") Type type) {
         this.caseSensitive = caseSensitive;
         this.createdUser = createdUser;
         this.creationTime = creationTime;

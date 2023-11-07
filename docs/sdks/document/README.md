@@ -1,5 +1,5 @@
 # Document
-(*document*)
+(*.document*)
 
 ## Overview
 
@@ -70,10 +70,10 @@ List team documents
 package hello.world;
 
 import com.writer.sdk.Writer;
+import com.writer.sdk.models.operations.ListTeamDocumentsQueryParamSortField;
+import com.writer.sdk.models.operations.ListTeamDocumentsQueryParamSortOrder;
 import com.writer.sdk.models.operations.ListTeamDocumentsRequest;
 import com.writer.sdk.models.operations.ListTeamDocumentsResponse;
-import com.writer.sdk.models.operations.ListTeamDocumentsSortField;
-import com.writer.sdk.models.operations.ListTeamDocumentsSortOrder;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -90,8 +90,8 @@ public class Application {
                 limit = 547272;
                 offset = 257649L;
                 search = "string";
-                sortField = ListTeamDocumentsSortField.MODIFIED_BY_ME_TIME;
-                sortOrder = ListTeamDocumentsSortOrder.ASC;
+                sortField = ListTeamDocumentsQueryParamSortField.MODIFIED_BY_ME_TIME;
+                sortOrder = ListTeamDocumentsQueryParamSortOrder.ASC;
             }};            
 
             ListTeamDocumentsResponse res = sdk.document.list(req);

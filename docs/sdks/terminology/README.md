@@ -1,5 +1,5 @@
 # Terminology
-(*terminology*)
+(*.terminology*)
 
 ## Overview
 
@@ -26,7 +26,7 @@ import com.writer.sdk.models.operations.AddTermsRequest;
 import com.writer.sdk.models.operations.AddTermsResponse;
 import com.writer.sdk.models.shared.ApprovedTermExtensionCreate;
 import com.writer.sdk.models.shared.CreateTermsRequest;
-import com.writer.sdk.models.shared.CreateTermsRequestFailHandling;
+import com.writer.sdk.models.shared.FailHandling;
 import com.writer.sdk.models.shared.LinkedTermCreate;
 import com.writer.sdk.models.shared.Security;
 import com.writer.sdk.models.shared.TermCreate;
@@ -49,7 +49,7 @@ public class Application {
                 .build();
 
             AddTermsRequest req = new AddTermsRequest(new CreateTermsRequest(){{
-failHandling = CreateTermsRequestFailHandling.VALIDATE_ONLY;
+failHandling = FailHandling.VALIDATE_ONLY;
 models = new com.writer.sdk.models.shared.TermCreate[]{{
     add(new TermCreate(false, "string", TermCreateType.PENDING){{
         approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
@@ -173,12 +173,12 @@ Find terms
 package hello.world;
 
 import com.writer.sdk.Writer;
-import com.writer.sdk.models.operations.FindTermsPartOfSpeech;
 import com.writer.sdk.models.operations.FindTermsRequest;
 import com.writer.sdk.models.operations.FindTermsResponse;
-import com.writer.sdk.models.operations.FindTermsSortField;
-import com.writer.sdk.models.operations.FindTermsSortOrder;
-import com.writer.sdk.models.operations.FindTermsType;
+import com.writer.sdk.models.operations.PartOfSpeech;
+import com.writer.sdk.models.operations.QueryParamSortField;
+import com.writer.sdk.models.operations.QueryParamSortOrder;
+import com.writer.sdk.models.operations.Type;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -194,14 +194,14 @@ public class Application {
             FindTermsRequest req = new FindTermsRequest(326883L){{
                 limit = 488098L;
                 offset = 949900L;
-                partOfSpeech = FindTermsPartOfSpeech.ADJECTIVE;
-                sortField = FindTermsSortField.TERM;
-                sortOrder = FindTermsSortOrder.ASC;
+                partOfSpeech = PartOfSpeech.ADJECTIVE;
+                sortField = QueryParamSortField.TERM;
+                sortOrder = QueryParamSortOrder.ASC;
                 tags = new String[]{{
                     add("string"),
                 }};
                 term = "string";
-                type = FindTermsType.PENDING;
+                type = Type.PENDING;
             }};            
 
             FindTermsResponse res = sdk.terminology.find(req);

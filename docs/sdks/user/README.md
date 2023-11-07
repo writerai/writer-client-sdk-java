@@ -1,5 +1,5 @@
 # User
-(*user*)
+(*.user*)
 
 ## Overview
 
@@ -19,10 +19,10 @@ List users
 package hello.world;
 
 import com.writer.sdk.Writer;
+import com.writer.sdk.models.operations.ListUsersQueryParamSortField;
+import com.writer.sdk.models.operations.ListUsersQueryParamSortOrder;
 import com.writer.sdk.models.operations.ListUsersRequest;
 import com.writer.sdk.models.operations.ListUsersResponse;
-import com.writer.sdk.models.operations.ListUsersSortField;
-import com.writer.sdk.models.operations.ListUsersSortOrder;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -39,8 +39,8 @@ public class Application {
                 limit = 99895L;
                 offset = 547272L;
                 search = "string";
-                sortField = ListUsersSortField.NAME;
-                sortOrder = ListUsersSortOrder.DESC;
+                sortField = ListUsersQueryParamSortField.NAME;
+                sortOrder = ListUsersQueryParamSortOrder.DESC;
             }};            
 
             ListUsersResponse res = sdk.user.list(req);

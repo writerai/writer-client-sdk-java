@@ -32,9 +32,9 @@ public class SubscriptionPublicResponseApi {
     }
     
     @JsonProperty("productName")
-    public SubscriptionPublicResponseApiProductName productName;
+    public ProductName productName;
 
-    public SubscriptionPublicResponseApi withProductName(SubscriptionPublicResponseApiProductName productName) {
+    public SubscriptionPublicResponseApi withProductName(ProductName productName) {
         this.productName = productName;
         return this;
     }
@@ -71,7 +71,7 @@ public class SubscriptionPublicResponseApi {
         return this;
     }
     
-    public SubscriptionPublicResponseApi(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("meta") MetaData meta, @JsonProperty("productName") SubscriptionPublicResponseApiProductName productName, @JsonProperty("seats") Long seats, @JsonProperty("status") SubscriptionPublicResponseApiStatus status, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("usage") Usage usage) {
+    public SubscriptionPublicResponseApi(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("meta") MetaData meta, @JsonProperty("productName") ProductName productName, @JsonProperty("seats") Long seats, @JsonProperty("status") SubscriptionPublicResponseApiStatus status, @JsonProperty("subscriptionId") String subscriptionId, @JsonProperty("usage") Usage usage) {
         this.createdAt = createdAt;
         this.meta = meta;
         this.productName = productName;

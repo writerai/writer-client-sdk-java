@@ -2,27 +2,35 @@ configVersion: 1.0.0
 management:
   docChecksum: 044ba6ea348a6fb8206cacad6926373d
   docVersion: "1.7"
-  speakeasyVersion: 1.112.1
-  generationVersion: 2.173.0
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
   comments: {}
   sdkClassName: writer
   repoURL: https://github.com/writerai/writer-client-sdk-java.git
 features:
   java:
-    core: 2.94.0
+    core: 3.0.1
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
     globals: 2.81.1
     nameOverrides: 2.81.1
 java:
-  version: 0.42.0
+  version: 0.43.0
   artifactID: sdk
   companyEmail: info@mycompany.com
   companyName: My Company
   companyURL: www.mycompany.com
   githubURL: github.com/owner/repo
   groupID: com.writer
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/shared
+      webhooks: models/webhooks
   maxMethodParams: 0
   ossrhURL: https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/
   projectName: api

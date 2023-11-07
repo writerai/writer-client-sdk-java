@@ -62,10 +62,10 @@ public class DeleteModelCustomizationResponse {
     }
     
     
-    public DeleteModelCustomization200ApplicationJSON deleteModelCustomization200ApplicationJSONObject;
+    public DeleteModelCustomizationResponseBody object;
 
-    public DeleteModelCustomizationResponse withDeleteModelCustomization200ApplicationJSONObject(DeleteModelCustomization200ApplicationJSON deleteModelCustomization200ApplicationJSONObject) {
-        this.deleteModelCustomization200ApplicationJSONObject = deleteModelCustomization200ApplicationJSONObject;
+    public DeleteModelCustomizationResponse withObject(DeleteModelCustomizationResponseBody object) {
+        this.object = object;
         return this;
     }
     

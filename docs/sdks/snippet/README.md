@@ -1,5 +1,5 @@
 # Snippet
-(*snippet*)
+(*.snippet*)
 
 ## Overview
 
@@ -78,8 +78,8 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.FindSnippetsRequest;
 import com.writer.sdk.models.operations.FindSnippetsResponse;
-import com.writer.sdk.models.operations.FindSnippetsSortField;
-import com.writer.sdk.models.operations.FindSnippetsSortOrder;
+import com.writer.sdk.models.operations.SortField;
+import com.writer.sdk.models.operations.SortOrder;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -99,8 +99,8 @@ public class Application {
                 shortcuts = new String[]{{
                     add("string"),
                 }};
-                sortField = FindSnippetsSortField.MODIFICATION_TIME;
-                sortOrder = FindSnippetsSortOrder.ASC;
+                sortField = SortField.MODIFICATION_TIME;
+                sortOrder = SortOrder.ASC;
                 tags = new String[]{{
                     add("string"),
                 }};
@@ -173,7 +173,7 @@ public class Application {
 
             UpdateSnippetsResponse res = sdk.snippet.update(req);
 
-            if (res.snippetWithUsers != null) {
+            if (res.classes != null) {
                 // handle response
             }
         } catch (Exception e) {

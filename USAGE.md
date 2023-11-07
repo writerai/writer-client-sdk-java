@@ -5,9 +5,7 @@
 package hello.world;
 
 import com.writer.sdk.Writer;
-import com.writer.sdk.models.operations.DetectContentRequest;
-import com.writer.sdk.models.operations.DetectContentResponse;
-import com.writer.sdk.models.shared.ContentDetectorRequest;
+import com.writer.sdk.models.operations.GetSubscriptionDetailsResponse;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
@@ -17,14 +15,12 @@ public class Application {
                 .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(496531L)
+                .setOrganizationId(850421L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("string"));            
+            GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
 
-            DetectContentResponse res = sdk.aiContentDetector.detect(req);
-
-            if (res.contentDetectorResponses != null) {
+            if (res.subscriptionPublicResponseApi != null) {
                 // handle response
             }
         } catch (Exception e) {

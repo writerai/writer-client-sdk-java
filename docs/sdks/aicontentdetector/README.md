@@ -1,5 +1,5 @@
 # AIContentDetector
-(*aiContentDetector*)
+(*.aiContentDetector*)
 
 ## Overview
 
@@ -38,7 +38,7 @@ public class Application {
 
             DetectContentResponse res = sdk.aiContentDetector.detect(req);
 
-            if (res.contentDetectorResponses != null) {
+            if (res.classes != null) {
                 // handle response
             }
         } catch (Exception e) {

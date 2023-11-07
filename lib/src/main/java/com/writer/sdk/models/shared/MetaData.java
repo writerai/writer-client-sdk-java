@@ -68,9 +68,9 @@ public class MetaData {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
-    public MetaDataTier tier;
+    public Tier tier;
 
-    public MetaData withTier(MetaDataTier tier) {
+    public MetaData withTier(Tier tier) {
         this.tier = tier;
         return this;
     }

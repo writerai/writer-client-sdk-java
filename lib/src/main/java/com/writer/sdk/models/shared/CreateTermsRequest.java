@@ -12,9 +12,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTermsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failHandling")
-    public CreateTermsRequestFailHandling failHandling;
+    public FailHandling failHandling;
 
-    public CreateTermsRequest withFailHandling(CreateTermsRequestFailHandling failHandling) {
+    public CreateTermsRequest withFailHandling(FailHandling failHandling) {
         this.failHandling = failHandling;
         return this;
     }

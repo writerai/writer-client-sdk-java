@@ -42,17 +42,17 @@ public class ListTeamDocumentsRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
-    public ListTeamDocumentsSortField sortField;
+    public ListTeamDocumentsQueryParamSortField sortField;
 
-    public ListTeamDocumentsRequest withSortField(ListTeamDocumentsSortField sortField) {
+    public ListTeamDocumentsRequest withSortField(ListTeamDocumentsQueryParamSortField sortField) {
         this.sortField = sortField;
         return this;
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
-    public ListTeamDocumentsSortOrder sortOrder;
+    public ListTeamDocumentsQueryParamSortOrder sortOrder;
 
-    public ListTeamDocumentsRequest withSortOrder(ListTeamDocumentsSortOrder sortOrder) {
+    public ListTeamDocumentsRequest withSortOrder(ListTeamDocumentsQueryParamSortOrder sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }

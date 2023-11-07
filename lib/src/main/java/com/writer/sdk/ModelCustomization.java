@@ -106,7 +106,7 @@ public class ModelCustomization {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = new com.writer.sdk.models.operations.DeleteModelCustomizationResponse(contentType, httpRes.statusCode()) {{
-            deleteModelCustomization200ApplicationJSONObject = null;
+            object = null;
             failResponse = null;
         }};
         res.rawResponse = httpRes;
@@ -116,8 +116,8 @@ public class ModelCustomization {
             
             if (com.writer.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                com.writer.sdk.models.operations.DeleteModelCustomization200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.operations.DeleteModelCustomization200ApplicationJSON.class);
-                res.deleteModelCustomization200ApplicationJSONObject = out;
+                com.writer.sdk.models.operations.DeleteModelCustomizationResponseBody out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.operations.DeleteModelCustomizationResponseBody.class);
+                res.object = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

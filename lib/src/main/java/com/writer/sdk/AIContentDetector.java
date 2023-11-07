@@ -54,7 +54,7 @@ public class AIContentDetector {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.writer.sdk.models.operations.DetectContentResponse res = new com.writer.sdk.models.operations.DetectContentResponse(contentType, httpRes.statusCode()) {{
-            contentDetectorResponses = null;
+            classes = null;
             failResponse = null;
         }};
         res.rawResponse = httpRes;
@@ -65,7 +65,7 @@ public class AIContentDetector {
             if (com.writer.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 com.writer.sdk.models.shared.ContentDetectorResponse[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), com.writer.sdk.models.shared.ContentDetectorResponse[].class);
-                res.contentDetectorResponses = out;
+                res.classes = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

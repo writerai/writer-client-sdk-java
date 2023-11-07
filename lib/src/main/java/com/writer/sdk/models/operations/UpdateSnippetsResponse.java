@@ -39,14 +39,6 @@ public class UpdateSnippetsResponse {
         return this;
     }
     
-    
-    public com.writer.sdk.models.shared.SnippetWithUser[] snippetWithUsers;
-
-    public UpdateSnippetsResponse withSnippetWithUsers(com.writer.sdk.models.shared.SnippetWithUser[] snippetWithUsers) {
-        this.snippetWithUsers = snippetWithUsers;
-        return this;
-    }
-    
     /**
      * HTTP response status code for this operation
      */
@@ -66,6 +58,14 @@ public class UpdateSnippetsResponse {
 
     public UpdateSnippetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    
+    public com.writer.sdk.models.shared.SnippetWithUser[] classes;
+
+    public UpdateSnippetsResponse withClasses(com.writer.sdk.models.shared.SnippetWithUser[] classes) {
+        this.classes = classes;
         return this;
     }
     
