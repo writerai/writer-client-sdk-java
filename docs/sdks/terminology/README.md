@@ -1,5 +1,5 @@
 # Terminology
-(*.terminology*)
+(*terminology*)
 
 ## Overview
 

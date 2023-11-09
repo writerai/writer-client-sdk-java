@@ -1,5 +1,5 @@
 # Styleguide
-(*.styleguide*)
+(*styleguide*)
 
 ## Overview
 

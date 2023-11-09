@@ -1,5 +1,5 @@
 # Files
-(*.files*)
+(*files*)
 
 ## Overview
 
