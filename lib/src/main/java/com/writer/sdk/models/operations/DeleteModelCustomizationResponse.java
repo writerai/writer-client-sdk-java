@@ -9,6 +9,9 @@ import java.net.http.HttpResponse;
 
 
 public class DeleteModelCustomizationResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -36,6 +39,9 @@ public class DeleteModelCustomizationResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -44,6 +50,9 @@ public class DeleteModelCustomizationResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -53,10 +62,10 @@ public class DeleteModelCustomizationResponse {
     }
     
     
-    public DeleteModelCustomization200ApplicationJSON deleteModelCustomization200ApplicationJSONObject;
+    public DeleteModelCustomizationResponseBody object;
 
-    public DeleteModelCustomizationResponse withDeleteModelCustomization200ApplicationJSONObject(DeleteModelCustomization200ApplicationJSON deleteModelCustomization200ApplicationJSONObject) {
-        this.deleteModelCustomization200ApplicationJSONObject = deleteModelCustomization200ApplicationJSONObject;
+    public DeleteModelCustomizationResponse withObject(DeleteModelCustomizationResponseBody object) {
+        this.object = object;
         return this;
     }
     

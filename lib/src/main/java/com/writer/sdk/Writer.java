@@ -16,41 +16,45 @@ public class Writer {
 	};
   	
     /**
-     * Methods related to AI Content Detector
-     */
-    public AIContentDetector aiContentDetector;
-    /**
      * Methods related to Billing
      */
     public Billing billing;
     /**
-     * Methods related to CoWrite
+     * Methods related to AI Content Detector
      */
-    public CoWrite coWrite;
-    /**
-     * Methods related to Completions
-     */
-    public Completions completions;
+    public AIContentDetector aiContentDetector;
     /**
      * Methods related to Content
      */
     public Content content;
     /**
-     * Methods related to Download the customized model
+     * Methods related to CoWrite
      */
-    public DownloadTheCustomizedModel downloadTheCustomizedModel;
+    public CoWrite coWrite;
     /**
      * Methods related to Files
      */
     public Files files;
     /**
+     * Methods related to Model
+     */
+    public Models models;
+    /**
+     * Methods related to Completions
+     */
+    public Completions completions;
+    /**
      * Methods related to Model Customization
      */
     public ModelCustomization modelCustomization;
     /**
-     * Methods related to Model
+     * Methods related to Download the customized model
      */
-    public Models models;
+    public DownloadTheCustomizedModel downloadTheCustomizedModel;
+    /**
+     * Methods related to document
+     */
+    public Document document;
     /**
      * Methods related to Snippets
      */
@@ -66,11 +70,7 @@ public class Writer {
     /**
      * Methods related to User
      */
-    public User user;
-    /**
-     * Methods related to document
-     */
-    public Document document;	
+    public User user;	
 
 	private SDKConfiguration sdkConfiguration;
 
@@ -192,23 +192,25 @@ public class Writer {
 	private Writer(SDKConfiguration sdkConfiguration) throws Exception {
 		this.sdkConfiguration = sdkConfiguration;
 		
-		this.aiContentDetector = new AIContentDetector(this.sdkConfiguration);
-		
 		this.billing = new Billing(this.sdkConfiguration);
 		
-		this.coWrite = new CoWrite(this.sdkConfiguration);
-		
-		this.completions = new Completions(this.sdkConfiguration);
+		this.aiContentDetector = new AIContentDetector(this.sdkConfiguration);
 		
 		this.content = new Content(this.sdkConfiguration);
 		
-		this.downloadTheCustomizedModel = new DownloadTheCustomizedModel(this.sdkConfiguration);
+		this.coWrite = new CoWrite(this.sdkConfiguration);
 		
 		this.files = new Files(this.sdkConfiguration);
 		
+		this.models = new Models(this.sdkConfiguration);
+		
+		this.completions = new Completions(this.sdkConfiguration);
+		
 		this.modelCustomization = new ModelCustomization(this.sdkConfiguration);
 		
-		this.models = new Models(this.sdkConfiguration);
+		this.downloadTheCustomizedModel = new DownloadTheCustomizedModel(this.sdkConfiguration);
+		
+		this.document = new Document(this.sdkConfiguration);
 		
 		this.snippet = new Snippet(this.sdkConfiguration);
 		
@@ -217,7 +219,5 @@ public class Writer {
 		this.terminology = new Terminology(this.sdkConfiguration);
 		
 		this.user = new User(this.sdkConfiguration);
-		
-		this.document = new Document(this.sdkConfiguration);
 	}
 }

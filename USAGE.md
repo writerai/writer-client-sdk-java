@@ -5,26 +5,22 @@
 package hello.world;
 
 import com.writer.sdk.Writer;
-import com.writer.sdk.models.operations.DetectContentRequest;
-import com.writer.sdk.models.operations.DetectContentResponse;
-import com.writer.sdk.models.shared.ContentDetectorRequest;
+import com.writer.sdk.models.operations.GetSubscriptionDetailsResponse;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corrupti") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(592845L)
+                .setOrganizationId(850421L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("distinctio"););            
+            GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
 
-            DetectContentResponse res = sdk.aiContentDetector.detect(req);
-
-            if (res.contentDetectorResponses != null) {
+            if (res.subscriptionPublicResponseApi != null) {
                 // handle response
             }
         } catch (Exception e) {

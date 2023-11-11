@@ -34,25 +34,25 @@ public class FindTermsRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partOfSpeech")
-    public FindTermsPartOfSpeech partOfSpeech;
+    public PartOfSpeech partOfSpeech;
 
-    public FindTermsRequest withPartOfSpeech(FindTermsPartOfSpeech partOfSpeech) {
+    public FindTermsRequest withPartOfSpeech(PartOfSpeech partOfSpeech) {
         this.partOfSpeech = partOfSpeech;
         return this;
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
-    public FindTermsSortField sortField;
+    public QueryParamSortField sortField;
 
-    public FindTermsRequest withSortField(FindTermsSortField sortField) {
+    public FindTermsRequest withSortField(QueryParamSortField sortField) {
         this.sortField = sortField;
         return this;
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
-    public FindTermsSortOrder sortOrder;
+    public QueryParamSortOrder sortOrder;
 
-    public FindTermsRequest withSortOrder(FindTermsSortOrder sortOrder) {
+    public FindTermsRequest withSortOrder(QueryParamSortOrder sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
@@ -82,9 +82,9 @@ public class FindTermsRequest {
     }
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
-    public FindTermsType type;
+    public Type type;
 
-    public FindTermsRequest withType(FindTermsType type) {
+    public FindTermsRequest withType(Type type) {
         this.type = type;
         return this;
     }

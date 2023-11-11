@@ -9,6 +9,9 @@ import java.net.http.HttpResponse;
 
 
 public class DeleteFileResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -36,6 +39,9 @@ public class DeleteFileResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -44,6 +50,9 @@ public class DeleteFileResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -53,10 +62,10 @@ public class DeleteFileResponse {
     }
     
     
-    public DeleteFile200ApplicationJSON deleteFile200ApplicationJSONObject;
+    public DeleteFileResponseBody object;
 
-    public DeleteFileResponse withDeleteFile200ApplicationJSONObject(DeleteFile200ApplicationJSON deleteFile200ApplicationJSONObject) {
-        this.deleteFile200ApplicationJSONObject = deleteFile200ApplicationJSONObject;
+    public DeleteFileResponse withObject(DeleteFileResponseBody object) {
+        this.object = object;
         return this;
     }
     

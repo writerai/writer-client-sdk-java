@@ -9,6 +9,9 @@ import java.net.http.HttpResponse;
 
 
 public class FetchCustomizedModelFileResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -36,6 +39,9 @@ public class FetchCustomizedModelFileResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -44,6 +50,9 @@ public class FetchCustomizedModelFileResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
@@ -53,10 +62,10 @@ public class FetchCustomizedModelFileResponse {
     }
     
     
-    public byte[] fetchCustomizedModelFile200ApplicationOctetStreamBinaryString;
+    public byte[] bytes;
 
-    public FetchCustomizedModelFileResponse withFetchCustomizedModelFile200ApplicationOctetStreamBinaryString(byte[] fetchCustomizedModelFile200ApplicationOctetStreamBinaryString) {
-        this.fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = fetchCustomizedModelFile200ApplicationOctetStreamBinaryString;
+    public FetchCustomizedModelFileResponse withBytes(byte[] bytes) {
+        this.bytes = bytes;
         return this;
     }
     

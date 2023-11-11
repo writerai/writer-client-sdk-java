@@ -9,6 +9,9 @@ import java.net.http.HttpResponse;
 
 
 public class UpdateSnippetsResponse {
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -36,14 +39,9 @@ public class UpdateSnippetsResponse {
         return this;
     }
     
-    
-    public com.writer.sdk.models.shared.SnippetWithUser[] snippetWithUsers;
-
-    public UpdateSnippetsResponse withSnippetWithUsers(com.writer.sdk.models.shared.SnippetWithUser[] snippetWithUsers) {
-        this.snippetWithUsers = snippetWithUsers;
-        return this;
-    }
-    
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -52,11 +50,22 @@ public class UpdateSnippetsResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
     public UpdateSnippetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    
+    public com.writer.sdk.models.shared.SnippetWithUser[] classes;
+
+    public UpdateSnippetsResponse withClasses(com.writer.sdk.models.shared.SnippetWithUser[] classes) {
+        this.classes = classes;
         return this;
     }
     

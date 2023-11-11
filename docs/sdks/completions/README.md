@@ -1,4 +1,5 @@
-# completions
+# Completions
+(*completions*)
 
 ## Overview
 
@@ -28,28 +29,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("at") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(870088L)
+                .setOrganizationId(486589L)
                 .build();
 
-            CreateCompletionRequest req = new CreateCompletionRequest(                new CompletionRequest("maiores") {{
-                                bestOf = 1L;
-                                frequencyPenalty = 4736.08d;
-                                logprobs = 799159L;
-                                maxTokens = 1024L;
-                                minTokens = 1L;
-                                n = 800911L;
-                                presencePenalty = 4614.79d;
-                                stop = new String[]{{
-                                    add("porro"),
-                                    add("dolorum"),
-                                    add("dicta"),
-                                }};
-                                temperature = 0.7d;
-                                topP = 1d;
-                            }};, "nam");            
+            CreateCompletionRequest req = new CreateCompletionRequest(new CompletionRequest("string"){{
+bestOf = 1L;
+frequencyPenalty = 4893.82d;
+logprobs = 638424L;
+maxTokens = 1024L;
+minTokens = 1L;
+n = 859213L;
+presencePenalty = 4174.58d;
+stop = new String[]{{
+    add("the"),
+    add("is"),
+    add("and"),
+}};
+temperature = 0.7d;
+topP = 1d;
+}}, "string");            
 
             CreateCompletionResponse res = sdk.completions.create(req);
 
@@ -94,26 +95,28 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("officia") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(582020L)
+                .setOrganizationId(919503L)
                 .build();
 
-            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(                new CompletionRequest("fugit") {{
-                                bestOf = 1L;
-                                frequencyPenalty = 5373.73d;
-                                logprobs = 944669L;
-                                maxTokens = 1024L;
-                                minTokens = 1L;
-                                n = 758616L;
-                                presencePenalty = 5218.48d;
-                                stop = new String[]{{
-                                    add("commodi"),
-                                }};
-                                temperature = 0.7d;
-                                topP = 1d;
-                            }};, "molestiae", "modi");            
+            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(new CompletionRequest("string"){{
+bestOf = 1L;
+frequencyPenalty = 412.97d;
+logprobs = 951257L;
+maxTokens = 1024L;
+minTokens = 1L;
+n = 314952L;
+presencePenalty = 657.2d;
+stop = new String[]{{
+    add("the"),
+    add("is"),
+    add("and"),
+}};
+temperature = 0.7d;
+topP = 1d;
+}}, "string", "string");            
 
             CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 

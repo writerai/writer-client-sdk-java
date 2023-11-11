@@ -9,14 +9,9 @@ import java.net.http.HttpResponse;
 
 
 public class DetectContentResponse {
-    
-    public com.writer.sdk.models.shared.ContentDetectorResponse[] contentDetectorResponses;
-
-    public DetectContentResponse withContentDetectorResponses(com.writer.sdk.models.shared.ContentDetectorResponse[] contentDetectorResponses) {
-        this.contentDetectorResponses = contentDetectorResponses;
-        return this;
-    }
-    
+    /**
+     * HTTP response content type for this operation
+     */
     
     public String contentType;
 
@@ -44,6 +39,9 @@ public class DetectContentResponse {
         return this;
     }
     
+    /**
+     * HTTP response status code for this operation
+     */
     
     public Integer statusCode;
 
@@ -52,11 +50,22 @@ public class DetectContentResponse {
         return this;
     }
     
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     
     public HttpResponse<byte[]> rawResponse;
 
     public DetectContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
+        return this;
+    }
+    
+    
+    public com.writer.sdk.models.shared.ContentDetectorResponse[] classes;
+
+    public DetectContentResponse withClasses(com.writer.sdk.models.shared.ContentDetectorResponse[] classes) {
+        this.classes = classes;
         return this;
     }
     

@@ -1,4 +1,5 @@
-# modelCustomization
+# ModelCustomization
+(*modelCustomization*)
 
 ## Overview
 
@@ -31,21 +32,21 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("ipsa") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(969810L)
+                .setOrganizationId(486589L)
                 .build();
 
-            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(                new CreateCustomizationRequest("est", "mollitia") {{
-                                additionalHyperParameters = new HyperParameters(670638L);;
-                                batchSize = 170909L;
-                                description = "dolorem";
-                                epochs = 358152L;
-                                learningRate = 1289.26d;
-                                promptTemplate = "nobis";
-                                validationDatasetFileId = "enim";
-                            }};, "omnis");            
+            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(new CreateCustomizationRequest("string", "string"){{
+additionalHyperParameters = new HyperParameters(489382L);
+batchSize = 638424L;
+description = "Synchronised full-range emulation";
+epochs = 134365L;
+learningRate = 7865.46d;
+promptTemplate = "string";
+validationDatasetFileId = "string";
+}}, "string");            
 
             CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
 
@@ -89,17 +90,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("nemo") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(325047L)
+                .setOrganizationId(545907L)
                 .build();
 
-            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("excepturi", "accusantium");            
+            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("string", "string");            
 
             DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
 
-            if (res.deleteModelCustomization200ApplicationJSONObject != null) {
+            if (res.object != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -139,13 +140,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("iure") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(634274L)
+                .setOrganizationId(700347L)
                 .build();
 
-            GetModelCustomizationRequest req = new GetModelCustomizationRequest("doloribus", "sapiente");            
+            GetModelCustomizationRequest req = new GetModelCustomizationRequest("string", "string");            
 
             GetModelCustomizationResponse res = sdk.modelCustomization.get(req);
 
@@ -189,13 +190,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("architecto") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(652790L)
+                .setOrganizationId(768578L)
                 .build();
 
-            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("dolorem");            
+            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("string");            
 
             ListModelCustomizationsResponse res = sdk.modelCustomization.list(req);
 

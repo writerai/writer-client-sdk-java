@@ -16,7 +16,7 @@
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.41.0'
+implementation 'com.writer.sdk:api:0.43.1'
 ```
 <!-- End SDK Installation -->
 
@@ -32,32 +32,26 @@ If you cannot see your secret API keys in the Dashboard, this means you do not h
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```java
 package hello.world;
 
 import com.writer.sdk.Writer;
-import com.writer.sdk.models.operations.DetectContentRequest;
-import com.writer.sdk.models.operations.DetectContentResponse;
-import com.writer.sdk.models.shared.ContentDetectorRequest;
+import com.writer.sdk.models.operations.GetSubscriptionDetailsResponse;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corrupti") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(592845L)
+                .setOrganizationId(850421L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(                new ContentDetectorRequest("distinctio"););            
+            GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
 
-            DetectContentResponse res = sdk.aiContentDetector.detect(req);
-
-            if (res.contentDetectorResponses != null) {
+            if (res.subscriptionPublicResponseApi != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -72,32 +66,23 @@ public class Application {
 ## Available Resources and Operations
 
 
-### [aiContentDetector](docs/sdks/aicontentdetector/README.md)
-
-* [detect](docs/sdks/aicontentdetector/README.md#detect) - Content detector api
-
 ### [billing](docs/sdks/billing/README.md)
 
 * [getSubscriptionDetails](docs/sdks/billing/README.md#getsubscriptiondetails) - Get your organization subscription details
 
-### [coWrite](docs/sdks/cowrite/README.md)
+### [aiContentDetector](docs/sdks/aicontentdetector/README.md)
 
-* [generateContent](docs/sdks/cowrite/README.md#generatecontent) - Generate content using predefined templates
-* [listTemplates](docs/sdks/cowrite/README.md#listtemplates) - Get a list of your existing CoWrite templates
-
-### [completions](docs/sdks/completions/README.md)
-
-* [create](docs/sdks/completions/README.md#create) - Create completion for LLM model
-* [createModelCustomizationCompletion](docs/sdks/completions/README.md#createmodelcustomizationcompletion) - Create completion for LLM customization model
+* [detect](docs/sdks/aicontentdetector/README.md#detect) - Content detector api
 
 ### [content](docs/sdks/content/README.md)
 
 * [check](docs/sdks/content/README.md#check) - Check your content against your preset styleguide.
 * [correct](docs/sdks/content/README.md#correct) - Apply the style guide suggestions directly to your content.
 
-### [downloadTheCustomizedModel](docs/sdks/downloadthecustomizedmodel/README.md)
+### [coWrite](docs/sdks/cowrite/README.md)
 
-* [fetchFile](docs/sdks/downloadthecustomizedmodel/README.md#fetchfile) - Download your fine-tuned model (available only for Palmyra Base and Palmyra Large)
+* [generateContent](docs/sdks/cowrite/README.md#generatecontent) - Generate content using predefined templates
+* [listTemplates](docs/sdks/cowrite/README.md#listtemplates) - Get a list of your existing CoWrite templates
 
 ### [files](docs/sdks/files/README.md)
 
@@ -106,6 +91,15 @@ public class Application {
 * [list](docs/sdks/files/README.md#list) - List files
 * [upload](docs/sdks/files/README.md#upload) - Upload file
 
+### [models](docs/sdks/models/README.md)
+
+* [list](docs/sdks/models/README.md#list) - List available LLM models
+
+### [completions](docs/sdks/completions/README.md)
+
+* [create](docs/sdks/completions/README.md#create) - Create completion for LLM model
+* [createModelCustomizationCompletion](docs/sdks/completions/README.md#createmodelcustomizationcompletion) - Create completion for LLM customization model
+
 ### [modelCustomization](docs/sdks/modelcustomization/README.md)
 
 * [create](docs/sdks/modelcustomization/README.md#create) - Create model customization
@@ -113,9 +107,14 @@ public class Application {
 * [get](docs/sdks/modelcustomization/README.md#get) - Get model customization
 * [list](docs/sdks/modelcustomization/README.md#list) - List model customizations
 
-### [models](docs/sdks/models/README.md)
+### [downloadTheCustomizedModel](docs/sdks/downloadthecustomizedmodel/README.md)
 
-* [list](docs/sdks/models/README.md#list) - List available LLM models
+* [fetchFile](docs/sdks/downloadthecustomizedmodel/README.md#fetchfile) - Download your fine-tuned model (available only for Palmyra Base and Palmyra Large)
+
+### [document](docs/sdks/document/README.md)
+
+* [get](docs/sdks/document/README.md#get) - Get document details
+* [list](docs/sdks/document/README.md#list) - List team documents
 
 ### [snippet](docs/sdks/snippet/README.md)
 
@@ -138,11 +137,72 @@ public class Application {
 ### [user](docs/sdks/user/README.md)
 
 * [list](docs/sdks/user/README.md#list) - List users
-
-### [document](docs/sdks/document/README.md)
-
-* [get](docs/sdks/document/README.md#get) - Get document details
-* [list](docs/sdks/document/README.md#list) - List team documents
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Global Parameters -->
+# Global Parameters
+
+A parameter is configured globally. This parameter must be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
+
+For example, you can set `organizationId` to `297548L` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
+
+
+## Available Globals
+
+The following global parameter is available. The required parameter must be set when you initialize the SDK client.
+
+| Name | Type | Required | Description |
+| ---- | ---- |:--------:| ----------- |
+| organizationId | Long | ✔️ | The organizationId parameter. |
+
+
+
+## Example
+
+```java
+package hello.world;
+
+import com.writer.sdk.Writer;
+import com.writer.sdk.models.operations.DetectContentRequest;
+import com.writer.sdk.models.operations.DetectContentResponse;
+import com.writer.sdk.models.shared.ContentDetectorRequest;
+import com.writer.sdk.models.shared.Security;
+
+public class Application {
+    public static void main(String[] args) {
+        try {
+            Writer sdk = Writer.builder()
+                .setSecurity(new Security("string"){{
+                    apiKey = "";
+                }})
+                .setOrganizationId(496531L)
+                .build();
+
+            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("string"));            
+
+            DetectContentResponse res = sdk.aiContentDetector.detect(req);
+
+            if (res.classes != null) {
+                // handle response
+            }
+        } catch (Exception e) {
+            // handle exception
+        }
+    }
+}
+```
+<!-- End Global Parameters -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -1,4 +1,5 @@
-# files
+# Files
+(*files*)
 
 ## Overview
 
@@ -29,17 +30,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(386489L)
+                .setOrganizationId(545907L)
                 .build();
 
-            DeleteFileRequest req = new DeleteFileRequest("hic");            
+            DeleteFileRequest req = new DeleteFileRequest("string");            
 
             DeleteFileResponse res = sdk.files.delete(req);
 
-            if (res.deleteFile200ApplicationJSONObject != null) {
+            if (res.object != null) {
                 // handle response
             }
         } catch (Exception e) {
@@ -79,13 +80,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("saepe") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(681820L)
+                .setOrganizationId(700347L)
                 .build();
 
-            GetFileRequest req = new GetFileRequest("in");            
+            GetFileRequest req = new GetFileRequest("string");            
 
             GetFileResponse res = sdk.files.get(req);
 
@@ -129,10 +130,10 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("corporis") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(613064L)
+                .setOrganizationId(768578L)
                 .build();
 
             ListFilesRequest req = new ListFilesRequest();            
@@ -173,21 +174,21 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.UploadFileRequest;
 import com.writer.sdk.models.operations.UploadFileResponse;
+import com.writer.sdk.models.shared.File;
 import com.writer.sdk.models.shared.Security;
 import com.writer.sdk.models.shared.UploadModelFileRequest;
-import com.writer.sdk.models.shared.UploadModelFileRequestFile;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("iure") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(902349L)
+                .setOrganizationId(403654L)
                 .build();
 
-            UploadFileRequest req = new UploadFileRequest(                new UploadModelFileRequest(                new UploadModelFileRequestFile("quidem".getBytes(), "architecto");););            
+            UploadFileRequest req = new UploadFileRequest(new UploadModelFileRequest(new File("0x7cbca97eC6".getBytes(), "string")));            
 
             UploadFileResponse res = sdk.files.upload(req);
 

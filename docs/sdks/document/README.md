@@ -1,4 +1,5 @@
-# document
+# Document
+(*document*)
 
 ## Overview
 
@@ -27,13 +28,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("natus") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(773326L)
+                .setOrganizationId(700347L)
                 .build();
 
-            GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(13236L, 974259L);            
+            GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(90065L, 558834L);            
 
             GetDocumentDetailsResponse res = sdk.document.get(req);
 
@@ -69,28 +70,28 @@ List team documents
 package hello.world;
 
 import com.writer.sdk.Writer;
+import com.writer.sdk.models.operations.ListTeamDocumentsQueryParamSortField;
+import com.writer.sdk.models.operations.ListTeamDocumentsQueryParamSortOrder;
 import com.writer.sdk.models.operations.ListTeamDocumentsRequest;
 import com.writer.sdk.models.operations.ListTeamDocumentsResponse;
-import com.writer.sdk.models.operations.ListTeamDocumentsSortField;
-import com.writer.sdk.models.operations.ListTeamDocumentsSortOrder;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("exercitationem") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(862310L)
+                .setOrganizationId(768578L)
                 .build();
 
-            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(148141L) {{
-                limit = 780427;
-                offset = 981830L;
-                search = "doloribus";
-                sortField = ListTeamDocumentsSortField.MODIFICATION_TIME;
-                sortOrder = ListTeamDocumentsSortOrder.DESC;
+            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(99895L){{
+                limit = 547272;
+                offset = 257649L;
+                search = "string";
+                sortField = ListTeamDocumentsQueryParamSortField.MODIFIED_BY_ME_TIME;
+                sortOrder = ListTeamDocumentsQueryParamSortOrder.ASC;
             }};            
 
             ListTeamDocumentsResponse res = sdk.document.list(req);

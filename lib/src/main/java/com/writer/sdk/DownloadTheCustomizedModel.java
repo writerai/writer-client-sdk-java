@@ -39,7 +39,7 @@ public class DownloadTheCustomizedModel {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json;q=1, application/octet-stream;q=0");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion, this.sdkConfiguration.openapiDocVersion));
+        req.addHeader("user-agent", this.sdkConfiguration.userAgent);
         
         HTTPClient client = this.sdkConfiguration.securityClient;
         
@@ -48,7 +48,7 @@ public class DownloadTheCustomizedModel {
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         com.writer.sdk.models.operations.FetchCustomizedModelFileResponse res = new com.writer.sdk.models.operations.FetchCustomizedModelFileResponse(contentType, httpRes.statusCode()) {{
-            fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = null;
+            bytes = null;
             failResponse = null;
         }};
         res.rawResponse = httpRes;
@@ -58,7 +58,7 @@ public class DownloadTheCustomizedModel {
             
             if (com.writer.sdk.utils.Utils.matchContentType(contentType, "application/octet-stream")) {
                 byte[] out = httpRes.body();
-                res.fetchCustomizedModelFile200ApplicationOctetStreamBinaryString = out;
+                res.bytes = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

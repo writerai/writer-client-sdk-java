@@ -16,9 +16,9 @@ import java.time.OffsetDateTime;
 
 public class BriefDocument {
     @JsonProperty("access")
-    public BriefDocumentAccess access;
+    public Access access;
 
-    public BriefDocument withAccess(BriefDocumentAccess access) {
+    public BriefDocument withAccess(Access access) {
         this.access = access;
         return this;
     }
@@ -101,7 +101,7 @@ public class BriefDocument {
         return this;
     }
     
-    public BriefDocument(@JsonProperty("access") BriefDocumentAccess access, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") Long id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("organizationId") Long organizationId, @JsonProperty("score") Long score, @JsonProperty("teamId") Long teamId, @JsonProperty("title") String title) {
+    public BriefDocument(@JsonProperty("access") Access access, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") Long id, @JsonProperty("modificationTime") OffsetDateTime modificationTime, @JsonProperty("organizationId") Long organizationId, @JsonProperty("score") Long score, @JsonProperty("teamId") Long teamId, @JsonProperty("title") String title) {
         this.access = access;
         this.creationTime = creationTime;
         this.id = id;

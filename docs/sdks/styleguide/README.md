@@ -1,4 +1,5 @@
-# styleguide
+# Styleguide
+(*styleguide*)
 
 ## Overview
 
@@ -27,13 +28,13 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("illum") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(864934L)
+                .setOrganizationId(700347L)
                 .build();
 
-            PageDetailsRequest req = new PageDetailsRequest(807319L);            
+            PageDetailsRequest req = new PageDetailsRequest(90065L);            
 
             PageDetailsResponse res = sdk.styleguide.get(req);
 
@@ -71,23 +72,23 @@ package hello.world;
 import com.writer.sdk.Writer;
 import com.writer.sdk.models.operations.ListPagesRequest;
 import com.writer.sdk.models.operations.ListPagesResponse;
-import com.writer.sdk.models.operations.ListPagesStatus;
+import com.writer.sdk.models.operations.Status;
 import com.writer.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("ea") {{
+                .setSecurity(new Security("string"){{
                     apiKey = "";
                 }})
-                .setOrganizationId(569101L)
+                .setOrganizationId(763372L)
                 .build();
 
-            ListPagesRequest req = new ListPagesRequest() {{
-                limit = 139972L;
-                offset = 407183L;
-                status = ListPagesStatus.LIVE;
+            ListPagesRequest req = new ListPagesRequest(){{
+                limit = 760116L;
+                offset = 303332L;
+                status = Status.LIVE;
             }};            
 
             ListPagesResponse res = sdk.styleguide.listPages(req);
