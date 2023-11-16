@@ -48,12 +48,11 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.GetDocumentDetailsResponse res = new com.writer.sdk.models.operations.GetDocumentDetailsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.GetDocumentDetailsResponse res = new com.writer.sdk.models.operations.GetDocumentDetailsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             document = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -105,12 +104,11 @@ public class Document {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.ListTeamDocumentsResponse res = new com.writer.sdk.models.operations.ListTeamDocumentsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.ListTeamDocumentsResponse res = new com.writer.sdk.models.operations.ListTeamDocumentsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             briefDocuments = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

@@ -53,12 +53,11 @@ public class CoWrite {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.GenerateContentResponse res = new com.writer.sdk.models.operations.GenerateContentResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.GenerateContentResponse res = new com.writer.sdk.models.operations.GenerateContentResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             draft = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -104,12 +103,11 @@ public class CoWrite {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.ListTemplatesResponse res = new com.writer.sdk.models.operations.ListTemplatesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.ListTemplatesResponse res = new com.writer.sdk.models.operations.ListTemplatesResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             templateDetailsResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

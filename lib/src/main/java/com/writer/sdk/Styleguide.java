@@ -48,12 +48,11 @@ public class Styleguide {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.PageDetailsResponse res = new com.writer.sdk.models.operations.PageDetailsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.PageDetailsResponse res = new com.writer.sdk.models.operations.PageDetailsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             pageWithSectionResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -105,12 +104,11 @@ public class Styleguide {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.ListPagesResponse res = new com.writer.sdk.models.operations.ListPagesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.ListPagesResponse res = new com.writer.sdk.models.operations.ListPagesResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             paginatedResultPagePublicApiResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

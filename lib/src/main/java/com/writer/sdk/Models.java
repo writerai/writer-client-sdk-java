@@ -46,12 +46,11 @@ public class Models {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.ListModelsResponse res = new com.writer.sdk.models.operations.ListModelsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.ListModelsResponse res = new com.writer.sdk.models.operations.ListModelsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             generationModelsResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
