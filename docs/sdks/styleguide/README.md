@@ -28,15 +28,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(700347L)
                 .build();
 
-            PageDetailsRequest req = new PageDetailsRequest(90065L);            
+            com.writer.sdk.models.operations.PageDetailsRequest req = new PageDetailsRequest(
+                90065L);
 
-            PageDetailsResponse res = sdk.styleguide.get(req);
+            com.writer.sdk.models.operations.PageDetailsResponse res = sdk.styleguide.get(req);
 
             if (res.pageWithSectionResponse != null) {
                 // handle response
@@ -79,19 +81,22 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(763372L)
                 .build();
 
-            ListPagesRequest req = new ListPagesRequest(){{
+            com.writer.sdk.models.operations.ListPagesRequest req = new ListPagesRequest(
+){{
                 limit = 760116L;
                 offset = 303332L;
                 status = Status.LIVE;
-            }};            
 
-            ListPagesResponse res = sdk.styleguide.listPages(req);
+            }};
+
+            com.writer.sdk.models.operations.ListPagesResponse res = sdk.styleguide.listPages(req);
 
             if (res.paginatedResultPagePublicApiResponse != null) {
                 // handle response

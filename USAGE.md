@@ -1,4 +1,4 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```java
 package hello.world;
 
@@ -10,13 +10,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(850421L)
                 .build();
 
-            GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
+            com.writer.sdk.models.operations.GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
 
             if (res.subscriptionPublicResponseApi != null) {
                 // handle response
@@ -27,4 +28,4 @@ public class Application {
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

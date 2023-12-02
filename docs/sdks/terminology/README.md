@@ -42,49 +42,66 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(551477L)
                 .build();
 
-            AddTermsRequest req = new AddTermsRequest(new CreateTermsRequest(){{
-failHandling = FailHandling.VALIDATE_ONLY;
-models = new com.writer.sdk.models.shared.TermCreate[]{{
-    add(new TermCreate(false, "string", TermCreateType.PENDING){{
-        approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
-            capitalize = false;
-            fixCase = false;
-            fixCommonMistakes = false;
-        }};
-        caseSensitive = false;
-        examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-            add(new TermExampleCreate("string", TermExampleCreateType.BAD){{
-                example = "string";
-                type = TermExampleCreateType.BAD;
-            }}),
-        }};
-        linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-            add(new LinkedTermCreate(){{}}),
-        }};
-        mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-            add(new TermMistakeCreate(false, "string"){{
-                caseSensitive = false;
-                mistake = "string";
-            }}),
-        }};
-        tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-            add(new TermTagCreate("string"){{
-                tag = "string";
-            }}),
-        }};
-        term = "string";
-        type = TermCreateType.PENDING;
-    }}),
-}};
-}}, 953696L);            
+            com.writer.sdk.models.operations.AddTermsRequest req = new AddTermsRequest(
+                new CreateTermsRequest(
+){{
+                    failHandling = FailHandling.VALIDATE_ONLY;
+                    models = new com.writer.sdk.models.shared.TermCreate[]{{
+                        add(new TermCreate(
+                        false,
+                        "string",
+                        TermCreateType.PENDING){{
+                            approvedTermExtension = new ApprovedTermExtensionCreate(
+                            false,
+                            false,
+                            false){{
+                                capitalize = false;
+                                fixCase = false;
+                                fixCommonMistakes = false;
+                            }};
+                            caseSensitive = false;
+                            examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
+                                add(new TermExampleCreate(
+                                "string",
+                                TermExampleCreateType.BAD){{
+                                    example = "string";
+                                    type = TermExampleCreateType.BAD;
+                                }}),
+                            }};
+                            linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
+                                add(new LinkedTermCreate(
+                                ){{}}),
+                            }};
+                            mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
+                                add(new TermMistakeCreate(
+                                false,
+                                "string"){{
+                                    caseSensitive = false;
+                                    mistake = "string";
+                                }}),
+                            }};
+                            tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
+                                add(new TermTagCreate(
+                                "string"){{
+                                    tag = "string";
+                                }}),
+                            }};
+                            term = "string";
+                            type = TermCreateType.PENDING;
+                        }}),
+                    }};
 
-            AddTermsResponse res = sdk.terminology.add(req);
+                }},
+                953696L);
+
+            com.writer.sdk.models.operations.AddTermsResponse res = sdk.terminology.add(req);
 
             if (res.createTermsResponse != null) {
                 // handle response
@@ -126,20 +143,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(545907L)
                 .build();
 
-            DeleteTermsRequest req = new DeleteTermsRequest(841399L){{
+            com.writer.sdk.models.operations.DeleteTermsRequest req = new DeleteTermsRequest(
+                841399L){{
                 xRequestID = "string";
                 ids = new Long[]{{
                     add(698486L),
                 }};
-            }};            
 
-            DeleteTermsResponse res = sdk.terminology.delete(req);
+            }};
+
+            com.writer.sdk.models.operations.DeleteTermsResponse res = sdk.terminology.delete(req);
 
             if (res.deleteResponse != null) {
                 // handle response
@@ -185,13 +205,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(40141L)
                 .build();
 
-            FindTermsRequest req = new FindTermsRequest(326883L){{
+            com.writer.sdk.models.operations.FindTermsRequest req = new FindTermsRequest(
+                326883L){{
                 limit = 488098L;
                 offset = 949900L;
                 partOfSpeech = PartOfSpeech.ADJECTIVE;
@@ -202,9 +224,10 @@ public class Application {
                 }};
                 term = "string";
                 type = Type.PENDING;
-            }};            
 
-            FindTermsResponse res = sdk.terminology.find(req);
+            }};
+
+            com.writer.sdk.models.operations.FindTermsResponse res = sdk.terminology.find(req);
 
             if (res.paginatedResultFullTermWithUser != null) {
                 // handle response
@@ -258,52 +281,71 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(857478L)
                 .build();
 
-            UpdateTermsRequest req = new UpdateTermsRequest(new UpdateTermsRequest(){{
-failHandling = UpdateTermsRequestFailHandling.ACCUMULATE;
-models = new com.writer.sdk.models.shared.TermUpdate[]{{
-    add(new TermUpdate(false, 991464L, "string", TermUpdateType.APPROVED){{
-        approvedTermExtension = new ApprovedTermExtensionCreate(false, false, false){{
-            capitalize = false;
-            fixCase = false;
-            fixCommonMistakes = false;
-        }};
-        caseSensitive = false;
-        examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-            add(new TermExampleCreate("string", TermExampleCreateType.GOOD){{
-                example = "string";
-                type = TermExampleCreateType.BAD;
-            }}),
-        }};
-        id = 344620L;
-        linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-            add(new LinkedTermCreate(){{}}),
-        }};
-        mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-            add(new TermMistakeCreate(false, "string"){{
-                caseSensitive = false;
-                mistake = "string";
-            }}),
-        }};
-        tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-            add(new TermTagCreate("string"){{
-                tag = "string";
-            }}),
-        }};
-        term = "string";
-        type = TermUpdateType.PENDING;
-    }}),
-}};
-}}, 627690L){{
-                xRequestID = "string";
-            }};            
+            com.writer.sdk.models.operations.UpdateTermsRequest req = new UpdateTermsRequest(
+                new UpdateTermsRequest(
+){{
+                    failHandling = UpdateTermsRequestFailHandling.ACCUMULATE;
+                    models = new com.writer.sdk.models.shared.TermUpdate[]{{
+                        add(new TermUpdate(
+                        false,
+                        991464L,
+                        "string",
+                        TermUpdateType.APPROVED){{
+                            approvedTermExtension = new ApprovedTermExtensionCreate(
+                            false,
+                            false,
+                            false){{
+                                capitalize = false;
+                                fixCase = false;
+                                fixCommonMistakes = false;
+                            }};
+                            caseSensitive = false;
+                            examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
+                                add(new TermExampleCreate(
+                                "string",
+                                TermExampleCreateType.GOOD){{
+                                    example = "string";
+                                    type = TermExampleCreateType.BAD;
+                                }}),
+                            }};
+                            id = 344620L;
+                            linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
+                                add(new LinkedTermCreate(
+                                ){{}}),
+                            }};
+                            mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
+                                add(new TermMistakeCreate(
+                                false,
+                                "string"){{
+                                    caseSensitive = false;
+                                    mistake = "string";
+                                }}),
+                            }};
+                            tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
+                                add(new TermTagCreate(
+                                "string"){{
+                                    tag = "string";
+                                }}),
+                            }};
+                            term = "string";
+                            type = TermUpdateType.PENDING;
+                        }}),
+                    }};
 
-            UpdateTermsResponse res = sdk.terminology.update(req);
+                }},
+                627690L){{
+                xRequestID = "string";
+
+            }};
+
+            com.writer.sdk.models.operations.UpdateTermsResponse res = sdk.terminology.update(req);
 
             if (res.createTermsResponse != null) {
                 // handle response

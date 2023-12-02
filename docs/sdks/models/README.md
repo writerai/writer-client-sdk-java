@@ -27,15 +27,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(768578L)
                 .build();
 
-            ListModelsRequest req = new ListModelsRequest();            
+            com.writer.sdk.models.operations.ListModelsRequest req = new ListModelsRequest(
+);
 
-            ListModelsResponse res = sdk.models.list(req);
+            com.writer.sdk.models.operations.ListModelsResponse res = sdk.models.list(req);
 
             if (res.generationModelsResponse != null) {
                 // handle response

@@ -207,7 +207,6 @@ lib/src/main/java/com/writer/sdk/models/shared/PaginatedResultUserPublicResponse
 lib/src/main/java/com/writer/sdk/models/shared/AccountStatus.java
 lib/src/main/java/com/writer/sdk/models/shared/UserPublicResponse.java
 lib/src/main/java/com/writer/sdk/models/shared/Security.java
-USAGE.md
 docs/models/operations/GetSubscriptionDetailsResponse.md
 docs/models/operations/DetectContentRequest.md
 docs/models/operations/DetectContentResponse.md
@@ -387,3 +386,4 @@ docs/sdks/snippet/README.md
 docs/sdks/styleguide/README.md
 docs/sdks/terminology/README.md
 docs/sdks/user/README.md
+USAGE.md

@@ -30,24 +30,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(569932L)
                 .build();
 
-            GenerateContentRequest req = new GenerateContentRequest(new GenerateTemplateRequest("string"){{
-inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
-    add(new MagicRequestInput("string"){{
-        name = "string";
-        value = new String[]{{
-            add("string"),
-        }};
-    }}),
-}};
-}}, 888452L);            
+            com.writer.sdk.models.operations.GenerateContentRequest req = new GenerateContentRequest(
+                new GenerateTemplateRequest(
+                    "string"){{
+                    inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
+                        add(new MagicRequestInput(
+                        "string"){{
+                            name = "string";
+                            value = new String[]{{
+                                add("string"),
+                            }};
+                        }}),
+                    }};
 
-            GenerateContentResponse res = sdk.coWrite.generateContent(req);
+                }},
+                888452L);
+
+            com.writer.sdk.models.operations.GenerateContentResponse res = sdk.coWrite.generateContent(req);
 
             if (res.draft != null) {
                 // handle response
@@ -89,15 +95,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(380445L)
                 .build();
 
-            ListTemplatesRequest req = new ListTemplatesRequest(882866L, "string");            
+            com.writer.sdk.models.operations.ListTemplatesRequest req = new ListTemplatesRequest(
+                882866L,
+                "string");
 
-            ListTemplatesResponse res = sdk.coWrite.listTemplates(req);
+            com.writer.sdk.models.operations.ListTemplatesResponse res = sdk.coWrite.listTemplates(req);
 
             if (res.templateDetailsResponse != null) {
                 // handle response

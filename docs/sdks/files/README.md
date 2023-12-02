@@ -30,15 +30,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(545907L)
                 .build();
 
-            DeleteFileRequest req = new DeleteFileRequest("string");            
+            com.writer.sdk.models.operations.DeleteFileRequest req = new DeleteFileRequest(
+                "string");
 
-            DeleteFileResponse res = sdk.files.delete(req);
+            com.writer.sdk.models.operations.DeleteFileResponse res = sdk.files.delete(req);
 
             if (res.object != null) {
                 // handle response
@@ -80,15 +82,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(700347L)
                 .build();
 
-            GetFileRequest req = new GetFileRequest("string");            
+            com.writer.sdk.models.operations.GetFileRequest req = new GetFileRequest(
+                "string");
 
-            GetFileResponse res = sdk.files.get(req);
+            com.writer.sdk.models.operations.GetFileResponse res = sdk.files.get(req);
 
             if (res.modelFile != null) {
                 // handle response
@@ -130,15 +134,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(768578L)
                 .build();
 
-            ListFilesRequest req = new ListFilesRequest();            
+            com.writer.sdk.models.operations.ListFilesRequest req = new ListFilesRequest(
+);
 
-            ListFilesResponse res = sdk.files.list(req);
+            com.writer.sdk.models.operations.ListFilesResponse res = sdk.files.list(req);
 
             if (res.modelFilesResponse != null) {
                 // handle response
@@ -182,15 +188,20 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(403654L)
                 .build();
 
-            UploadFileRequest req = new UploadFileRequest(new UploadModelFileRequest(new File("0x7cbca97eC6".getBytes(), "string")));            
+            com.writer.sdk.models.operations.UploadFileRequest req = new UploadFileRequest(
+                new UploadModelFileRequest(
+                    new File(
+                        "0x7cbca97eC6".getBytes(),
+                        "string")));
 
-            UploadFileResponse res = sdk.files.upload(req);
+            com.writer.sdk.models.operations.UploadFileResponse res = sdk.files.upload(req);
 
             if (res.modelFile != null) {
                 // handle response

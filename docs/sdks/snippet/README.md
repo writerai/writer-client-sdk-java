@@ -29,20 +29,23 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(545907L)
                 .build();
 
-            DeleteSnippetsRequest req = new DeleteSnippetsRequest(841399L){{
+            com.writer.sdk.models.operations.DeleteSnippetsRequest req = new DeleteSnippetsRequest(
+                841399L){{
                 xRequestID = "string";
                 ids = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            DeleteSnippetsResponse res = sdk.snippet.delete(req);
+            }};
+
+            com.writer.sdk.models.operations.DeleteSnippetsResponse res = sdk.snippet.delete(req);
 
             if (res.deleteResponse != null) {
                 // handle response
@@ -86,13 +89,15 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(40141L)
                 .build();
 
-            FindSnippetsRequest req = new FindSnippetsRequest(326883L){{
+            com.writer.sdk.models.operations.FindSnippetsRequest req = new FindSnippetsRequest(
+                326883L){{
                 limit = 488098L;
                 offset = 949900L;
                 search = "string";
@@ -104,9 +109,10 @@ public class Application {
                 tags = new String[]{{
                     add("string"),
                 }};
-            }};            
 
-            FindSnippetsResponse res = sdk.snippet.find(req);
+            }};
+
+            com.writer.sdk.models.operations.FindSnippetsResponse res = sdk.snippet.find(req);
 
             if (res.paginatedResultSnippetWithUser != null) {
                 // handle response
@@ -150,28 +156,34 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(857478L)
                 .build();
 
-            UpdateSnippetsRequest req = new UpdateSnippetsRequest(24555L){{
+            com.writer.sdk.models.operations.UpdateSnippetsRequest req = new UpdateSnippetsRequest(
+                24555L){{
                 requestBody = new com.writer.sdk.models.shared.SnippetUpdate[]{{
-                    add(new SnippetUpdate("string", "string"){{
+                    add(new SnippetUpdate(
+                    "string",
+                    "string"){{
                         id = "<ID>";
                         snippet = "string";
                         tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2("string"){{
+                            add(new SnippetTagV2(
+                            "string"){{
                                 tag = "string";
                             }}),
                         }};
                     }}),
                 }};
                 xRequestID = "string";
-            }};            
 
-            UpdateSnippetsResponse res = sdk.snippet.update(req);
+            }};
+
+            com.writer.sdk.models.operations.UpdateSnippetsResponse res = sdk.snippet.update(req);
 
             if (res.classes != null) {
                 // handle response

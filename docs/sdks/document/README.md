@@ -28,15 +28,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(700347L)
                 .build();
 
-            GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(90065L, 558834L);            
+            com.writer.sdk.models.operations.GetDocumentDetailsRequest req = new GetDocumentDetailsRequest(
+                90065L,
+                558834L);
 
-            GetDocumentDetailsResponse res = sdk.document.get(req);
+            com.writer.sdk.models.operations.GetDocumentDetailsResponse res = sdk.document.get(req);
 
             if (res.document != null) {
                 // handle response
@@ -80,21 +83,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
+                .setSecurity(new Security(
+                "string"){{
                     apiKey = "";
                 }})
                 .setOrganizationId(768578L)
                 .build();
 
-            ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(99895L){{
+            com.writer.sdk.models.operations.ListTeamDocumentsRequest req = new ListTeamDocumentsRequest(
+                99895L){{
                 limit = 547272;
                 offset = 257649L;
                 search = "string";
                 sortField = ListTeamDocumentsQueryParamSortField.MODIFIED_BY_ME_TIME;
                 sortOrder = ListTeamDocumentsQueryParamSortOrder.ASC;
-            }};            
 
-            ListTeamDocumentsResponse res = sdk.document.list(req);
+            }};
+
+            com.writer.sdk.models.operations.ListTeamDocumentsResponse res = sdk.document.list(req);
 
             if (res.briefDocuments != null) {
                 // handle response
