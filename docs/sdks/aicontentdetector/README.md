@@ -30,7 +30,7 @@ public class Application {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    apiKey = "";
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(496531L)
                 .build();

@@ -31,7 +31,7 @@ public class Application {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    apiKey = "";
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(545907L)
                 .build();
@@ -91,7 +91,7 @@ public class Application {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    apiKey = "";
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(40141L)
                 .build();
@@ -158,7 +158,7 @@ public class Application {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
                 "string"){{
-                    apiKey = "";
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(857478L)
                 .build();
