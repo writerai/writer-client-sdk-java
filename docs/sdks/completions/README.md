@@ -29,30 +29,35 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(486589L)
                 .build();
 
-            CreateCompletionRequest req = new CreateCompletionRequest(new CompletionRequest("string"){{
-bestOf = 1L;
-frequencyPenalty = 4893.82d;
-logprobs = 638424L;
-maxTokens = 1024L;
-minTokens = 1L;
-n = 859213L;
-presencePenalty = 4174.58d;
-stop = new String[]{{
-    add("the"),
-    add("is"),
-    add("and"),
-}};
-temperature = 0.7d;
-topP = 1d;
-}}, "string");            
+            com.writer.sdk.models.operations.CreateCompletionRequest req = new CreateCompletionRequest(
+                new CompletionRequest(
+                    "string"){{
+                    bestOf = 1L;
+                    frequencyPenalty = 4893.82d;
+                    logprobs = 638424L;
+                    maxTokens = 1024L;
+                    minTokens = 1L;
+                    n = 859213L;
+                    presencePenalty = 4174.58d;
+                    stop = new String[]{{
+                        add("the"),
+                        add("is"),
+                        add("and"),
+                    }};
+                    temperature = 0.7d;
+                    topP = 1d;
 
-            CreateCompletionResponse res = sdk.completions.create(req);
+                }},
+                "string");
+
+            com.writer.sdk.models.operations.CreateCompletionResponse res = sdk.completions.create(req);
 
             if (res.completionResponse != null) {
                 // handle response
@@ -95,30 +100,36 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(919503L)
                 .build();
 
-            CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(new CompletionRequest("string"){{
-bestOf = 1L;
-frequencyPenalty = 412.97d;
-logprobs = 951257L;
-maxTokens = 1024L;
-minTokens = 1L;
-n = 314952L;
-presencePenalty = 657.2d;
-stop = new String[]{{
-    add("the"),
-    add("is"),
-    add("and"),
-}};
-temperature = 0.7d;
-topP = 1d;
-}}, "string", "string");            
+            com.writer.sdk.models.operations.CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(
+                new CompletionRequest(
+                    "string"){{
+                    bestOf = 1L;
+                    frequencyPenalty = 412.97d;
+                    logprobs = 951257L;
+                    maxTokens = 1024L;
+                    minTokens = 1L;
+                    n = 314952L;
+                    presencePenalty = 657.2d;
+                    stop = new String[]{{
+                        add("the"),
+                        add("is"),
+                        add("and"),
+                    }};
+                    temperature = 0.7d;
+                    topP = 1d;
 
-            CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
+                }},
+                "string",
+                "string");
+
+            com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 
             if (res.completionResponse != null) {
                 // handle response

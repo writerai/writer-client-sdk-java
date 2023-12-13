@@ -53,12 +53,11 @@ public class ModelCustomization {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.CreateModelCustomizationResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.CreateModelCustomizationResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             modelCustomization = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -104,12 +103,11 @@ public class ModelCustomization {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = new com.writer.sdk.models.operations.DeleteModelCustomizationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = new com.writer.sdk.models.operations.DeleteModelCustomizationResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             object = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -155,12 +153,11 @@ public class ModelCustomization {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.GetModelCustomizationResponse res = new com.writer.sdk.models.operations.GetModelCustomizationResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.GetModelCustomizationResponse res = new com.writer.sdk.models.operations.GetModelCustomizationResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             modelCustomization = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -206,12 +203,11 @@ public class ModelCustomization {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.ListModelCustomizationsResponse res = new com.writer.sdk.models.operations.ListModelCustomizationsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.ListModelCustomizationsResponse res = new com.writer.sdk.models.operations.ListModelCustomizationsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             customizationsResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

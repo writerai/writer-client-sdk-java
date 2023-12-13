@@ -28,15 +28,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(496531L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("string"));            
+            com.writer.sdk.models.operations.DetectContentRequest req = new DetectContentRequest(
+                new ContentDetectorRequest(
+                    "string"));
 
-            DetectContentResponse res = sdk.aiContentDetector.detect(req);
+            com.writer.sdk.models.operations.DetectContentResponse res = sdk.aiContentDetector.detect(req);
 
             if (res.classes != null) {
                 // handle response

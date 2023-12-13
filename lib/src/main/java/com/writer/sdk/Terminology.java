@@ -53,12 +53,11 @@ public class Terminology {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.AddTermsResponse res = new com.writer.sdk.models.operations.AddTermsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.AddTermsResponse res = new com.writer.sdk.models.operations.AddTermsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             createTermsResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -118,12 +117,11 @@ public class Terminology {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.DeleteTermsResponse res = new com.writer.sdk.models.operations.DeleteTermsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.DeleteTermsResponse res = new com.writer.sdk.models.operations.DeleteTermsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             deleteResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -175,12 +173,11 @@ public class Terminology {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.FindTermsResponse res = new com.writer.sdk.models.operations.FindTermsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.FindTermsResponse res = new com.writer.sdk.models.operations.FindTermsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             paginatedResultFullTermWithUser = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -239,12 +236,11 @@ public class Terminology {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.UpdateTermsResponse res = new com.writer.sdk.models.operations.UpdateTermsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.UpdateTermsResponse res = new com.writer.sdk.models.operations.UpdateTermsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             createTermsResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

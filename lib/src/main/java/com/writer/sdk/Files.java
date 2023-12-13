@@ -48,12 +48,11 @@ public class Files {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.DeleteFileResponse res = new com.writer.sdk.models.operations.DeleteFileResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.DeleteFileResponse res = new com.writer.sdk.models.operations.DeleteFileResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             object = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -99,12 +98,11 @@ public class Files {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.GetFileResponse res = new com.writer.sdk.models.operations.GetFileResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.GetFileResponse res = new com.writer.sdk.models.operations.GetFileResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             modelFile = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -150,12 +148,11 @@ public class Files {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.ListFilesResponse res = new com.writer.sdk.models.operations.ListFilesResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.ListFilesResponse res = new com.writer.sdk.models.operations.ListFilesResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             modelFilesResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -206,12 +203,11 @@ public class Files {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.UploadFileResponse res = new com.writer.sdk.models.operations.UploadFileResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.UploadFileResponse res = new com.writer.sdk.models.operations.UploadFileResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             modelFile = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

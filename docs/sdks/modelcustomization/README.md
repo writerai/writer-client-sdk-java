@@ -32,23 +32,30 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(486589L)
                 .build();
 
-            CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(new CreateCustomizationRequest("string", "string"){{
-additionalHyperParameters = new HyperParameters(489382L);
-batchSize = 638424L;
-description = "Synchronised full-range emulation";
-epochs = 134365L;
-learningRate = 7865.46d;
-promptTemplate = "string";
-validationDatasetFileId = "string";
-}}, "string");            
+            com.writer.sdk.models.operations.CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(
+                new CreateCustomizationRequest(
+                    "string",
+                    "string"){{
+                    additionalHyperParameters = new HyperParameters(
+                        489382L);
+                    batchSize = 638424L;
+                    description = "Synchronised full-range emulation";
+                    epochs = 134365L;
+                    learningRate = 7865.46d;
+                    promptTemplate = "string";
+                    validationDatasetFileId = "string";
 
-            CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
+                }},
+                "string");
+
+            com.writer.sdk.models.operations.CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
 
             if (res.modelCustomization != null) {
                 // handle response
@@ -90,15 +97,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(545907L)
                 .build();
 
-            DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest("string", "string");            
+            com.writer.sdk.models.operations.DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest(
+                "string",
+                "string");
 
-            DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
+            com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
 
             if (res.object != null) {
                 // handle response
@@ -140,15 +150,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(700347L)
                 .build();
 
-            GetModelCustomizationRequest req = new GetModelCustomizationRequest("string", "string");            
+            com.writer.sdk.models.operations.GetModelCustomizationRequest req = new GetModelCustomizationRequest(
+                "string",
+                "string");
 
-            GetModelCustomizationResponse res = sdk.modelCustomization.get(req);
+            com.writer.sdk.models.operations.GetModelCustomizationResponse res = sdk.modelCustomization.get(req);
 
             if (res.modelCustomization != null) {
                 // handle response
@@ -190,15 +203,17 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(768578L)
                 .build();
 
-            ListModelCustomizationsRequest req = new ListModelCustomizationsRequest("string");            
+            com.writer.sdk.models.operations.ListModelCustomizationsRequest req = new ListModelCustomizationsRequest(
+                "string");
 
-            ListModelCustomizationsResponse res = sdk.modelCustomization.list(req);
+            com.writer.sdk.models.operations.ListModelCustomizationsResponse res = sdk.modelCustomization.list(req);
 
             if (res.customizationsResponse != null) {
                 // handle response

@@ -62,12 +62,11 @@ public class Snippet {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.DeleteSnippetsResponse res = new com.writer.sdk.models.operations.DeleteSnippetsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.DeleteSnippetsResponse res = new com.writer.sdk.models.operations.DeleteSnippetsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             deleteResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -119,12 +118,11 @@ public class Snippet {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.FindSnippetsResponse res = new com.writer.sdk.models.operations.FindSnippetsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.FindSnippetsResponse res = new com.writer.sdk.models.operations.FindSnippetsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             paginatedResultSnippetWithUser = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -180,12 +178,11 @@ public class Snippet {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.UpdateSnippetsResponse res = new com.writer.sdk.models.operations.UpdateSnippetsResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.UpdateSnippetsResponse res = new com.writer.sdk.models.operations.UpdateSnippetsResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             classes = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

@@ -29,21 +29,24 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(768578L)
                 .build();
 
-            ListUsersRequest req = new ListUsersRequest(){{
+            com.writer.sdk.models.operations.ListUsersRequest req = new ListUsersRequest(
+){{
                 limit = 99895L;
                 offset = 547272L;
                 search = "string";
                 sortField = ListUsersQueryParamSortField.NAME;
                 sortOrder = ListUsersQueryParamSortOrder.DESC;
-            }};            
 
-            ListUsersResponse res = sdk.user.list(req);
+            }};
+
+            com.writer.sdk.models.operations.ListUsersResponse res = sdk.user.list(req);
 
             if (res.paginatedResultUserPublicResponse != null) {
                 // handle response

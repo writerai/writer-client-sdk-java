@@ -69,8 +69,10 @@ public class CreateCompletionResponse {
         return this;
     }
     
-    public CreateCompletionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    public CreateCompletionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("Headers") java.util.Map<String, String[]> headers, @JsonProperty("StatusCode") Integer statusCode, @JsonProperty("RawResponse") HttpResponse<byte[]> rawResponse) {
         this.contentType = contentType;
+        this.headers = headers;
         this.statusCode = statusCode;
+        this.rawResponse = rawResponse;
   }
 }

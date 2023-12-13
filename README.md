@@ -10,15 +10,15 @@
   <a href="https://github.com/writerai/writer-client-sdk-java/releases"><img src="https://img.shields.io/github/v/release/writerai/writer-client-sdk-java?sort=semver&style=for-the-badge" /></a>
 </div>
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### Gradle
 
 ```groovy
-implementation 'com.writer.sdk:api:0.43.1'
+implementation 'com.writer.sdk:api:0.44.0'
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
 ## Authentication
 
@@ -30,8 +30,11 @@ Your API keys are available in the account dashboard. We include randomly genera
 
 If you cannot see your secret API keys in the Dashboard, this means you do not have access to them. Contact your Writer account owner and ask to be added to their team as a developer.
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
+### Example
+
 ```java
 package hello.world;
 
@@ -43,13 +46,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(850421L)
                 .build();
 
-            GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
+            com.writer.sdk.models.operations.GetSubscriptionDetailsResponse res = sdk.billing.getSubscriptionDetails();
 
             if (res.subscriptionPublicResponseApi != null) {
                 // handle response
@@ -60,11 +64,10 @@ public class Application {
     }
 }
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [billing](docs/sdks/billing/README.md)
 
@@ -137,25 +140,21 @@ public class Application {
 ### [user](docs/sdks/user/README.md)
 
 * [list](docs/sdks/user/README.md#list) - List users
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
 
 
-
-<!-- Start Global Parameters -->
-# Global Parameters
+<!-- Start Global Parameters [global-parameters] -->
+## Global Parameters
 
 A parameter is configured globally. This parameter must be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
 
 For example, you can set `organizationId` to `297548L` at SDK initialization and then you do not have to pass the same value on calls to operations like `detect`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
 
 
-## Available Globals
+### Available Globals
 
 The following global parameter is available. The required parameter must be set when you initialize the SDK client.
 
@@ -164,8 +163,7 @@ The following global parameter is available. The required parameter must be set 
 | organizationId | Long | ✔️ | The organizationId parameter. |
 
 
-
-## Example
+### Example
 
 ```java
 package hello.world;
@@ -180,15 +178,18 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(496531L)
                 .build();
 
-            DetectContentRequest req = new DetectContentRequest(new ContentDetectorRequest("string"));            
+            com.writer.sdk.models.operations.DetectContentRequest req = new DetectContentRequest(
+                new ContentDetectorRequest(
+                    "string"));
 
-            DetectContentResponse res = sdk.aiContentDetector.detect(req);
+            com.writer.sdk.models.operations.DetectContentResponse res = sdk.aiContentDetector.detect(req);
 
             if (res.classes != null) {
                 // handle response
@@ -199,7 +200,28 @@ public class Application {
     }
 }
 ```
-<!-- End Global Parameters -->
+<!-- End Global Parameters [global-parameters] -->
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally using the `setServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://enterprise-api.writer.com` | None |
+
+
+
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally using the `setServerURL` option when initializing the SDK client instance. For example:
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

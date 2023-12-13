@@ -52,12 +52,11 @@ public class Completions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.CreateCompletionResponse res = new com.writer.sdk.models.operations.CreateCompletionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.CreateCompletionResponse res = new com.writer.sdk.models.operations.CreateCompletionResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             completionResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
@@ -108,12 +107,11 @@ public class Completions {
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse(contentType, httpRes.statusCode()) {{
+        
+        com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse res = new com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse(contentType, null, httpRes.statusCode(), httpRes) {{
             completionResponse = null;
             failResponse = null;
         }};
-        res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));

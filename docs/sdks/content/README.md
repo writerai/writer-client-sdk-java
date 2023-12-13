@@ -30,15 +30,36 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(935464L)
                 .build();
 
-            ContentCheckRequest req = new ContentCheckRequest(new ContentRequest("string", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 38270L);            
+            com.writer.sdk.models.operations.ContentCheckRequest req = new ContentCheckRequest(
+                new ContentRequest(
+                    "string",
+                    new ContentSettings(
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false)),
+                38270L);
 
-            ContentCheckResponse res = sdk.content.check(req);
+            com.writer.sdk.models.operations.ContentCheckResponse res = sdk.content.check(req);
 
             if (res.processedContent != null) {
                 // handle response
@@ -82,17 +103,39 @@ public class Application {
     public static void main(String[] args) {
         try {
             Writer sdk = Writer.builder()
-                .setSecurity(new Security("string"){{
-                    apiKey = "";
+                .setSecurity(new Security(
+                "string"){{
+                    apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(501355L)
                 .build();
 
-            ContentCorrectRequest req = new ContentCorrectRequest(new ContentRequest("string", new ContentSettings(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false)), 31310L){{
+            com.writer.sdk.models.operations.ContentCorrectRequest req = new ContentCorrectRequest(
+                new ContentRequest(
+                    "string",
+                    new ContentSettings(
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false)),
+                31310L){{
                 xRequestID = "string";
-            }};            
 
-            ContentCorrectResponse res = sdk.content.correct(req);
+            }};
+
+            com.writer.sdk.models.operations.ContentCorrectResponse res = sdk.content.correct(req);
 
             if (res.correctionResponse != null) {
                 // handle response
