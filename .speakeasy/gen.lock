@@ -4,15 +4,15 @@ management:
   docChecksum: 044ba6ea348a6fb8206cacad6926373d
   docVersion: "1.7"
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.44.0
-  configChecksum: 6d821ec78ff1399b93e19fb9448dfe15
+  generationVersion: 2.228.1
+  releaseVersion: 0.44.1
+  configChecksum: 10fbd62234635e51168b6db7c69ec5fd
   repoURL: https://github.com/writerai/writer-client-sdk-java.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.2.0
+    core: 3.2.1
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
     globals: 2.81.1
