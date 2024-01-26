@@ -142,7 +142,7 @@ public class Writer {
 		 */
 		public Builder setOrganizationId(Long organizationId) {
 			if (!this.sdkConfiguration.globals.get("parameters").containsKey("pathParam")) {
-				this.sdkConfiguration.globals.get("parameters").put("pathParam", new java.util.HashMap<String, Object>());
+				this.sdkConfiguration.globals.get("parameters").put("pathParam", new java.util.HashMap<String, java.lang.Object>());
 			}
 
 			this.sdkConfiguration.globals.get("parameters").get("pathParam").put("organizationId", organizationId);

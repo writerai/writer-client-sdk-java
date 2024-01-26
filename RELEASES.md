@@ -451,3 +451,11 @@ Based on:
 - Speakeasy CLI 1.133.1 (2.228.1) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [java v0.44.1] .
+
+## 2024-01-26 00:22:32
+### Changes
+Based on:
+- OpenAPI Doc 1.7 https://raw.githubusercontent.com/speakeasy-sdks/w-ai-openapi/main/openapi.yaml
+- Speakeasy CLI 1.152.1 (2.239.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [java v0.45.0] .
