@@ -57,49 +57,15 @@ public class Application {
                         add(new TermCreate(
                         false,
                         "string",
-                        TermCreateType.PENDING){{
-                            approvedTermExtension = new ApprovedTermExtensionCreate(
-                            false,
-                            false,
-                            false){{
-                                capitalize = false;
-                                fixCase = false;
-                                fixCommonMistakes = false;
-                            }};
+                        TermCreateType.BANNED){{
                             caseSensitive = false;
-                            examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                add(new TermExampleCreate(
-                                "string",
-                                TermExampleCreateType.BAD){{
-                                    example = "string";
-                                    type = TermExampleCreateType.BAD;
-                                }}),
-                            }};
-                            linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-                                add(new LinkedTermCreate(
-                                ){{}}),
-                            }};
-                            mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                add(new TermMistakeCreate(
-                                false,
-                                "string"){{
-                                    caseSensitive = false;
-                                    mistake = "string";
-                                }}),
-                            }};
-                            tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                add(new TermTagCreate(
-                                "string"){{
-                                    tag = "string";
-                                }}),
-                            }};
                             term = "string";
-                            type = TermCreateType.PENDING;
+                            type = TermCreateType.BANNED;
                         }}),
                     }};
 
                 }},
-                953696L);
+                822001L);
 
             com.writer.sdk.models.operations.AddTermsResponse res = sdk.terminology.add(req);
 
@@ -295,52 +261,18 @@ public class Application {
                     models = new com.writer.sdk.models.shared.TermUpdate[]{{
                         add(new TermUpdate(
                         false,
-                        991464L,
+                        344620L,
                         "string",
-                        TermUpdateType.APPROVED){{
-                            approvedTermExtension = new ApprovedTermExtensionCreate(
-                            false,
-                            false,
-                            false){{
-                                capitalize = false;
-                                fixCase = false;
-                                fixCommonMistakes = false;
-                            }};
+                        TermUpdateType.PENDING){{
                             caseSensitive = false;
-                            examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                add(new TermExampleCreate(
-                                "string",
-                                TermExampleCreateType.GOOD){{
-                                    example = "string";
-                                    type = TermExampleCreateType.BAD;
-                                }}),
-                            }};
-                            id = 344620L;
-                            linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-                                add(new LinkedTermCreate(
-                                ){{}}),
-                            }};
-                            mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                add(new TermMistakeCreate(
-                                false,
-                                "string"){{
-                                    caseSensitive = false;
-                                    mistake = "string";
-                                }}),
-                            }};
-                            tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                add(new TermTagCreate(
-                                "string"){{
-                                    tag = "string";
-                                }}),
-                            }};
+                            id = 597129L;
                             term = "string";
-                            type = TermUpdateType.PENDING;
+                            type = TermUpdateType.APPROVED;
                         }}),
                     }};
 
                 }},
-                627690L){{
+                991464L){{
                 xRequestID = "string";
 
             }};

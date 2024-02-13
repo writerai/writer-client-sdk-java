@@ -171,12 +171,6 @@ public class Application {
                     "string"){{
                         id = "<ID>";
                         snippet = "string";
-                        tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2(
-                            "string"){{
-                                tag = "string";
-                            }}),
-                        }};
                     }}),
                 }};
                 xRequestID = "string";

@@ -44,9 +44,6 @@ public class Application {
                         add(new MagicRequestInput(
                         "string"){{
                             name = "string";
-                            value = new String[]{{
-                                add("string"),
-                            }};
                         }}),
                     }};
 

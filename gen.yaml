@@ -5,8 +5,10 @@ generation:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
 java:
-  version: 0.45.0
+  version: 0.45.1
   artifactID: sdk
   companyEmail: info@mycompany.com
   companyName: My Company
