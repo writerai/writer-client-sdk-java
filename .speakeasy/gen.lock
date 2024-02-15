@@ -4,15 +4,15 @@ management:
   docChecksum: 044ba6ea348a6fb8206cacad6926373d
   docVersion: "1.7"
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 0.45.1
-  configChecksum: 05a350f828e0b18889ed7d176351b447
+  generationVersion: 2.258.0
+  releaseVersion: 0.46.0
+  configChecksum: e04c1199570d87fc43a9554859bb4110
   repoURL: https://github.com/writerai/writer-client-sdk-java.git
   repoSubDirectory: .
   published: true
 features:
   java:
-    core: 3.2.2
+    core: 3.5.0
     globalSecurity: 2.81.2
     globalServerURLs: 2.82.1
     globals: 2.81.1
@@ -39,6 +39,7 @@ generatedFiles:
   - gradle/wrapper/gradle-wrapper.properties
   - gradlew
   - gradlew.bat
+  - settings.gradle
   - lib/build.gradle
   - lib/src/main/java/com/writer/sdk/utils/DateTimeDeserializer.java
   - lib/src/main/java/com/writer/sdk/utils/DateTimeSerializer.java
@@ -62,7 +63,6 @@ generatedFiles:
   - lib/src/main/java/com/writer/sdk/utils/SpeakeasyMetadata.java
   - lib/src/main/java/com/writer/sdk/utils/Types.java
   - lib/src/main/java/com/writer/sdk/utils/Utils.java
-  - settings.gradle
   - lib/src/main/java/com/writer/sdk/models/operations/GetSubscriptionDetailsResponse.java
   - lib/src/main/java/com/writer/sdk/models/operations/DetectContentRequest.java
   - lib/src/main/java/com/writer/sdk/models/operations/DetectContentResponse.java

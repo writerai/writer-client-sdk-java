@@ -43,7 +43,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(551477L)
@@ -56,10 +56,10 @@ public class Application {
                     models = new com.writer.sdk.models.shared.TermCreate[]{{
                         add(new TermCreate(
                         false,
-                        "string",
+                        "<value>",
                         TermCreateType.BANNED){{
                             caseSensitive = false;
-                            term = "string";
+                            term = "<value>";
                             type = TermCreateType.BANNED;
                         }}),
                     }};
@@ -110,7 +110,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(545907L)
@@ -118,7 +118,7 @@ public class Application {
 
             com.writer.sdk.models.operations.DeleteTermsRequest req = new DeleteTermsRequest(
                 841399L){{
-                xRequestID = "string";
+                xRequestID = "<value>";
                 ids = new Long[]{{
                     add(698486L),
                 }};
@@ -172,7 +172,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(40141L)
@@ -186,9 +186,9 @@ public class Application {
                 sortField = QueryParamSortField.TERM;
                 sortOrder = QueryParamSortOrder.ASC;
                 tags = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                term = "string";
+                term = "<value>";
                 type = Type.PENDING;
 
             }};
@@ -248,7 +248,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(857478L)
@@ -262,18 +262,18 @@ public class Application {
                         add(new TermUpdate(
                         false,
                         344620L,
-                        "string",
+                        "<value>",
                         TermUpdateType.PENDING){{
                             caseSensitive = false;
                             id = 597129L;
-                            term = "string";
+                            term = "<value>";
                             type = TermUpdateType.APPROVED;
                         }}),
                     }};
 
                 }},
                 991464L){{
-                xRequestID = "string";
+                xRequestID = "<value>";
 
             }};
 

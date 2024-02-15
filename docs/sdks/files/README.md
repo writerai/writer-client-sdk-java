@@ -31,14 +31,14 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(545907L)
                 .build();
 
             com.writer.sdk.models.operations.DeleteFileRequest req = new DeleteFileRequest(
-                "string");
+                "<value>");
 
             com.writer.sdk.models.operations.DeleteFileResponse res = sdk.files.delete(req);
 
@@ -83,14 +83,14 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(700347L)
                 .build();
 
             com.writer.sdk.models.operations.GetFileRequest req = new GetFileRequest(
-                "string");
+                "<value>");
 
             com.writer.sdk.models.operations.GetFileResponse res = sdk.files.get(req);
 
@@ -135,7 +135,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(768578L)
@@ -189,7 +189,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(403654L)
@@ -199,7 +199,7 @@ public class Application {
                 new UploadModelFileRequest(
                     new File(
                         "0x7cbca97eC6".getBytes(),
-                        "string")));
+                        "<value>")));
 
             com.writer.sdk.models.operations.UploadFileResponse res = sdk.files.upload(req);
 

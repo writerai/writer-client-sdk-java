@@ -30,7 +30,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(486589L)
@@ -38,7 +38,7 @@ public class Application {
 
             com.writer.sdk.models.operations.CreateCompletionRequest req = new CreateCompletionRequest(
                 new CompletionRequest(
-                    "string"){{
+                    "<value>"){{
                     bestOf = 1L;
                     frequencyPenalty = 4893.82d;
                     logprobs = 638424L;
@@ -55,7 +55,7 @@ public class Application {
                     topP = 1d;
 
                 }},
-                "string");
+                "<value>");
 
             com.writer.sdk.models.operations.CreateCompletionResponse res = sdk.completions.create(req);
 
@@ -101,7 +101,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(919503L)
@@ -109,7 +109,7 @@ public class Application {
 
             com.writer.sdk.models.operations.CreateModelCustomizationCompletionRequest req = new CreateModelCustomizationCompletionRequest(
                 new CompletionRequest(
-                    "string"){{
+                    "<value>"){{
                     bestOf = 1L;
                     frequencyPenalty = 412.97d;
                     logprobs = 951257L;
@@ -126,8 +126,8 @@ public class Application {
                     topP = 1d;
 
                 }},
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.writer.sdk.models.operations.CreateModelCustomizationCompletionResponse res = sdk.completions.createModelCustomizationCompletion(req);
 

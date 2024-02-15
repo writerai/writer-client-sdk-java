@@ -11,7 +11,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(850421L)

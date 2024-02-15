@@ -30,7 +30,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(768578L)
@@ -40,7 +40,7 @@ public class Application {
 ){{
                 limit = 99895L;
                 offset = 547272L;
-                search = "string";
+                search = "<value>";
                 sortField = ListUsersQueryParamSortField.NAME;
                 sortOrder = ListUsersQueryParamSortOrder.DESC;
 

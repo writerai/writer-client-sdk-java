@@ -31,7 +31,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(569932L)
@@ -39,11 +39,11 @@ public class Application {
 
             com.writer.sdk.models.operations.GenerateContentRequest req = new GenerateContentRequest(
                 new GenerateTemplateRequest(
-                    "string"){{
+                    "<value>"){{
                     inputs = new com.writer.sdk.models.shared.MagicRequestInput[]{{
                         add(new MagicRequestInput(
-                        "string"){{
-                            name = "string";
+                        "<value>"){{
+                            name = "<value>";
                         }}),
                     }};
 
@@ -93,7 +93,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(380445L)
@@ -101,7 +101,7 @@ public class Application {
 
             com.writer.sdk.models.operations.ListTemplatesRequest req = new ListTemplatesRequest(
                 882866L,
-                "string");
+                "<value>");
 
             com.writer.sdk.models.operations.ListTemplatesResponse res = sdk.coWrite.listTemplates(req);
 
