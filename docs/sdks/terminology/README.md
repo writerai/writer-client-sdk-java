@@ -43,7 +43,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(551477L)
@@ -56,50 +56,16 @@ public class Application {
                     models = new com.writer.sdk.models.shared.TermCreate[]{{
                         add(new TermCreate(
                         false,
-                        "string",
-                        TermCreateType.PENDING){{
-                            approvedTermExtension = new ApprovedTermExtensionCreate(
-                            false,
-                            false,
-                            false){{
-                                capitalize = false;
-                                fixCase = false;
-                                fixCommonMistakes = false;
-                            }};
+                        "<value>",
+                        TermCreateType.BANNED){{
                             caseSensitive = false;
-                            examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                add(new TermExampleCreate(
-                                "string",
-                                TermExampleCreateType.BAD){{
-                                    example = "string";
-                                    type = TermExampleCreateType.BAD;
-                                }}),
-                            }};
-                            linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-                                add(new LinkedTermCreate(
-                                ){{}}),
-                            }};
-                            mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                add(new TermMistakeCreate(
-                                false,
-                                "string"){{
-                                    caseSensitive = false;
-                                    mistake = "string";
-                                }}),
-                            }};
-                            tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                add(new TermTagCreate(
-                                "string"){{
-                                    tag = "string";
-                                }}),
-                            }};
-                            term = "string";
-                            type = TermCreateType.PENDING;
+                            term = "<value>";
+                            type = TermCreateType.BANNED;
                         }}),
                     }};
 
                 }},
-                953696L);
+                822001L);
 
             com.writer.sdk.models.operations.AddTermsResponse res = sdk.terminology.add(req);
 
@@ -144,7 +110,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(545907L)
@@ -152,7 +118,7 @@ public class Application {
 
             com.writer.sdk.models.operations.DeleteTermsRequest req = new DeleteTermsRequest(
                 841399L){{
-                xRequestID = "string";
+                xRequestID = "<value>";
                 ids = new Long[]{{
                     add(698486L),
                 }};
@@ -206,7 +172,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(40141L)
@@ -220,9 +186,9 @@ public class Application {
                 sortField = QueryParamSortField.TERM;
                 sortOrder = QueryParamSortOrder.ASC;
                 tags = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
-                term = "string";
+                term = "<value>";
                 type = Type.PENDING;
 
             }};
@@ -282,7 +248,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(857478L)
@@ -295,53 +261,19 @@ public class Application {
                     models = new com.writer.sdk.models.shared.TermUpdate[]{{
                         add(new TermUpdate(
                         false,
-                        991464L,
-                        "string",
-                        TermUpdateType.APPROVED){{
-                            approvedTermExtension = new ApprovedTermExtensionCreate(
-                            false,
-                            false,
-                            false){{
-                                capitalize = false;
-                                fixCase = false;
-                                fixCommonMistakes = false;
-                            }};
+                        344620L,
+                        "<value>",
+                        TermUpdateType.PENDING){{
                             caseSensitive = false;
-                            examples = new com.writer.sdk.models.shared.TermExampleCreate[]{{
-                                add(new TermExampleCreate(
-                                "string",
-                                TermExampleCreateType.GOOD){{
-                                    example = "string";
-                                    type = TermExampleCreateType.BAD;
-                                }}),
-                            }};
-                            id = 344620L;
-                            linkedTerms = new com.writer.sdk.models.shared.LinkedTermCreate[]{{
-                                add(new LinkedTermCreate(
-                                ){{}}),
-                            }};
-                            mistakes = new com.writer.sdk.models.shared.TermMistakeCreate[]{{
-                                add(new TermMistakeCreate(
-                                false,
-                                "string"){{
-                                    caseSensitive = false;
-                                    mistake = "string";
-                                }}),
-                            }};
-                            tags = new com.writer.sdk.models.shared.TermTagCreate[]{{
-                                add(new TermTagCreate(
-                                "string"){{
-                                    tag = "string";
-                                }}),
-                            }};
-                            term = "string";
-                            type = TermUpdateType.PENDING;
+                            id = 597129L;
+                            term = "<value>";
+                            type = TermUpdateType.APPROVED;
                         }}),
                     }};
 
                 }},
-                627690L){{
-                xRequestID = "string";
+                991464L){{
+                xRequestID = "<value>";
 
             }};
 

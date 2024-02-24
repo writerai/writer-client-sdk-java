@@ -20,9 +20,9 @@ public class FailResponse {
     }
     
     @JsonProperty("extras")
-    public Object extras;
+    public java.lang.Object extras;
 
-    public FailResponse withExtras(Object extras) {
+    public FailResponse withExtras(java.lang.Object extras) {
         this.extras = extras;
         return this;
     }
@@ -35,7 +35,7 @@ public class FailResponse {
         return this;
     }
     
-    public FailResponse(@JsonProperty("extras") Object extras, @JsonProperty("tpe") String tpe) {
+    public FailResponse(@JsonProperty("extras") java.lang.Object extras, @JsonProperty("tpe") String tpe) {
         this.extras = extras;
         this.tpe = tpe;
   }

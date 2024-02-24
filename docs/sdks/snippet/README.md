@@ -30,7 +30,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(545907L)
@@ -38,9 +38,9 @@ public class Application {
 
             com.writer.sdk.models.operations.DeleteSnippetsRequest req = new DeleteSnippetsRequest(
                 841399L){{
-                xRequestID = "string";
+                xRequestID = "<value>";
                 ids = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -90,7 +90,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(40141L)
@@ -100,14 +100,14 @@ public class Application {
                 326883L){{
                 limit = 488098L;
                 offset = 949900L;
-                search = "string";
+                search = "<value>";
                 shortcuts = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
                 sortField = SortField.MODIFICATION_TIME;
                 sortOrder = SortOrder.ASC;
                 tags = new String[]{{
-                    add("string"),
+                    add("<value>"),
                 }};
 
             }};
@@ -157,7 +157,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(857478L)
@@ -167,19 +167,13 @@ public class Application {
                 24555L){{
                 requestBody = new com.writer.sdk.models.shared.SnippetUpdate[]{{
                     add(new SnippetUpdate(
-                    "string",
-                    "string"){{
-                        id = "<ID>";
-                        snippet = "string";
-                        tags = new com.writer.sdk.models.shared.SnippetTagV2[]{{
-                            add(new SnippetTagV2(
-                            "string"){{
-                                tag = "string";
-                            }}),
-                        }};
+                    "<value>",
+                    "<value>"){{
+                        id = "<id>";
+                        snippet = "<value>";
                     }}),
                 }};
-                xRequestID = "string";
+                xRequestID = "<value>";
 
             }};
 

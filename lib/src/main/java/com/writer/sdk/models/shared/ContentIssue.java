@@ -29,9 +29,9 @@ public class ContentIssue {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
-    public Object meta;
+    public java.lang.Object meta;
 
-    public ContentIssue withMeta(Object meta) {
+    public ContentIssue withMeta(java.lang.Object meta) {
         this.meta = meta;
         return this;
     }

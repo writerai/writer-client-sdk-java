@@ -28,15 +28,15 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(501762L)
                 .build();
 
             com.writer.sdk.models.operations.FetchCustomizedModelFileRequest req = new FetchCustomizedModelFileRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.writer.sdk.models.operations.FetchCustomizedModelFileResponse res = sdk.downloadTheCustomizedModel.fetchFile(req);
 

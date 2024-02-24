@@ -17,9 +17,9 @@ public class FailMessage {
     }
     
     @JsonProperty("extras")
-    public Object extras;
+    public java.lang.Object extras;
 
-    public FailMessage withExtras(Object extras) {
+    public FailMessage withExtras(java.lang.Object extras) {
         this.extras = extras;
         return this;
     }
@@ -32,7 +32,7 @@ public class FailMessage {
         return this;
     }
     
-    public FailMessage(@JsonProperty("description") String description, @JsonProperty("extras") Object extras, @JsonProperty("key") String key) {
+    public FailMessage(@JsonProperty("description") String description, @JsonProperty("extras") java.lang.Object extras, @JsonProperty("key") String key) {
         this.description = description;
         this.extras = extras;
         this.key = key;

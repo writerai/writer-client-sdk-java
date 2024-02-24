@@ -17,11 +17,11 @@ class SDKConfiguration {
 	public int serverIdx = 0;
 	public String language = "java";
 	public String openapiDocVersion = "1.7";
-	public String sdkVersion = "0.44.0";
-	public String genVersion = "2.213.3";
-	public String userAgent = "speakeasy-sdk/java 0.44.0 2.213.3 1.7 <no value>";
-	public Map<String, Map<String, Map<String, Object>>> globals = new HashMap<String, Map<String, Map<String, Object>>>(){{
-		put("parameters", new HashMap<String, Map<String, Object>>());
+	public String sdkVersion = "0.46.2";
+	public String genVersion = "2.272.4";
+	public String userAgent = "speakeasy-sdk/java 0.46.2 2.272.4 1.7 com.writer.sdk";
+	public Map<String, Map<String, Map<String, java.lang.Object>>> globals = new HashMap<String, Map<String, Map<String, java.lang.Object>>>(){{
+		put("parameters", new HashMap<String, Map<String, java.lang.Object>>());
 	}};
 	
 }

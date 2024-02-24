@@ -33,7 +33,7 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(486589L)
@@ -41,19 +41,19 @@ public class Application {
 
             com.writer.sdk.models.operations.CreateModelCustomizationRequest req = new CreateModelCustomizationRequest(
                 new CreateCustomizationRequest(
-                    "string",
-                    "string"){{
+                    "<value>",
+                    "<value>"){{
                     additionalHyperParameters = new HyperParameters(
                         489382L);
                     batchSize = 638424L;
                     description = "Synchronised full-range emulation";
                     epochs = 134365L;
                     learningRate = 7865.46d;
-                    promptTemplate = "string";
-                    validationDatasetFileId = "string";
+                    promptTemplate = "<value>";
+                    validationDatasetFileId = "<value>";
 
                 }},
-                "string");
+                "<value>");
 
             com.writer.sdk.models.operations.CreateModelCustomizationResponse res = sdk.modelCustomization.create(req);
 
@@ -98,15 +98,15 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(545907L)
                 .build();
 
             com.writer.sdk.models.operations.DeleteModelCustomizationRequest req = new DeleteModelCustomizationRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.writer.sdk.models.operations.DeleteModelCustomizationResponse res = sdk.modelCustomization.delete(req);
 
@@ -151,15 +151,15 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(700347L)
                 .build();
 
             com.writer.sdk.models.operations.GetModelCustomizationRequest req = new GetModelCustomizationRequest(
-                "string",
-                "string");
+                "<value>",
+                "<value>");
 
             com.writer.sdk.models.operations.GetModelCustomizationResponse res = sdk.modelCustomization.get(req);
 
@@ -204,14 +204,14 @@ public class Application {
         try {
             Writer sdk = Writer.builder()
                 .setSecurity(new Security(
-                "string"){{
+                "<value>"){{
                     apiKey = "<YOUR_API_KEY_HERE>";
                 }})
                 .setOrganizationId(768578L)
                 .build();
 
             com.writer.sdk.models.operations.ListModelCustomizationsRequest req = new ListModelCustomizationsRequest(
-                "string");
+                "<value>");
 
             com.writer.sdk.models.operations.ListModelCustomizationsResponse res = sdk.modelCustomization.list(req);
 
